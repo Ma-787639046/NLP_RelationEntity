@@ -1,0 +1,5 @@
+seqeval
+tqdm
+matplotlib
+tensorboard
+pandas

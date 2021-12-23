@@ -1,0 +1,2304 @@
+Namespace(MASTER_ADDR='10.104.91.31', MASTER_PORT='29501', batch_size=32, continueTraining=False, fp16=0, gradient_acc_steps=2, log_dir='./log', lr=7e-05, max_norm=1.0, model='./model/bert-base-uncased', n_gpu=8, n_node=1, node_rank=0, num_classes=19, num_epochs=20, seed=42, test_data='./data/SemEval2010_task8_all_data/SemEval2010_task8_testing_keys/TEST_FILE_FULL.TXT', train_data='./data/SemEval2010_task8_all_data/SemEval2010_task8_training/TRAIN_FILE.TXT')
+12/22/2021 06:51:05 PM [INFO]: Added key: store_based_barrier_key:1 to store for rank: 3
+12/22/2021 06:51:05 PM [INFO]: Added key: store_based_barrier_key:1 to store for rank: 6
+12/22/2021 06:51:05 PM [INFO]: Added key: store_based_barrier_key:1 to store for rank: 1
+12/22/2021 06:51:05 PM [INFO]: Added key: store_based_barrier_key:1 to store for rank: 5
+12/22/2021 06:51:05 PM [INFO]: Added key: store_based_barrier_key:1 to store for rank: 2
+12/22/2021 06:51:05 PM [INFO]: Added key: store_based_barrier_key:1 to store for rank: 4
+12/22/2021 06:51:05 PM [INFO]: Added key: store_based_barrier_key:1 to store for rank: 7
+12/22/2021 06:51:05 PM [INFO]: Added key: store_based_barrier_key:1 to store for rank: 0
+12/22/2021 06:51:06 PM [INFO]: Saved BERT tokenizer at ./data/BERT_tokenizer.pkl
+12/22/2021 06:51:06 PM [INFO]: Saved BERT tokenizer at ./data/BERT_tokenizer.pkl
+12/22/2021 06:51:06 PM [INFO]: Saved BERT tokenizer at ./data/BERT_tokenizer.pkl
+12/22/2021 06:51:06 PM [INFO]: Saved BERT tokenizer at ./data/BERT_tokenizer.pkl
+12/22/2021 06:51:06 PM [INFO]: Saved BERT tokenizer at ./data/BERT_tokenizer.pkl
+12/22/2021 06:51:06 PM [INFO]: Saved BERT tokenizer at ./data/BERT_tokenizer.pkl
+12/22/2021 06:51:06 PM [INFO]: Saved BERT tokenizer at ./data/BERT_tokenizer.pkl
+12/22/2021 06:51:06 PM [INFO]: Saved BERT tokenizer at ./data/BERT_tokenizer.pkl
+12/22/2021 06:51:06 PM [INFO]: Loaded preproccessed data.
+12/22/2021 06:51:06 PM [INFO]: Tokenizing data...
+12/22/2021 06:51:06 PM [INFO]: Loaded preproccessed data.
+12/22/2021 06:51:06 PM [INFO]: Tokenizing data...
+prog_bar:   0%|          | 0/8000 [00:00<?, ?it/s]12/22/2021 06:51:06 PM [INFO]: Loaded preproccessed data.
+12/22/2021 06:51:06 PM [INFO]: Tokenizing data...
+12/22/2021 06:51:06 PM [INFO]: Loaded preproccessed data.
+12/22/2021 06:51:06 PM [INFO]: Tokenizing data...
+prog_bar:   0%|          | 0/8000 [00:00<?, ?it/s]12/22/2021 06:51:06 PM [INFO]: Loaded preproccessed data.
+12/22/2021 06:51:06 PM [INFO]: Tokenizing data...
+12/22/2021 06:51:06 PM [INFO]: Loaded preproccessed data.
+12/22/2021 06:51:06 PM [INFO]: Loaded preproccessed data.
+12/22/2021 06:51:06 PM [INFO]: Loaded preproccessed data.
+12/22/2021 06:51:06 PM [INFO]: Tokenizing data...
+12/22/2021 06:51:06 PM [INFO]: Tokenizing data...
+12/22/2021 06:51:06 PM [INFO]: Tokenizing data...
+prog_bar:   0%|          | 0/8000 [00:00<?, ?it/s]prog_bar:   0%|          | 0/8000 [00:00<?, ?it/s]prog_bar:   0%|          | 0/8000 [00:00<?, ?it/s]prog_bar:   0%|          | 0/8000 [00:00<?, ?it/s]prog_bar:   0%|          | 0/8000 [00:00<?, ?it/s]prog_bar:   0%|          | 0/8000 [00:00<?, ?it/s]prog_bar:   3%|▎         | 241/8000 [00:00<00:03, 2408.34it/s]prog_bar:   3%|▎         | 242/8000 [00:00<00:03, 2413.55it/s]prog_bar:   3%|▎         | 234/8000 [00:00<00:03, 2335.53it/s]prog_bar:   3%|▎         | 236/8000 [00:00<00:03, 2353.64it/s]prog_bar:   3%|▎         | 240/8000 [00:00<00:03, 2394.72it/s]prog_bar:   3%|▎         | 241/8000 [00:00<00:03, 2408.17it/s]prog_bar:   3%|▎         | 240/8000 [00:00<00:03, 2398.61it/s]prog_bar:   3%|▎         | 237/8000 [00:00<00:03, 2367.35it/s]prog_bar:   6%|▋         | 501/8000 [00:00<00:02, 2520.37it/s]prog_bar:   6%|▋         | 506/8000 [00:00<00:02, 2541.76it/s]prog_bar:   6%|▌         | 491/8000 [00:00<00:03, 2469.83it/s]prog_bar:   6%|▋         | 500/8000 [00:00<00:02, 2513.72it/s]prog_bar:   6%|▌         | 497/8000 [00:00<00:03, 2499.19it/s]prog_bar:   6%|▌         | 493/8000 [00:00<00:03, 2480.09it/s]prog_bar:   6%|▌         | 498/8000 [00:00<00:02, 2502.09it/s]prog_bar:   6%|▋         | 500/8000 [00:00<00:02, 2511.60it/s]prog_bar:  10%|▉         | 766/8000 [00:00<00:02, 2577.53it/s]prog_bar:  10%|▉         | 775/8000 [00:00<00:02, 2608.84it/s]prog_bar:   9%|▉         | 752/8000 [00:00<00:02, 2532.78it/s]prog_bar:  10%|▉         | 767/8000 [00:00<00:02, 2583.48it/s]prog_bar:  10%|▉         | 762/8000 [00:00<00:02, 2565.42it/s]prog_bar:   9%|▉         | 753/8000 [00:00<00:02, 2534.44it/s]prog_bar:  10%|▉         | 766/8000 [00:00<00:02, 2577.36it/s]prog_bar:  10%|▉         | 762/8000 [00:00<00:02, 2561.19it/s]prog_bar:  13%|█▎        | 1029/8000 [00:00<00:02, 2594.25it/s]prog_bar:  13%|█▎        | 1036/8000 [00:00<00:02, 2603.85it/s]prog_bar:  13%|█▎        | 1017/8000 [00:00<00:02, 2578.26it/s]prog_bar:  13%|█▎        | 1025/8000 [00:00<00:02, 2589.67it/s]prog_bar:  13%|█▎        | 1016/8000 [00:00<00:02, 2571.97it/s]prog_bar:  13%|█▎        | 1028/8000 [00:00<00:02, 2587.94it/s]prog_bar:  13%|█▎        | 1030/8000 [00:00<00:02, 2598.99it/s]prog_bar:  13%|█▎        | 1028/8000 [00:00<00:02, 2594.53it/s]prog_bar:  16%|█▋        | 1300/8000 [00:00<00:02, 2632.96it/s]prog_bar:  16%|█▋        | 1306/8000 [00:00<00:02, 2634.47it/s]prog_bar:  16%|█▌        | 1286/8000 [00:00<00:02, 2616.19it/s]prog_bar:  16%|█▌        | 1284/8000 [00:00<00:02, 2609.60it/s]prog_bar:  16%|█▌        | 1294/8000 [00:00<00:02, 2623.54it/s]prog_bar:  16%|█▋        | 1300/8000 [00:00<00:02, 2633.97it/s]prog_bar:  16%|█▋        | 1304/8000 [00:00<00:02, 2646.54it/s]prog_bar:  16%|█▋        | 1303/8000 [00:00<00:02, 2647.20it/s]prog_bar:  19%|█▉        | 1545/8000 [00:00<00:02, 2566.48it/s]prog_bar:  20%|█▉        | 1564/8000 [00:00<00:02, 2592.45it/s]prog_bar:  19%|█▉        | 1557/8000 [00:00<00:02, 2576.42it/s]prog_bar:  20%|█▉        | 1564/8000 [00:00<00:02, 2563.55it/s]prog_bar:  20%|█▉        | 1570/8000 [00:00<00:02, 2577.90it/s]prog_bar:  20%|█▉        | 1569/8000 [00:00<00:02, 2597.13it/s]prog_bar:  20%|█▉        | 1568/8000 [00:00<00:02, 2598.70it/s]prog_bar:  19%|█▉        | 1548/8000 [00:00<00:02, 2555.56it/s]prog_bar:  23%|██▎       | 1802/8000 [00:00<00:02, 2564.91it/s]prog_bar:  23%|██▎       | 1829/8000 [00:00<00:02, 2609.96it/s]prog_bar:  23%|██▎       | 1819/8000 [00:00<00:02, 2588.15it/s]prog_bar:  23%|██▎       | 1831/8000 [00:00<00:02, 2587.59it/s]prog_bar:  23%|██▎       | 1824/8000 [00:00<00:02, 2572.06it/s]prog_bar:  23%|██▎       | 1831/8000 [00:00<00:02, 2603.17it/s]prog_bar:  23%|██▎       | 1804/8000 [00:00<00:02, 2555.19it/s]prog_bar:  23%|██▎       | 1829/8000 [00:00<00:02, 2589.33it/s]prog_bar:  26%|██▌       | 2065/8000 [00:00<00:02, 2583.73it/s]prog_bar:  26%|██▌       | 2096/8000 [00:00<00:02, 2626.66it/s]prog_bar:  26%|██▌       | 2083/8000 [00:00<00:02, 2602.67it/s]prog_bar:  26%|██▌       | 2094/8000 [00:00<00:02, 2600.40it/s]prog_bar:  26%|██▌       | 2086/8000 [00:00<00:02, 2584.81it/s]prog_bar:  26%|██▌       | 2096/8000 [00:00<00:02, 2616.06it/s]prog_bar:  26%|██▌       | 2063/8000 [00:00<00:02, 2565.22it/s]prog_bar:  26%|██▌       | 2094/8000 [00:00<00:02, 2608.16it/s]prog_bar:  29%|██▉       | 2324/8000 [00:00<00:02, 2557.98it/s]prog_bar:  29%|██▉       | 2345/8000 [00:00<00:02, 2564.63it/s]prog_bar:  29%|██▉       | 2344/8000 [00:00<00:02, 2579.55it/s]prog_bar:  29%|██▉       | 2320/8000 [00:00<00:02, 2546.06it/s]prog_bar:  29%|██▉       | 2358/8000 [00:00<00:02, 2590.81it/s]prog_bar:  29%|██▉       | 2355/8000 [00:00<00:02, 2564.62it/s]prog_bar:  29%|██▉       | 2355/8000 [00:00<00:02, 2583.19it/s]prog_bar:  29%|██▉       | 2359/8000 [00:00<00:02, 2569.74it/s]prog_bar:  32%|███▏      | 2580/8000 [00:01<00:02, 2556.23it/s]prog_bar:  33%|███▎      | 2603/8000 [00:01<00:02, 2569.30it/s]prog_bar:  32%|███▏      | 2578/8000 [00:01<00:02, 2554.01it/s]prog_bar:  33%|███▎      | 2619/8000 [00:01<00:02, 2593.54it/s]prog_bar:  33%|███▎      | 2612/8000 [00:01<00:02, 2563.93it/s]prog_bar:  33%|███▎      | 2617/8000 [00:01<00:02, 2592.20it/s]prog_bar:  33%|███▎      | 2603/8000 [00:01<00:02, 2563.28it/s]prog_bar:  33%|███▎      | 2619/8000 [00:01<00:02, 2578.88it/s]prog_bar:  36%|███▌      | 2871/8000 [00:01<00:01, 2570.95it/s]prog_bar:  36%|███▌      | 2861/8000 [00:01<00:02, 2554.20it/s]prog_bar:  36%|███▌      | 2879/8000 [00:01<00:01, 2583.30it/s]prog_bar:  35%|███▌      | 2834/8000 [00:01<00:02, 2539.48it/s]prog_bar:  35%|███▌      | 2836/8000 [00:01<00:02, 2527.02it/s]prog_bar:  36%|███▌      | 2878/8000 [00:01<00:01, 2579.06it/s]prog_bar:  36%|███▌      | 2860/8000 [00:01<00:02, 2545.59it/s]prog_bar:  36%|███▌      | 2877/8000 [00:01<00:02, 2552.41it/s]prog_bar:  39%|███▉      | 3133/8000 [00:01<00:01, 2584.50it/s]prog_bar:  39%|███▉      | 3123/8000 [00:01<00:01, 2572.99it/s]prog_bar:  39%|███▉      | 3142/8000 [00:01<00:01, 2597.01it/s]prog_bar:  39%|███▉      | 3100/8000 [00:01<00:01, 2575.01it/s]prog_bar:  39%|███▊      | 3097/8000 [00:01<00:01, 2549.93it/s]prog_bar:  39%|███▉      | 3125/8000 [00:01<00:01, 2574.43it/s]prog_bar:  39%|███▉      | 3137/8000 [00:01<00:01, 2568.19it/s]prog_bar:  39%|███▉      | 3141/8000 [00:01<00:01, 2576.23it/s]prog_bar:  42%|████▏     | 3386/8000 [00:01<00:01, 2589.72it/s]prog_bar:  42%|████▏     | 3393/8000 [00:01<00:01, 2587.96it/s]prog_bar:  43%|████▎     | 3409/8000 [00:01<00:01, 2617.86it/s]prog_bar:  42%|████▏     | 3370/8000 [00:01<00:01, 2610.91it/s]prog_bar:  42%|████▏     | 3362/8000 [00:01<00:01, 2579.27it/s]prog_bar:  42%|████▏     | 3384/8000 [00:01<00:01, 2578.49it/s]prog_bar:  43%|████▎     | 3401/8000 [00:01<00:01, 2588.72it/s]prog_bar:  43%|████▎     | 3411/8000 [00:01<00:01, 2607.56it/s]prog_bar:  46%|████▌     | 3649/8000 [00:01<00:01, 2600.10it/s]prog_bar:  46%|████▌     | 3654/8000 [00:01<00:01, 2592.39it/s]prog_bar:  45%|████▌     | 3632/8000 [00:01<00:01, 2613.12it/s]prog_bar:  46%|████▌     | 3671/8000 [00:01<00:01, 2612.37it/s]prog_bar:  45%|████▌     | 3622/8000 [00:01<00:01, 2584.58it/s]prog_bar:  46%|████▌     | 3648/8000 [00:01<00:01, 2596.52it/s]prog_bar:  46%|████▌     | 3664/8000 [00:01<00:01, 2600.45it/s]prog_bar:  46%|████▌     | 3674/8000 [00:01<00:01, 2612.34it/s]prog_bar:  49%|████▉     | 3933/8000 [00:01<00:01, 2595.98it/s]prog_bar:  49%|████▉     | 3910/8000 [00:01<00:01, 2578.32it/s]prog_bar:  49%|████▉     | 3914/8000 [00:01<00:01, 2566.49it/s]prog_bar:  49%|████▉     | 3925/8000 [00:01<00:01, 2591.77it/s]prog_bar:  49%|████▊     | 3894/8000 [00:01<00:01, 2577.09it/s]prog_bar:  49%|████▊     | 3881/8000 [00:01<00:01, 2555.04it/s]prog_bar:  49%|████▉     | 3908/8000 [00:01<00:01, 2559.34it/s]prog_bar:  49%|████▉     | 3936/8000 [00:01<00:01, 2595.81it/s]prog_bar:  52%|█████▏    | 4170/8000 [00:01<00:01, 2584.39it/s]prog_bar:  52%|█████▏    | 4193/8000 [00:01<00:01, 2596.63it/s]prog_bar:  52%|█████▏    | 4174/8000 [00:01<00:01, 2574.44it/s]prog_bar:  52%|█████▏    | 4189/8000 [00:01<00:01, 2603.71it/s]prog_bar:  52%|█████▏    | 4158/8000 [00:01<00:01, 2595.13it/s]prog_bar:  52%|█████▏    | 4168/8000 [00:01<00:01, 2570.37it/s]prog_bar:  52%|█████▏    | 4137/8000 [00:01<00:01, 2536.90it/s]prog_bar:  52%|█████▏    | 4196/8000 [00:01<00:01, 2596.96it/s]prog_bar:  55%|█████▌    | 4429/8000 [00:01<00:01, 2581.08it/s]prog_bar:  55%|█████▌    | 4418/8000 [00:01<00:01, 2596.01it/s]prog_bar:  55%|█████▌    | 4432/8000 [00:01<00:01, 2555.28it/s]prog_bar:  55%|█████▌    | 4427/8000 [00:01<00:01, 2575.42it/s]prog_bar:  56%|█████▌    | 4453/8000 [00:01<00:01, 2562.21it/s]prog_bar:  55%|█████▍    | 4395/8000 [00:01<00:01, 2549.15it/s]prog_bar:  56%|█████▌    | 4450/8000 [00:01<00:01, 2575.65it/s]prog_bar:  56%|█████▌    | 4456/8000 [00:01<00:01, 2530.38it/s]prog_bar:  59%|█████▊    | 4691/8000 [00:01<00:01, 2590.69it/s]prog_bar:  59%|█████▉    | 4710/8000 [00:01<00:01, 2562.78it/s]prog_bar:  59%|█████▊    | 4689/8000 [00:01<00:01, 2586.65it/s]prog_bar:  58%|█████▊    | 4678/8000 [00:01<00:01, 2572.40it/s]prog_bar:  59%|█████▊    | 4688/8000 [00:01<00:01, 2522.78it/s]prog_bar:  58%|█████▊    | 4650/8000 [00:01<00:01, 2525.00it/s]prog_bar:  59%|█████▉    | 4711/8000 [00:01<00:01, 2566.10it/s]prog_bar:  59%|█████▉    | 4714/8000 [00:01<00:01, 2543.17it/s]prog_bar:  62%|██████▏   | 4951/8000 [00:01<00:01, 2587.30it/s]prog_bar:  62%|██████▏   | 4970/8000 [00:01<00:01, 2571.68it/s]prog_bar:  62%|██████▏   | 4936/8000 [00:01<00:01, 2569.81it/s]prog_bar:  62%|██████▏   | 4948/8000 [00:01<00:01, 2573.55it/s]prog_bar:  61%|██████▏   | 4905/8000 [00:01<00:01, 2531.55it/s]prog_bar:  62%|██████▏   | 4968/8000 [00:01<00:01, 2563.79it/s]prog_bar:  62%|██████▏   | 4941/8000 [00:01<00:01, 2510.05it/s]prog_bar:  62%|██████▏   | 4974/8000 [00:01<00:01, 2559.19it/s]prog_bar:  65%|██████▌   | 5214/8000 [00:02<00:01, 2599.67it/s]prog_bar:  65%|██████▌   | 5233/8000 [00:02<00:01, 2588.38it/s]prog_bar:  65%|██████▌   | 5204/8000 [00:02<00:01, 2600.18it/s]prog_bar:  65%|██████▌   | 5209/8000 [00:02<00:01, 2581.76it/s]prog_bar:  65%|██████▌   | 5231/8000 [00:02<00:01, 2580.57it/s]prog_bar:  64%|██████▍   | 5159/8000 [00:02<00:01, 2521.21it/s]prog_bar:  65%|██████▌   | 5201/8000 [00:02<00:01, 2534.47it/s]prog_bar:  65%|██████▌   | 5238/8000 [00:02<00:01, 2580.78it/s]prog_bar:  68%|██████▊   | 5475/8000 [00:02<00:00, 2600.27it/s]prog_bar:  69%|██████▊   | 5492/8000 [00:02<00:00, 2585.71it/s]prog_bar:  68%|██████▊   | 5465/8000 [00:02<00:00, 2597.13it/s]prog_bar:  68%|██████▊   | 5468/8000 [00:02<00:00, 2580.24it/s]prog_bar:  69%|██████▊   | 5492/8000 [00:02<00:00, 2585.96it/s]prog_bar:  68%|██████▊   | 5416/8000 [00:02<00:01, 2535.56it/s]prog_bar:  68%|██████▊   | 5456/8000 [00:02<00:01, 2538.80it/s]prog_bar:  69%|██████▊   | 5497/8000 [00:02<00:00, 2582.82it/s]prog_bar:  72%|███████▏  | 5736/8000 [00:02<00:00, 2600.70it/s]prog_bar:  72%|███████▏  | 5752/8000 [00:02<00:00, 2588.47it/s]prog_bar:  72%|███████▏  | 5727/8000 [00:02<00:00, 2571.83it/s]prog_bar:  72%|███████▏  | 5751/8000 [00:02<00:00, 2587.03it/s]prog_bar:  72%|███████▏  | 5725/8000 [00:02<00:00, 2577.13it/s]prog_bar:  71%|███████   | 5670/8000 [00:02<00:00, 2536.52it/s]prog_bar:  71%|███████▏  | 5710/8000 [00:02<00:00, 2535.61it/s]prog_bar:  72%|███████▏  | 5761/8000 [00:02<00:00, 2597.93it/s]prog_bar:  75%|███████▌  | 6001/8000 [00:02<00:00, 2614.84it/s]prog_bar:  75%|███████▌  | 6018/8000 [00:02<00:00, 2608.78it/s]prog_bar:  75%|███████▍  | 5992/8000 [00:02<00:00, 2594.29it/s]prog_bar:  75%|███████▌  | 6020/8000 [00:02<00:00, 2615.53it/s]prog_bar:  75%|███████▍  | 5994/8000 [00:02<00:00, 2609.56it/s]prog_bar:  74%|███████▍  | 5936/8000 [00:02<00:00, 2572.80it/s]prog_bar:  75%|███████▍  | 5973/8000 [00:02<00:00, 2561.30it/s]prog_bar:  75%|███████▌  | 6027/8000 [00:02<00:00, 2614.21it/s]prog_bar:  78%|███████▊  | 6275/8000 [00:02<00:00, 2650.52it/s]prog_bar:  79%|███████▊  | 6292/8000 [00:02<00:00, 2647.45it/s]prog_bar:  78%|███████▊  | 6264/8000 [00:02<00:00, 2629.74it/s]prog_bar:  79%|███████▊  | 6296/8000 [00:02<00:00, 2655.67it/s]prog_bar:  78%|███████▊  | 6202/8000 [00:02<00:00, 2596.03it/s]prog_bar:  78%|███████▊  | 6242/8000 [00:02<00:00, 2597.27it/s]prog_bar:  78%|███████▊  | 6256/8000 [00:02<00:00, 2588.68it/s]prog_bar:  79%|███████▉  | 6302/8000 [00:02<00:00, 2654.15it/s]prog_bar:  82%|████████▏ | 6541/8000 [00:02<00:00, 2614.90it/s]prog_bar:  82%|████████▏ | 6557/8000 [00:02<00:00, 2617.56it/s]prog_bar:  81%|████████  | 6466/8000 [00:02<00:00, 2608.37it/s]prog_bar:  82%|████████▏ | 6528/8000 [00:02<00:00, 2602.23it/s]prog_bar:  81%|████████▏ | 6502/8000 [00:02<00:00, 2576.33it/s]prog_bar:  82%|████████▏ | 6562/8000 [00:02<00:00, 2623.54it/s]prog_bar:  81%|████████▏ | 6515/8000 [00:02<00:00, 2564.76it/s]prog_bar:  82%|████████▏ | 6568/8000 [00:02<00:00, 2626.43it/s]prog_bar:  85%|████████▌ | 6803/8000 [00:02<00:00, 2599.00it/s]prog_bar:  85%|████████▌ | 6819/8000 [00:02<00:00, 2609.18it/s]prog_bar:  85%|████████▍ | 6789/8000 [00:02<00:00, 2590.45it/s]prog_bar:  85%|████████▌ | 6825/8000 [00:02<00:00, 2615.65it/s]prog_bar:  84%|████████▍ | 6760/8000 [00:02<00:00, 2562.61it/s]prog_bar:  84%|████████▍ | 6727/8000 [00:02<00:00, 2541.48it/s]prog_bar:  85%|████████▍ | 6772/8000 [00:02<00:00, 2536.02it/s]prog_bar:  85%|████████▌ | 6831/8000 [00:02<00:00, 2618.42it/s]prog_bar:  88%|████████▊ | 7063/8000 [00:02<00:00, 2583.49it/s]prog_bar:  88%|████████▊ | 7080/8000 [00:02<00:00, 2593.30it/s]prog_bar:  89%|████████▊ | 7087/8000 [00:02<00:00, 2601.20it/s]prog_bar:  88%|████████▊ | 7049/8000 [00:02<00:00, 2571.43it/s]prog_bar:  88%|████████▊ | 7017/8000 [00:02<00:00, 2550.12it/s]prog_bar:  87%|████████▋ | 6982/8000 [00:02<00:00, 2539.94it/s]prog_bar:  88%|████████▊ | 7026/8000 [00:02<00:00, 2531.59it/s]prog_bar:  89%|████████▊ | 7093/8000 [00:02<00:00, 2598.45it/s]prog_bar:  92%|█████████▏| 7322/8000 [00:02<00:00, 2576.44it/s]prog_bar:  92%|█████████▏| 7340/8000 [00:02<00:00, 2582.60it/s]prog_bar:  91%|█████████▏| 7307/8000 [00:02<00:00, 2564.74it/s]prog_bar:  91%|█████████ | 7273/8000 [00:02<00:00, 2539.95it/s]prog_bar:  90%|█████████ | 7237/8000 [00:02<00:00, 2534.61it/s]prog_bar:  91%|█████████ | 7280/8000 [00:02<00:00, 2531.97it/s]prog_bar:  92%|█████████▏| 7348/8000 [00:02<00:00, 2557.33it/s]prog_bar:  92%|█████████▏| 7353/8000 [00:02<00:00, 2546.87it/s]prog_bar:  95%|█████████▌| 7600/8000 [00:02<00:00, 2586.79it/s]prog_bar:  95%|█████████▍| 7580/8000 [00:02<00:00, 2538.70it/s]prog_bar:  95%|█████████▍| 7564/8000 [00:02<00:00, 2565.46it/s]prog_bar:  94%|█████████▍| 7528/8000 [00:02<00:00, 2538.07it/s]prog_bar:  94%|█████████▎| 7493/8000 [00:02<00:00, 2541.30it/s]prog_bar:  95%|█████████▌| 7610/8000 [00:02<00:00, 2573.54it/s]prog_bar:  94%|█████████▍| 7534/8000 [00:02<00:00, 2500.55it/s]prog_bar:  95%|█████████▌| 7613/8000 [00:02<00:00, 2561.67it/s]prog_bar:  98%|█████████▊| 7859/8000 [00:03<00:00, 2541.97it/s]prog_bar:  98%|█████████▊| 7834/8000 [00:03<00:00, 2507.08it/s]prog_bar:  97%|█████████▋| 7748/8000 [00:03<00:00, 2529.50it/s]prog_bar:  97%|█████████▋| 7782/8000 [00:03<00:00, 2516.22it/s]prog_bar:  98%|█████████▊| 7821/8000 [00:03<00:00, 2533.48it/s]prog_bar:  97%|█████████▋| 7785/8000 [00:03<00:00, 2485.90it/s]prog_bar:  98%|█████████▊| 7868/8000 [00:03<00:00, 2535.84it/s]prog_bar:  98%|█████████▊| 7870/8000 [00:03<00:00, 2524.29it/s]prog_bar: 100%|██████████| 8000/8000 [00:03<00:00, 2583.33it/s]
+prog_bar:   0%|          | 0/8000 [00:00<?, ?it/s]prog_bar: 100%|██████████| 8000/8000 [00:03<00:00, 2578.98it/s]
+prog_bar:   0%|          | 0/8000 [00:00<?, ?it/s]prog_bar: 100%|██████████| 8000/8000 [00:03<00:00, 2574.42it/s]
+prog_bar:   0%|          | 0/8000 [00:00<?, ?it/s]prog_bar: 100%|██████████| 8000/8000 [00:03<00:00, 2568.45it/s]
+prog_bar:   0%|          | 0/8000 [00:00<?, ?it/s]prog_bar: 100%|██████████| 8000/8000 [00:03<00:00, 2566.78it/s]
+prog_bar:   0%|          | 0/8000 [00:00<?, ?it/s]prog_bar: 100%|██████████| 8000/8000 [00:03<00:00, 2551.11it/s]
+prog_bar:   0%|          | 0/8000 [00:00<?, ?it/s]prog_bar: 100%|██████████| 8000/8000 [00:03<00:00, 2547.93it/s]
+prog_bar:   0%|          | 0/8000 [00:00<?, ?it/s]prog_bar: 100%|██████████| 8000/8000 [00:03<00:00, 2542.21it/s]
+prog_bar:   0%|          | 0/8000 [00:00<?, ?it/s]prog_bar: 100%|██████████| 8000/8000 [00:00<00:00, 91747.21it/s]
+12/22/2021 06:51:09 PM [INFO]: Tokenizing data...
+
+Invalid rows/total: 0/8000
+prog_bar:   0%|          | 0/2717 [00:00<?, ?it/s]prog_bar: 100%|██████████| 8000/8000 [00:00<00:00, 90331.94it/s]prog_bar: 100%|██████████| 8000/8000 [00:00<00:00, 91629.96it/s]
+12/22/2021 06:51:09 PM [INFO]: Tokenizing data...
+
+Invalid rows/total: 0/8000
+prog_bar:   0%|          | 0/2717 [00:00<?, ?it/s]
+12/22/2021 06:51:09 PM [INFO]: Tokenizing data...
+
+Invalid rows/total: 0/8000
+prog_bar:   0%|          | 0/2717 [00:00<?, ?it/s]prog_bar: 100%|██████████| 8000/8000 [00:00<00:00, 89709.34it/s]prog_bar: 100%|██████████| 8000/8000 [00:00<00:00, 91748.46it/s]
+12/22/2021 06:51:09 PM [INFO]: Tokenizing data...
+
+Invalid rows/total: 0/8000
+prog_bar:   0%|          | 0/2717 [00:00<?, ?it/s]
+12/22/2021 06:51:09 PM [INFO]: Tokenizing data...
+
+Invalid rows/total: 0/8000
+prog_bar:   0%|          | 0/2717 [00:00<?, ?it/s]prog_bar: 100%|██████████| 8000/8000 [00:00<00:00, 89510.95it/s]
+12/22/2021 06:51:09 PM [INFO]: Tokenizing data...
+
+Invalid rows/total: 0/8000
+prog_bar:   0%|          | 0/2717 [00:00<?, ?it/s]prog_bar: 100%|██████████| 8000/8000 [00:00<00:00, 88962.27it/s]
+12/22/2021 06:51:09 PM [INFO]: Tokenizing data...
+
+Invalid rows/total: 0/8000
+prog_bar:   0%|          | 0/2717 [00:00<?, ?it/s]prog_bar: 100%|██████████| 8000/8000 [00:00<00:00, 89155.86it/s]
+12/22/2021 06:51:09 PM [INFO]: Tokenizing data...
+
+Invalid rows/total: 0/8000
+prog_bar:   0%|          | 0/2717 [00:00<?, ?it/s]prog_bar:   9%|▉         | 257/2717 [00:00<00:00, 2564.66it/s]prog_bar:   9%|▉         | 256/2717 [00:00<00:00, 2550.47it/s]prog_bar:   9%|▉         | 257/2717 [00:00<00:00, 2557.27it/s]prog_bar:   9%|▉         | 254/2717 [00:00<00:00, 2535.78it/s]prog_bar:   9%|▉         | 254/2717 [00:00<00:00, 2529.65it/s]prog_bar:   9%|▉         | 251/2717 [00:00<00:00, 2507.43it/s]prog_bar:   9%|▉         | 241/2717 [00:00<00:01, 2406.50it/s]prog_bar:   9%|▉         | 254/2717 [00:00<00:00, 2533.74it/s]prog_bar:  19%|█▉        | 522/2717 [00:00<00:00, 2608.65it/s]prog_bar:  19%|█▉        | 519/2717 [00:00<00:00, 2592.75it/s]prog_bar:  19%|█▉        | 521/2717 [00:00<00:00, 2601.10it/s]prog_bar:  19%|█▉        | 519/2717 [00:00<00:00, 2600.77it/s]prog_bar:  19%|█▉        | 517/2717 [00:00<00:00, 2583.63it/s]prog_bar:  19%|█▉        | 512/2717 [00:00<00:00, 2566.05it/s]prog_bar:  18%|█▊        | 498/2717 [00:00<00:00, 2502.17it/s]prog_bar:  19%|█▉        | 517/2717 [00:00<00:00, 2586.86it/s]prog_bar:  29%|██▉       | 783/2717 [00:00<00:00, 2584.62it/s]prog_bar:  29%|██▊       | 779/2717 [00:00<00:00, 2566.46it/s]prog_bar:  29%|██▉       | 782/2717 [00:00<00:00, 2580.32it/s]prog_bar:  29%|██▊       | 780/2717 [00:00<00:00, 2567.51it/s]prog_bar:  29%|██▊       | 776/2717 [00:00<00:00, 2554.36it/s]prog_bar:  28%|██▊       | 769/2717 [00:00<00:00, 2537.71it/s]prog_bar:  28%|██▊       | 749/2717 [00:00<00:00, 2499.07it/s]prog_bar:  29%|██▊       | 776/2717 [00:00<00:00, 2556.68it/s]prog_bar:  38%|███▊      | 1042/2717 [00:00<00:00, 2579.35it/s]prog_bar:  38%|███▊      | 1036/2717 [00:00<00:00, 2552.06it/s]prog_bar:  38%|███▊      | 1041/2717 [00:00<00:00, 2567.94it/s]prog_bar:  38%|███▊      | 1037/2717 [00:00<00:00, 2550.65it/s]prog_bar:  38%|███▊      | 1032/2717 [00:00<00:00, 2511.53it/s]prog_bar:  38%|███▊      | 1023/2717 [00:00<00:00, 2515.54it/s]prog_bar:  37%|███▋      | 1000/2717 [00:00<00:00, 2502.82it/s]prog_bar:  38%|███▊      | 1032/2717 [00:00<00:00, 2469.50it/s]prog_bar:  48%|████▊     | 1303/2717 [00:00<00:00, 2590.25it/s]prog_bar:  48%|████▊     | 1294/2717 [00:00<00:00, 2560.31it/s]prog_bar:  48%|████▊     | 1300/2717 [00:00<00:00, 2574.74it/s]prog_bar:  48%|████▊     | 1297/2717 [00:00<00:00, 2567.56it/s]prog_bar:  47%|████▋     | 1289/2717 [00:00<00:00, 2529.90it/s]prog_bar:  47%|████▋     | 1281/2717 [00:00<00:00, 2532.56it/s]prog_bar:  47%|████▋     | 1265/2717 [00:00<00:00, 2554.47it/s]prog_bar:  47%|████▋     | 1288/2717 [00:00<00:00, 2499.92it/s]prog_bar:  58%|█████▊    | 1567/2717 [00:00<00:00, 2603.56it/s]prog_bar:  57%|█████▋    | 1558/2717 [00:00<00:00, 2585.23it/s]prog_bar:  57%|█████▋    | 1560/2717 [00:00<00:00, 2581.91it/s]prog_bar:  57%|█████▋    | 1559/2717 [00:00<00:00, 2584.04it/s]prog_bar:  57%|█████▋    | 1552/2717 [00:00<00:00, 2560.70it/s]prog_bar:  57%|█████▋    | 1540/2717 [00:00<00:00, 2550.80it/s]prog_bar:  56%|█████▌    | 1526/2717 [00:00<00:00, 2572.07it/s]prog_bar:  57%|█████▋    | 1547/2717 [00:00<00:00, 2529.73it/s]prog_bar:  67%|██████▋   | 1828/2717 [00:00<00:00, 2596.89it/s]prog_bar:  67%|██████▋   | 1818/2717 [00:00<00:00, 2588.55it/s]prog_bar:  67%|██████▋   | 1819/2717 [00:00<00:00, 2577.20it/s]prog_bar:  67%|██████▋   | 1818/2717 [00:00<00:00, 2583.33it/s]prog_bar:  67%|██████▋   | 1809/2717 [00:00<00:00, 2563.01it/s]prog_bar:  66%|██████▌   | 1797/2717 [00:00<00:00, 2555.13it/s]prog_bar:  66%|██████▌   | 1784/2717 [00:00<00:00, 2530.89it/s]prog_bar:  66%|██████▋   | 1802/2717 [00:00<00:00, 2535.21it/s]prog_bar:  77%|███████▋  | 2100/2717 [00:00<00:00, 2634.45it/s]prog_bar:  77%|███████▋  | 2086/2717 [00:00<00:00, 2617.42it/s]prog_bar:  77%|███████▋  | 2087/2717 [00:00<00:00, 2609.31it/s]prog_bar:  77%|███████▋  | 2086/2717 [00:00<00:00, 2613.37it/s]prog_bar:  76%|███████▋  | 2076/2717 [00:00<00:00, 2594.33it/s]prog_bar:  76%|███████▌  | 2055/2717 [00:00<00:00, 2560.61it/s]prog_bar:  75%|███████▌  | 2045/2717 [00:00<00:00, 2554.01it/s]prog_bar:  76%|███████▌  | 2070/2717 [00:00<00:00, 2578.26it/s]prog_bar:  87%|████████▋ | 2366/2717 [00:00<00:00, 2640.30it/s]prog_bar:  86%|████████▋ | 2348/2717 [00:00<00:00, 2611.67it/s]prog_bar:  86%|████████▋ | 2350/2717 [00:00<00:00, 2615.16it/s]prog_bar:  86%|████████▋ | 2348/2717 [00:00<00:00, 2612.40it/s]prog_bar:  86%|████████▌ | 2338/2717 [00:00<00:00, 2601.59it/s]prog_bar:  85%|████████▌ | 2313/2717 [00:00<00:00, 2565.14it/s]prog_bar:  85%|████████▍ | 2307/2717 [00:00<00:00, 2571.81it/s]prog_bar:  86%|████████▌ | 2333/2717 [00:00<00:00, 2593.92it/s]prog_bar:  97%|█████████▋| 2631/2717 [00:01<00:00, 2631.60it/s]prog_bar:  96%|█████████▌| 2612/2717 [00:01<00:00, 2605.20it/s]prog_bar:  96%|█████████▌| 2610/2717 [00:01<00:00, 2562.06it/s]prog_bar:  96%|█████████▌| 2610/2717 [00:01<00:00, 2604.27it/s]prog_bar:  96%|█████████▌| 2599/2717 [00:01<00:00, 2583.53it/s]prog_bar: 100%|██████████| 2717/2717 [00:01<00:00, 2609.28it/s]
+prog_bar:   0%|          | 0/2717 [00:00<?, ?it/s]prog_bar:  95%|█████████▍| 2570/2717 [00:01<00:00, 2557.39it/s]prog_bar:  94%|█████████▍| 2565/2717 [00:01<00:00, 2558.61it/s]prog_bar: 100%|██████████| 2717/2717 [00:01<00:00, 2590.55it/s]
+prog_bar:   0%|          | 0/2717 [00:00<?, ?it/s]prog_bar: 100%|██████████| 2717/2717 [00:01<00:00, 2574.18it/s]
+prog_bar:   0%|          | 0/2717 [00:00<?, ?it/s]prog_bar: 100%|██████████| 2717/2717 [00:01<00:00, 2588.24it/s]
+prog_bar:   0%|          | 0/2717 [00:00<?, ?it/s]prog_bar:  95%|█████████▌| 2593/2717 [00:01<00:00, 2581.48it/s]prog_bar: 100%|██████████| 2717/2717 [00:01<00:00, 2564.92it/s]
+prog_bar:   0%|          | 0/2717 [00:00<?, ?it/s]prog_bar: 100%|██████████| 2717/2717 [00:01<00:00, 2546.35it/s]
+prog_bar:   0%|          | 0/2717 [00:00<?, ?it/s]prog_bar: 100%|██████████| 2717/2717 [00:01<00:00, 2539.44it/s]
+prog_bar:   0%|          | 0/2717 [00:00<?, ?it/s]prog_bar: 100%|██████████| 2717/2717 [00:01<00:00, 2548.64it/s]
+prog_bar:   0%|          | 0/2717 [00:00<?, ?it/s]prog_bar: 100%|██████████| 2717/2717 [00:00<00:00, 32044.87it/s]prog_bar:  97%|█████████▋| 2642/2717 [00:00<00:00, 26419.27it/s]prog_bar: 100%|██████████| 2717/2717 [00:00<00:00, 26398.76it/s]prog_bar: 100%|██████████| 2717/2717 [00:00<00:00, 28025.08it/s]prog_bar:  88%|████████▊ | 2394/2717 [00:00<00:00, 22562.99it/s]prog_bar: 100%|██████████| 2717/2717 [00:00<00:00, 28443.59it/s]prog_bar: 100%|██████████| 2717/2717 [00:00<00:00, 24339.29it/s]prog_bar:  88%|████████▊ | 2394/2717 [00:00<00:00, 22497.78it/s]prog_bar: 100%|██████████| 2717/2717 [00:00<00:00, 24245.41it/s]
+12/22/2021 06:51:10 PM [INFO]: Loaded 8000 Training samples.
+prog_bar:  88%|████████▊ | 2394/2717 [00:00<00:00, 20576.91it/s]prog_bar: 100%|██████████| 2717/2717 [00:00<00:00, 22275.76it/s]prog_bar:  88%|████████▊ | 2394/2717 [00:00<00:00, 20221.78it/s]prog_bar: 100%|██████████| 2717/2717 [00:00<00:00, 21910.06it/s]
+Some weights of the model checkpoint at ./model/bert-base-uncased were not used when initializing BertmodelRE: ['cls.predictions.decoder.weight', 'cls.predictions.bias', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight']
+- This IS expected if you are initializing BertmodelRE from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertmodelRE from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertmodelRE were not initialized from the model checkpoint at ./model/bert-base-uncased and are newly initialized: ['bert.classification_layer.weight', 'bert.classification_layer.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+Some weights of the model checkpoint at ./model/bert-base-uncased were not used when initializing BertmodelRE: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertmodelRE from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertmodelRE from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertmodelRE were not initialized from the model checkpoint at ./model/bert-base-uncased and are newly initialized: ['bert.classification_layer.weight', 'bert.classification_layer.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+Some weights of the model checkpoint at ./model/bert-base-uncased were not used when initializing BertmodelRE: ['cls.seq_relationship.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias']
+- This IS expected if you are initializing BertmodelRE from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertmodelRE from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertmodelRE were not initialized from the model checkpoint at ./model/bert-base-uncased and are newly initialized: ['bert.classification_layer.bias', 'bert.classification_layer.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+Some weights of the model checkpoint at ./model/bert-base-uncased were not used when initializing BertmodelRE: ['cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.bias']
+- This IS expected if you are initializing BertmodelRE from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertmodelRE from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertmodelRE were not initialized from the model checkpoint at ./model/bert-base-uncased and are newly initialized: ['bert.classification_layer.bias', 'bert.classification_layer.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+Some weights of the model checkpoint at ./model/bert-base-uncased were not used when initializing BertmodelRE: ['cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight']
+- This IS expected if you are initializing BertmodelRE from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertmodelRE from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertmodelRE were not initialized from the model checkpoint at ./model/bert-base-uncased and are newly initialized: ['bert.classification_layer.weight', 'bert.classification_layer.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of the model checkpoint at ./model/bert-base-uncased were not used when initializing BertmodelRE: ['cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.weight']
+- This IS expected if you are initializing BertmodelRE from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertmodelRE from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertmodelRE were not initialized from the model checkpoint at ./model/bert-base-uncased and are newly initialized: ['bert.classification_layer.bias', 'bert.classification_layer.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+12/22/2021 06:51:11 PM [INFO]: finish initing paramters
+
+Some weights of the model checkpoint at ./model/bert-base-uncased were not used when initializing BertmodelRE: ['cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias']
+- This IS expected if you are initializing BertmodelRE from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertmodelRE from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertmodelRE were not initialized from the model checkpoint at ./model/bert-base-uncased and are newly initialized: ['bert.classification_layer.weight', 'bert.classification_layer.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+Some weights of the model checkpoint at ./model/bert-base-uncased were not used when initializing BertmodelRE: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertmodelRE from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertmodelRE from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertmodelRE were not initialized from the model checkpoint at ./model/bert-base-uncased and are newly initialized: ['bert.classification_layer.bias', 'bert.classification_layer.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+libibverbs: Warning: couldn't load driver '/usr/lib/libibverbs/libmlx5': /usr/lib/libibverbs/libmlx5-rdmav2.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver '/usr/lib/libibverbs/libmlx4': /usr/lib/libibverbs/libmlx4-rdmav2.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs1
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
+libibverbs: Warning: couldn't load driver '/usr/lib/libibverbs/libmlx5': /usr/lib/libibverbs/libmlx5-rdmav2.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver '/usr/lib/libibverbs/libmlx4': /usr/lib/libibverbs/libmlx4-rdmav2.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs1
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
+libibverbs: Warning: couldn't load driver '/usr/lib/libibverbs/libmlx5': /usr/lib/libibverbs/libmlx5-rdmav2.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver '/usr/lib/libibverbs/libmlx4': /usr/lib/libibverbs/libmlx4-rdmav2.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs1
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
+libibverbs: Warning: couldn't load driver '/usr/lib/libibverbs/libmlx5': /usr/lib/libibverbs/libmlx5-rdmav2.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver '/usr/lib/libibverbs/libmlx4': /usr/lib/libibverbs/libmlx4-rdmav2.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs1
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
+libibverbs: Warning: couldn't load driver '/usr/lib/libibverbs/libmlx5': /usr/lib/libibverbs/libmlx5-rdmav2.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver '/usr/lib/libibverbs/libmlx4': /usr/lib/libibverbs/libmlx4-rdmav2.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs1
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
+libibverbs: Warning: couldn't load driver '/usr/lib/libibverbs/libmlx5': /usr/lib/libibverbs/libmlx5-rdmav2.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver '/usr/lib/libibverbs/libmlx5': /usr/lib/libibverbs/libmlx5-rdmav2.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver '/usr/lib/libibverbs/libmlx4': /usr/lib/libibverbs/libmlx4-rdmav2.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver '/usr/lib/libibverbs/libmlx4': /usr/lib/libibverbs/libmlx4-rdmav2.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs1
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs1
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
+libibverbs: Warning: couldn't load driver '/usr/lib/libibverbs/libmlx5': /usr/lib/libibverbs/libmlx5-rdmav2.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver '/usr/lib/libibverbs/libmlx4': /usr/lib/libibverbs/libmlx4-rdmav2.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs1
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
+12/22/2021 06:51:17 PM [INFO]: Frezzing most of Bert layers, Activate Last Bert encoder layer and FC layer.
+12/22/2021 06:51:17 PM [INFO]: Frezzing most of Bert layers, Activate Last Bert encoder layer and FC layer.
+12/22/2021 06:51:17 PM [INFO]: Frezzing most of Bert layers, Activate Last Bert encoder layer and FC layer.
+12/22/2021 06:51:17 PM [INFO]: Frezzing most of Bert layers, Activate Last Bert encoder layer and FC layer.
+12/22/2021 06:51:17 PM [INFO]: Frezzing most of Bert layers, Activate Last Bert encoder layer and FC layer.
+12/22/2021 06:51:17 PM [INFO]: Frezzing most of Bert layers, Activate Last Bert encoder layer and FC layer.
+12/22/2021 06:51:17 PM [INFO]: Frezzing most of Bert layers, Activate Last Bert encoder layer and FC layer.
+12/22/2021 06:51:17 PM [INFO]: Finish initing all processors.
+12/22/2021 06:51:17 PM [INFO]: Frezzing most of Bert layers, Activate Last Bert encoder layer and FC layer.
+
+Invalid rows/total: 0/2717
+[FROZE]: module.embeddings.word_embeddings.weight
+[FROZE]: module.embeddings.position_embeddings.weight
+[FROZE]: module.embeddings.token_type_embeddings.weight
+[FROZE]: module.embeddings.LayerNorm.weight
+[FROZE]: module.embeddings.LayerNorm.bias
+[FROZE]: module.encoder.layer.0.attention.self.query.weight
+[FROZE]: module.encoder.layer.0.attention.self.query.bias
+[FROZE]: module.encoder.layer.0.attention.self.key.weight
+[FROZE]: module.encoder.layer.0.attention.self.key.bias
+[FROZE]: module.encoder.layer.0.attention.self.value.weight
+[FROZE]: module.encoder.layer.0.attention.self.value.bias
+[FROZE]: module.encoder.layer.0.attention.output.dense.weight
+[FROZE]: module.encoder.layer.0.attention.output.dense.bias
+[FROZE]: module.encoder.layer.0.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.0.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.0.intermediate.dense.weight
+[FROZE]: module.encoder.layer.0.intermediate.dense.bias
+[FROZE]: module.encoder.layer.0.output.dense.weight
+[FROZE]: module.encoder.layer.0.output.dense.bias
+[FROZE]: module.encoder.layer.0.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.0.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.1.attention.self.query.weight
+[FROZE]: module.encoder.layer.1.attention.self.query.bias
+[FROZE]: module.encoder.layer.1.attention.self.key.weight
+[FROZE]: module.encoder.layer.1.attention.self.key.bias
+[FROZE]: module.encoder.layer.1.attention.self.value.weight
+[FROZE]: module.encoder.layer.1.attention.self.value.bias
+[FROZE]: module.encoder.layer.1.attention.output.dense.weight
+[FROZE]: module.encoder.layer.1.attention.output.dense.bias
+[FROZE]: module.encoder.layer.1.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.1.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.1.intermediate.dense.weight
+[FROZE]: module.encoder.layer.1.intermediate.dense.bias
+[FROZE]: module.encoder.layer.1.output.dense.weight
+[FROZE]: module.encoder.layer.1.output.dense.bias
+[FROZE]: module.encoder.layer.1.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.1.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.2.attention.self.query.weight
+[FROZE]: module.encoder.layer.2.attention.self.query.bias
+[FROZE]: module.encoder.layer.2.attention.self.key.weight
+[FROZE]: module.encoder.layer.2.attention.self.key.bias
+[FROZE]: module.encoder.layer.2.attention.self.value.weight
+[FROZE]: module.encoder.layer.2.attention.self.value.bias
+[FROZE]: module.encoder.layer.2.attention.output.dense.weight
+[FROZE]: module.encoder.layer.2.attention.output.dense.bias
+[FROZE]: module.encoder.layer.2.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.2.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.2.intermediate.dense.weight
+[FROZE]: module.encoder.layer.2.intermediate.dense.bias
+[FROZE]: module.encoder.layer.2.output.dense.weight
+[FROZE]: module.encoder.layer.2.output.dense.bias
+[FROZE]: module.encoder.layer.2.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.2.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.3.attention.self.query.weight
+[FROZE]: module.encoder.layer.3.attention.self.query.bias
+[FROZE]: module.encoder.layer.3.attention.self.key.weight
+[FROZE]: module.encoder.layer.3.attention.self.key.bias
+[FROZE]: module.encoder.layer.3.attention.self.value.weight
+[FROZE]: module.encoder.layer.3.attention.self.value.bias
+[FROZE]: module.encoder.layer.3.attention.output.dense.weight
+[FROZE]: module.encoder.layer.3.attention.output.dense.bias
+[FROZE]: module.encoder.layer.3.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.3.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.3.intermediate.dense.weight
+[FROZE]: module.encoder.layer.3.intermediate.dense.bias
+[FROZE]: module.encoder.layer.3.output.dense.weight
+[FROZE]: module.encoder.layer.3.output.dense.bias
+[FROZE]: module.encoder.layer.3.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.3.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.4.attention.self.query.weight
+[FROZE]: module.encoder.layer.4.attention.self.query.bias
+[FROZE]: module.encoder.layer.4.attention.self.key.weight
+[FROZE]: module.encoder.layer.4.attention.self.key.bias
+[FROZE]: module.encoder.layer.4.attention.self.value.weight
+[FROZE]: module.encoder.layer.4.attention.self.value.bias
+[FROZE]: module.encoder.layer.4.attention.output.dense.weight
+[FROZE]: module.encoder.layer.4.attention.output.dense.bias
+[FROZE]: module.encoder.layer.4.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.4.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.4.intermediate.dense.weight
+[FROZE]: module.encoder.layer.4.intermediate.dense.bias
+[FROZE]: module.encoder.layer.4.output.dense.weight
+[FROZE]: module.encoder.layer.4.output.dense.bias
+[FROZE]: module.encoder.layer.4.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.4.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.5.attention.self.query.weight
+[FROZE]: module.encoder.layer.5.attention.self.query.bias
+[FROZE]: module.encoder.layer.5.attention.self.key.weight
+[FROZE]: module.encoder.layer.5.attention.self.key.bias
+[FROZE]: module.encoder.layer.5.attention.self.value.weight
+[FROZE]: module.encoder.layer.5.attention.self.value.bias
+[FROZE]: module.encoder.layer.5.attention.output.dense.weight
+[FROZE]: module.encoder.layer.5.attention.output.dense.bias
+[FROZE]: module.encoder.layer.5.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.5.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.5.intermediate.dense.weight
+[FROZE]: module.encoder.layer.5.intermediate.dense.bias
+[FROZE]: module.encoder.layer.5.output.dense.weight
+[FROZE]: module.encoder.layer.5.output.dense.bias
+[FROZE]: module.encoder.layer.5.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.5.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.6.attention.self.query.weight
+[FROZE]: module.encoder.layer.6.attention.self.query.bias
+[FROZE]: module.encoder.layer.6.attention.self.key.weight
+[FROZE]: module.encoder.layer.6.attention.self.key.bias
+[FROZE]: module.encoder.layer.6.attention.self.value.weight
+[FROZE]: module.encoder.layer.6.attention.self.value.bias
+[FROZE]: module.encoder.layer.6.attention.output.dense.weight
+[FROZE]: module.encoder.layer.6.attention.output.dense.bias
+[FROZE]: module.encoder.layer.6.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.6.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.6.intermediate.dense.weight
+[FROZE]: module.encoder.layer.6.intermediate.dense.bias
+[FROZE]: module.encoder.layer.6.output.dense.weight
+[FROZE]: module.encoder.layer.6.output.dense.bias
+[FROZE]: module.encoder.layer.6.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.6.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.7.attention.self.query.weight
+[FROZE]: module.encoder.layer.7.attention.self.query.bias
+[FROZE]: module.encoder.layer.7.attention.self.key.weight
+[FROZE]: module.encoder.layer.7.attention.self.key.bias
+[FROZE]: module.encoder.layer.7.attention.self.value.weight
+[FROZE]: module.encoder.layer.7.attention.self.value.bias
+[FROZE]: module.encoder.layer.7.attention.output.dense.weight
+[FROZE]: module.encoder.layer.7.attention.output.dense.bias
+[FROZE]: module.encoder.layer.7.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.7.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.7.intermediate.dense.weight
+[FROZE]: module.encoder.layer.7.intermediate.dense.bias
+[FROZE]: module.encoder.layer.7.output.dense.weight
+[FROZE]: module.encoder.layer.7.output.dense.bias
+[FROZE]: module.encoder.layer.7.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.7.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.8.attention.self.query.weight
+[FROZE]: module.encoder.layer.8.attention.self.query.bias
+[FROZE]: module.encoder.layer.8.attention.self.key.weight
+[FROZE]: module.encoder.layer.8.attention.self.key.bias
+[FROZE]: module.encoder.layer.8.attention.self.value.weight
+[FROZE]: module.encoder.layer.8.attention.self.value.bias
+[FROZE]: module.encoder.layer.8.attention.output.dense.weight
+[FROZE]: module.encoder.layer.8.attention.output.dense.bias
+
+Invalid rows/total: 0/2717
+[FROZE]: module.embeddings.word_embeddings.weight
+[FROZE]: module.embeddings.position_embeddings.weight
+[FROZE]: module.embeddings.token_type_embeddings.weight
+[FROZE]: module.embeddings.LayerNorm.weight
+[FROZE]: module.embeddings.LayerNorm.bias
+[FROZE]: module.encoder.layer.0.attention.self.query.weight
+[FROZE]: module.encoder.layer.0.attention.self.query.bias
+[FROZE]: module.encoder.layer.0.attention.self.key.weight
+[FROZE]: module.encoder.layer.0.attention.self.key.bias
+[FROZE]: module.encoder.layer.0.attention.self.value.weight
+[FROZE]: module.encoder.layer.0.attention.self.value.bias
+[FROZE]: module.encoder.layer.0.attention.output.dense.weight
+[FROZE]: module.encoder.layer.0.attention.output.dense.bias
+[FROZE]: module.encoder.layer.0.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.0.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.0.intermediate.dense.weight
+[FROZE]: module.encoder.layer.0.intermediate.dense.bias
+[FROZE]: module.encoder.layer.0.output.dense.weight
+[FROZE]: module.encoder.layer.0.output.dense.bias
+[FROZE]: module.encoder.layer.0.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.0.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.1.attention.self.query.weight
+[FROZE]: module.encoder.layer.1.attention.self.query.bias
+[FROZE]: module.encoder.layer.1.attention.self.key.weight
+[FROZE]: module.encoder.layer.1.attention.self.key.bias
+[FROZE]: module.encoder.layer.1.attention.self.value.weight
+[FROZE]: module.encoder.layer.1.attention.self.value.bias
+[FROZE]: module.encoder.layer.1.attention.output.dense.weight
+[FROZE]: module.encoder.layer.1.attention.output.dense.bias
+[FROZE]: module.encoder.layer.1.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.1.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.1.intermediate.dense.weight
+[FROZE]: module.encoder.layer.1.intermediate.dense.bias
+[FROZE]: module.encoder.layer.1.output.dense.weight
+[FROZE]: module.encoder.layer.1.output.dense.bias
+[FROZE]: module.encoder.layer.1.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.1.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.2.attention.self.query.weight
+[FROZE]: module.encoder.layer.2.attention.self.query.bias
+[FROZE]: module.encoder.layer.2.attention.self.key.weight
+[FROZE]: module.encoder.layer.2.attention.self.key.bias
+[FROZE]: module.encoder.layer.2.attention.self.value.weight
+[FROZE]: module.encoder.layer.2.attention.self.value.bias
+[FROZE]: module.encoder.layer.2.attention.output.dense.weight
+[FROZE]: module.encoder.layer.2.attention.output.dense.bias
+[FROZE]: module.encoder.layer.2.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.2.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.2.intermediate.dense.weight
+[FROZE]: module.encoder.layer.2.intermediate.dense.bias
+[FROZE]: module.encoder.layer.2.output.dense.weight
+[FROZE]: module.encoder.layer.2.output.dense.bias
+[FROZE]: module.encoder.layer.2.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.2.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.3.attention.self.query.weight
+[FROZE]: module.encoder.layer.3.attention.self.query.bias
+[FROZE]: module.encoder.layer.3.attention.self.key.weight
+[FROZE]: module.encoder.layer.3.attention.self.key.bias
+[FROZE]: module.encoder.layer.3.attention.self.value.weight
+[FROZE]: module.encoder.layer.3.attention.self.value.bias
+[FROZE]: module.encoder.layer.3.attention.output.dense.weight
+[FROZE]: module.encoder.layer.3.attention.output.dense.bias
+[FROZE]: module.encoder.layer.3.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.3.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.3.intermediate.dense.weight
+[FROZE]: module.encoder.layer.3.intermediate.dense.bias
+[FROZE]: module.encoder.layer.3.output.dense.weight
+[FROZE]: module.encoder.layer.3.output.dense.bias
+[FROZE]: module.encoder.layer.3.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.3.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.4.attention.self.query.weight
+[FROZE]: module.encoder.layer.4.attention.self.query.bias
+[FROZE]: module.encoder.layer.4.attention.self.key.weight
+[FROZE]: module.encoder.layer.4.attention.self.key.bias
+[FROZE]: module.encoder.layer.4.attention.self.value.weight
+[FROZE]: module.encoder.layer.4.attention.self.value.bias
+[FROZE]: module.encoder.layer.4.attention.output.dense.weight
+[FROZE]: module.encoder.layer.4.attention.output.dense.bias
+[FROZE]: module.encoder.layer.4.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.4.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.4.intermediate.dense.weight
+[FROZE]: module.encoder.layer.4.intermediate.dense.bias
+[FROZE]: module.encoder.layer.4.output.dense.weight
+[FROZE]: module.encoder.layer.4.output.dense.bias
+[FROZE]: module.encoder.layer.4.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.4.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.5.attention.self.query.weight
+[FROZE]: module.encoder.layer.5.attention.self.query.bias
+[FROZE]: module.encoder.layer.5.attention.self.key.weight
+[FROZE]: module.encoder.layer.5.attention.self.key.bias
+[FROZE]: module.encoder.layer.5.attention.self.value.weight
+[FROZE]: module.encoder.layer.5.attention.self.value.bias
+[FROZE]: module.encoder.layer.5.attention.output.dense.weight
+[FROZE]: module.encoder.layer.5.attention.output.dense.bias
+[FROZE]: module.encoder.layer.5.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.5.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.5.intermediate.dense.weight
+[FROZE]: module.encoder.layer.5.intermediate.dense.bias
+[FROZE]: module.encoder.layer.5.output.dense.weight
+[FROZE]: module.encoder.layer.5.output.dense.bias
+[FROZE]: module.encoder.layer.5.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.5.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.6.attention.self.query.weight
+[FROZE]: module.encoder.layer.6.attention.self.query.bias
+[FROZE]: module.encoder.layer.6.attention.self.key.weight
+[FROZE]: module.encoder.layer.6.attention.self.key.bias
+[FROZE]: module.encoder.layer.6.attention.self.value.weight
+[FROZE]: module.encoder.layer.6.attention.self.value.bias
+[FROZE]: module.encoder.layer.6.attention.output.dense.weight
+[FROZE]: module.encoder.layer.6.attention.output.dense.bias
+[FROZE]: module.encoder.layer.6.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.6.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.6.intermediate.dense.weight
+[FROZE]: module.encoder.layer.6.intermediate.dense.bias
+[FROZE]: module.encoder.layer.6.output.dense.weight
+[FROZE]: module.encoder.layer.6.output.dense.bias
+[FROZE]: module.encoder.layer.6.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.6.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.7.attention.self.query.weight
+[FROZE]: module.encoder.layer.7.attention.self.query.bias
+[FROZE]: module.encoder.layer.7.attention.self.key.weight
+[FROZE]: module.encoder.layer.7.attention.self.key.bias
+[FROZE]: module.encoder.layer.7.attention.self.value.weight
+[FROZE]: module.encoder.layer.7.attention.self.value.bias
+[FROZE]: module.encoder.layer.7.attention.output.dense.weight
+[FROZE]: module.encoder.layer.7.attention.output.dense.bias
+[FROZE]: module.encoder.layer.7.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.7.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.7.intermediate.dense.weight
+[FROZE]: module.encoder.layer.7.intermediate.dense.bias
+[FROZE]: module.encoder.layer.7.output.dense.weight
+[FROZE]: module.encoder.layer.7.output.dense.bias
+[FROZE]: module.encoder.layer.7.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.7.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.8.attention.self.query.weight
+[FROZE]: module.encoder.layer.8.attention.self.query.bias
+[FROZE]: module.encoder.layer.8.attention.self.key.weight
+[FROZE]: module.encoder.layer.8.attention.self.key.bias
+[FROZE]: module.encoder.layer.8.attention.self.value.weight
+[FROZE]: module.encoder.layer.8.attention.self.value.bias
+[FROZE]: module.encoder.layer.8.attention.output.dense.weight
+[FROZE]: module.encoder.layer.8.attention.output.dense.bias
+
+Invalid rows/total: 0/2717
+[FROZE]: module.embeddings.word_embeddings.weight
+[FROZE]: module.embeddings.position_embeddings.weight
+[FROZE]: module.embeddings.token_type_embeddings.weight
+[FROZE]: module.embeddings.LayerNorm.weight
+[FROZE]: module.embeddings.LayerNorm.bias
+[FROZE]: module.encoder.layer.0.attention.self.query.weight
+[FROZE]: module.encoder.layer.0.attention.self.query.bias
+[FROZE]: module.encoder.layer.0.attention.self.key.weight
+[FROZE]: module.encoder.layer.0.attention.self.key.bias
+[FROZE]: module.encoder.layer.0.attention.self.value.weight
+[FROZE]: module.encoder.layer.0.attention.self.value.bias
+[FROZE]: module.encoder.layer.0.attention.output.dense.weight
+[FROZE]: module.encoder.layer.0.attention.output.dense.bias
+[FROZE]: module.encoder.layer.0.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.0.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.0.intermediate.dense.weight
+[FROZE]: module.encoder.layer.0.intermediate.dense.bias
+[FROZE]: module.encoder.layer.0.output.dense.weight
+[FROZE]: module.encoder.layer.0.output.dense.bias
+[FROZE]: module.encoder.layer.0.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.0.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.1.attention.self.query.weight
+[FROZE]: module.encoder.layer.1.attention.self.query.bias
+[FROZE]: module.encoder.layer.1.attention.self.key.weight
+[FROZE]: module.encoder.layer.1.attention.self.key.bias
+[FROZE]: module.encoder.layer.1.attention.self.value.weight
+[FROZE]: module.encoder.layer.1.attention.self.value.bias
+[FROZE]: module.encoder.layer.1.attention.output.dense.weight
+[FROZE]: module.encoder.layer.1.attention.output.dense.bias
+[FROZE]: module.encoder.layer.1.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.1.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.1.intermediate.dense.weight
+[FROZE]: module.encoder.layer.1.intermediate.dense.bias
+[FROZE]: module.encoder.layer.1.output.dense.weight
+[FROZE]: module.encoder.layer.1.output.dense.bias
+[FROZE]: module.encoder.layer.1.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.1.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.2.attention.self.query.weight
+[FROZE]: module.encoder.layer.2.attention.self.query.bias
+[FROZE]: module.encoder.layer.2.attention.self.key.weight
+[FROZE]: module.encoder.layer.2.attention.self.key.bias
+[FROZE]: module.encoder.layer.2.attention.self.value.weight
+[FROZE]: module.encoder.layer.2.attention.self.value.bias
+[FROZE]: module.encoder.layer.2.attention.output.dense.weight
+[FROZE]: module.encoder.layer.2.attention.output.dense.bias
+[FROZE]: module.encoder.layer.2.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.2.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.2.intermediate.dense.weight
+[FROZE]: module.encoder.layer.2.intermediate.dense.bias
+[FROZE]: module.encoder.layer.2.output.dense.weight
+[FROZE]: module.encoder.layer.2.output.dense.bias
+[FROZE]: module.encoder.layer.2.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.2.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.3.attention.self.query.weight
+[FROZE]: module.encoder.layer.3.attention.self.query.bias
+[FROZE]: module.encoder.layer.3.attention.self.key.weight
+[FROZE]: module.encoder.layer.3.attention.self.key.bias
+[FROZE]: module.encoder.layer.3.attention.self.value.weight
+[FROZE]: module.encoder.layer.3.attention.self.value.bias
+[FROZE]: module.encoder.layer.3.attention.output.dense.weight
+[FROZE]: module.encoder.layer.3.attention.output.dense.bias
+[FROZE]: module.encoder.layer.3.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.3.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.3.intermediate.dense.weight
+[FROZE]: module.encoder.layer.3.intermediate.dense.bias
+[FROZE]: module.encoder.layer.3.output.dense.weight
+[FROZE]: module.encoder.layer.3.output.dense.bias
+[FROZE]: module.encoder.layer.3.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.3.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.4.attention.self.query.weight
+[FROZE]: module.encoder.layer.4.attention.self.query.bias
+[FROZE]: module.encoder.layer.4.attention.self.key.weight
+[FROZE]: module.encoder.layer.4.attention.self.key.bias
+[FROZE]: module.encoder.layer.4.attention.self.value.weight
+[FROZE]: module.encoder.layer.4.attention.self.value.bias
+[FROZE]: module.encoder.layer.4.attention.output.dense.weight
+[FROZE]: module.encoder.layer.4.attention.output.dense.bias
+[FROZE]: module.encoder.layer.4.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.4.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.4.intermediate.dense.weight
+[FROZE]: module.encoder.layer.4.intermediate.dense.bias
+[FROZE]: module.encoder.layer.4.output.dense.weight
+[FROZE]: module.encoder.layer.4.output.dense.bias
+[FROZE]: module.encoder.layer.4.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.4.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.5.attention.self.query.weight
+[FROZE]: module.encoder.layer.5.attention.self.query.bias
+[FROZE]: module.encoder.layer.5.attention.self.key.weight
+[FROZE]: module.encoder.layer.5.attention.self.key.bias
+[FROZE]: module.encoder.layer.5.attention.self.value.weight
+[FROZE]: module.encoder.layer.5.attention.self.value.bias
+[FROZE]: module.encoder.layer.5.attention.output.dense.weight
+[FROZE]: module.encoder.layer.5.attention.output.dense.bias
+[FROZE]: module.encoder.layer.5.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.5.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.5.intermediate.dense.weight
+[FROZE]: module.encoder.layer.5.intermediate.dense.bias
+[FROZE]: module.encoder.layer.5.output.dense.weight
+[FROZE]: module.encoder.layer.5.output.dense.bias
+[FROZE]: module.encoder.layer.5.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.5.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.6.attention.self.query.weight
+[FROZE]: module.encoder.layer.6.attention.self.query.bias
+[FROZE]: module.encoder.layer.6.attention.self.key.weight
+[FROZE]: module.encoder.layer.6.attention.self.key.bias
+[FROZE]: module.encoder.layer.6.attention.self.value.weight
+[FROZE]: module.encoder.layer.6.attention.self.value.bias
+[FROZE]: module.encoder.layer.6.attention.output.dense.weight
+[FROZE]: module.encoder.layer.6.attention.output.dense.bias
+[FROZE]: module.encoder.layer.6.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.6.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.6.intermediate.dense.weight
+[FROZE]: module.encoder.layer.6.intermediate.dense.bias
+[FROZE]: module.encoder.layer.6.output.dense.weight
+[FROZE]: module.encoder.layer.6.output.dense.bias
+[FROZE]: module.encoder.layer.6.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.6.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.7.attention.self.query.weight
+[FROZE]: module.encoder.layer.7.attention.self.query.bias
+[FROZE]: module.encoder.layer.7.attention.self.key.weight
+[FROZE]: module.encoder.layer.7.attention.self.key.bias
+[FROZE]: module.encoder.layer.7.attention.self.value.weight
+[FROZE]: module.encoder.layer.7.attention.self.value.bias
+[FROZE]: module.encoder.layer.7.attention.output.dense.weight
+[FROZE]: module.encoder.layer.7.attention.output.dense.bias
+[FROZE]: module.encoder.layer.7.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.7.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.7.intermediate.dense.weight
+[FROZE]: module.encoder.layer.7.intermediate.dense.bias
+[FROZE]: module.encoder.layer.7.output.dense.weight
+[FROZE]: module.encoder.layer.7.output.dense.bias
+[FROZE]: module.encoder.layer.7.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.7.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.8.attention.self.query.weight
+[FROZE]: module.encoder.layer.8.attention.self.query.bias
+[FROZE]: module.encoder.layer.8.attention.self.key.weight
+[FROZE]: module.encoder.layer.8.attention.self.key.bias
+[FROZE]: module.encoder.layer.8.attention.self.value.weight
+[FROZE]: module.encoder.layer.8.attention.self.value.bias
+[FROZE]: module.encoder.layer.8.attention.output.dense.weight
+[FROZE]: module.encoder.layer.8.attention.output.dense.bias
+
+Invalid rows/total: 0/2717
+[FROZE]: module.embeddings.word_embeddings.weight
+[FROZE]: module.embeddings.position_embeddings.weight
+[FROZE]: module.embeddings.token_type_embeddings.weight
+[FROZE]: module.embeddings.LayerNorm.weight
+[FROZE]: module.embeddings.LayerNorm.bias
+[FROZE]: module.encoder.layer.0.attention.self.query.weight
+[FROZE]: module.encoder.layer.0.attention.self.query.bias
+[FROZE]: module.encoder.layer.0.attention.self.key.weight
+[FROZE]: module.encoder.layer.0.attention.self.key.bias
+[FROZE]: module.encoder.layer.0.attention.self.value.weight
+[FROZE]: module.encoder.layer.0.attention.self.value.bias
+[FROZE]: module.encoder.layer.0.attention.output.dense.weight
+[FROZE]: module.encoder.layer.0.attention.output.dense.bias
+[FROZE]: module.encoder.layer.0.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.0.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.0.intermediate.dense.weight
+[FROZE]: module.encoder.layer.0.intermediate.dense.bias
+[FROZE]: module.encoder.layer.0.output.dense.weight
+[FROZE]: module.encoder.layer.0.output.dense.bias
+[FROZE]: module.encoder.layer.0.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.0.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.1.attention.self.query.weight
+[FROZE]: module.encoder.layer.1.attention.self.query.bias
+[FROZE]: module.encoder.layer.1.attention.self.key.weight
+[FROZE]: module.encoder.layer.1.attention.self.key.bias
+[FROZE]: module.encoder.layer.1.attention.self.value.weight
+[FROZE]: module.encoder.layer.1.attention.self.value.bias
+[FROZE]: module.encoder.layer.1.attention.output.dense.weight
+[FROZE]: module.encoder.layer.1.attention.output.dense.bias
+[FROZE]: module.encoder.layer.1.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.1.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.1.intermediate.dense.weight
+[FROZE]: module.encoder.layer.1.intermediate.dense.bias
+[FROZE]: module.encoder.layer.1.output.dense.weight
+[FROZE]: module.encoder.layer.1.output.dense.bias
+[FROZE]: module.encoder.layer.1.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.1.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.2.attention.self.query.weight
+[FROZE]: module.encoder.layer.2.attention.self.query.bias
+[FROZE]: module.encoder.layer.2.attention.self.key.weight
+[FROZE]: module.encoder.layer.2.attention.self.key.bias
+[FROZE]: module.encoder.layer.2.attention.self.value.weight
+[FROZE]: module.encoder.layer.2.attention.self.value.bias
+[FROZE]: module.encoder.layer.2.attention.output.dense.weight
+[FROZE]: module.encoder.layer.2.attention.output.dense.bias
+[FROZE]: module.encoder.layer.2.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.2.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.2.intermediate.dense.weight
+[FROZE]: module.encoder.layer.2.intermediate.dense.bias
+[FROZE]: module.encoder.layer.2.output.dense.weight
+[FROZE]: module.encoder.layer.2.output.dense.bias
+[FROZE]: module.encoder.layer.2.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.2.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.3.attention.self.query.weight
+[FROZE]: module.encoder.layer.3.attention.self.query.bias
+[FROZE]: module.encoder.layer.3.attention.self.key.weight
+[FROZE]: module.encoder.layer.3.attention.self.key.bias
+[FROZE]: module.encoder.layer.3.attention.self.value.weight
+[FROZE]: module.encoder.layer.3.attention.self.value.bias
+[FROZE]: module.encoder.layer.3.attention.output.dense.weight
+[FROZE]: module.encoder.layer.3.attention.output.dense.bias
+[FROZE]: module.encoder.layer.3.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.3.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.3.intermediate.dense.weight
+[FROZE]: module.encoder.layer.3.intermediate.dense.bias
+[FROZE]: module.encoder.layer.3.output.dense.weight
+[FROZE]: module.encoder.layer.3.output.dense.bias
+[FROZE]: module.encoder.layer.3.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.3.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.4.attention.self.query.weight
+[FROZE]: module.encoder.layer.4.attention.self.query.bias
+[FROZE]: module.encoder.layer.4.attention.self.key.weight
+[FROZE]: module.encoder.layer.4.attention.self.key.bias
+[FROZE]: module.encoder.layer.4.attention.self.value.weight
+[FROZE]: module.encoder.layer.4.attention.self.value.bias
+[FROZE]: module.encoder.layer.4.attention.output.dense.weight
+[FROZE]: module.encoder.layer.4.attention.output.dense.bias
+[FROZE]: module.encoder.layer.4.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.4.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.4.intermediate.dense.weight
+[FROZE]: module.encoder.layer.4.intermediate.dense.bias
+[FROZE]: module.encoder.layer.4.output.dense.weight
+[FROZE]: module.encoder.layer.4.output.dense.bias
+[FROZE]: module.encoder.layer.4.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.4.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.5.attention.self.query.weight
+[FROZE]: module.encoder.layer.5.attention.self.query.bias
+[FROZE]: module.encoder.layer.5.attention.self.key.weight
+[FROZE]: module.encoder.layer.5.attention.self.key.bias
+[FROZE]: module.encoder.layer.5.attention.self.value.weight
+[FROZE]: module.encoder.layer.5.attention.self.value.bias
+[FROZE]: module.encoder.layer.5.attention.output.dense.weight
+[FROZE]: module.encoder.layer.5.attention.output.dense.bias
+[FROZE]: module.encoder.layer.5.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.5.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.5.intermediate.dense.weight
+[FROZE]: module.encoder.layer.5.intermediate.dense.bias
+[FROZE]: module.encoder.layer.5.output.dense.weight
+[FROZE]: module.encoder.layer.5.output.dense.bias
+[FROZE]: module.encoder.layer.5.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.5.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.6.attention.self.query.weight
+[FROZE]: module.encoder.layer.6.attention.self.query.bias
+[FROZE]: module.encoder.layer.6.attention.self.key.weight
+[FROZE]: module.encoder.layer.6.attention.self.key.bias
+[FROZE]: module.encoder.layer.6.attention.self.value.weight
+[FROZE]: module.encoder.layer.6.attention.self.value.bias
+[FROZE]: module.encoder.layer.6.attention.output.dense.weight
+[FROZE]: module.encoder.layer.6.attention.output.dense.bias
+[FROZE]: module.encoder.layer.6.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.6.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.6.intermediate.dense.weight
+[FROZE]: module.encoder.layer.6.intermediate.dense.bias
+[FROZE]: module.encoder.layer.6.output.dense.weight
+[FROZE]: module.encoder.layer.6.output.dense.bias
+[FROZE]: module.encoder.layer.6.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.6.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.7.attention.self.query.weight
+[FROZE]: module.encoder.layer.7.attention.self.query.bias
+[FROZE]: module.encoder.layer.7.attention.self.key.weight
+[FROZE]: module.encoder.layer.7.attention.self.key.bias
+[FROZE]: module.encoder.layer.7.attention.self.value.weight
+[FROZE]: module.encoder.layer.7.attention.self.value.bias
+[FROZE]: module.encoder.layer.7.attention.output.dense.weight
+[FROZE]: module.encoder.layer.7.attention.output.dense.bias
+[FROZE]: module.encoder.layer.7.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.7.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.7.intermediate.dense.weight
+[FROZE]: module.encoder.layer.7.intermediate.dense.bias
+[FROZE]: module.encoder.layer.7.output.dense.weight
+[FROZE]: module.encoder.layer.7.output.dense.bias
+[FROZE]: module.encoder.layer.7.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.7.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.8.attention.self.query.weight
+[FROZE]: module.encoder.layer.8.attention.self.query.bias
+[FROZE]: module.encoder.layer.8.attention.self.key.weight
+[FROZE]: module.encoder.layer.8.attention.self.key.bias
+[FROZE]: module.encoder.layer.8.attention.self.value.weight
+[FROZE]: module.encoder.layer.8.attention.self.value.bias
+[FROZE]: module.encoder.layer.8.attention.output.dense.weight
+[FROZE]: module.encoder.layer.8.attention.output.dense.bias
+
+Invalid rows/total: 0/2717
+[FROZE]: module.embeddings.word_embeddings.weight
+[FROZE]: module.embeddings.position_embeddings.weight
+[FROZE]: module.embeddings.token_type_embeddings.weight
+[FROZE]: module.embeddings.LayerNorm.weight
+[FROZE]: module.embeddings.LayerNorm.bias
+[FROZE]: module.encoder.layer.0.attention.self.query.weight
+[FROZE]: module.encoder.layer.0.attention.self.query.bias
+[FROZE]: module.encoder.layer.0.attention.self.key.weight
+[FROZE]: module.encoder.layer.0.attention.self.key.bias
+[FROZE]: module.encoder.layer.0.attention.self.value.weight
+[FROZE]: module.encoder.layer.0.attention.self.value.bias
+[FROZE]: module.encoder.layer.0.attention.output.dense.weight
+[FROZE]: module.encoder.layer.0.attention.output.dense.bias
+[FROZE]: module.encoder.layer.0.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.0.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.0.intermediate.dense.weight
+[FROZE]: module.encoder.layer.0.intermediate.dense.bias
+[FROZE]: module.encoder.layer.0.output.dense.weight
+[FROZE]: module.encoder.layer.0.output.dense.bias
+[FROZE]: module.encoder.layer.0.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.0.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.1.attention.self.query.weight
+[FROZE]: module.encoder.layer.1.attention.self.query.bias
+[FROZE]: module.encoder.layer.1.attention.self.key.weight
+[FROZE]: module.encoder.layer.1.attention.self.key.bias
+[FROZE]: module.encoder.layer.1.attention.self.value.weight
+[FROZE]: module.encoder.layer.1.attention.self.value.bias
+[FROZE]: module.encoder.layer.1.attention.output.dense.weight
+[FROZE]: module.encoder.layer.1.attention.output.dense.bias
+[FROZE]: module.encoder.layer.1.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.1.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.1.intermediate.dense.weight
+[FROZE]: module.encoder.layer.1.intermediate.dense.bias
+[FROZE]: module.encoder.layer.1.output.dense.weight
+[FROZE]: module.encoder.layer.1.output.dense.bias
+[FROZE]: module.encoder.layer.1.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.1.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.2.attention.self.query.weight
+[FROZE]: module.encoder.layer.2.attention.self.query.bias
+[FROZE]: module.encoder.layer.2.attention.self.key.weight
+[FROZE]: module.encoder.layer.2.attention.self.key.bias
+[FROZE]: module.encoder.layer.2.attention.self.value.weight
+[FROZE]: module.encoder.layer.2.attention.self.value.bias
+[FROZE]: module.encoder.layer.2.attention.output.dense.weight
+[FROZE]: module.encoder.layer.2.attention.output.dense.bias
+[FROZE]: module.encoder.layer.2.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.2.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.2.intermediate.dense.weight
+[FROZE]: module.encoder.layer.2.intermediate.dense.bias
+[FROZE]: module.encoder.layer.2.output.dense.weight
+[FROZE]: module.encoder.layer.2.output.dense.bias
+[FROZE]: module.encoder.layer.2.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.2.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.3.attention.self.query.weight
+[FROZE]: module.encoder.layer.3.attention.self.query.bias
+[FROZE]: module.encoder.layer.3.attention.self.key.weight
+[FROZE]: module.encoder.layer.3.attention.self.key.bias
+[FROZE]: module.encoder.layer.3.attention.self.value.weight
+[FROZE]: module.encoder.layer.3.attention.self.value.bias
+[FROZE]: module.encoder.layer.3.attention.output.dense.weight
+[FROZE]: module.encoder.layer.3.attention.output.dense.bias
+[FROZE]: module.encoder.layer.3.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.3.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.3.intermediate.dense.weight
+[FROZE]: module.encoder.layer.3.intermediate.dense.bias
+[FROZE]: module.encoder.layer.3.output.dense.weight
+[FROZE]: module.encoder.layer.3.output.dense.bias
+[FROZE]: module.encoder.layer.3.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.3.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.4.attention.self.query.weight
+[FROZE]: module.encoder.layer.4.attention.self.query.bias
+[FROZE]: module.encoder.layer.4.attention.self.key.weight
+[FROZE]: module.encoder.layer.4.attention.self.key.bias
+[FROZE]: module.encoder.layer.4.attention.self.value.weight
+[FROZE]: module.encoder.layer.4.attention.self.value.bias
+[FROZE]: module.encoder.layer.4.attention.output.dense.weight
+[FROZE]: module.encoder.layer.4.attention.output.dense.bias
+[FROZE]: module.encoder.layer.4.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.4.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.4.intermediate.dense.weight
+[FROZE]: module.encoder.layer.4.intermediate.dense.bias
+[FROZE]: module.encoder.layer.4.output.dense.weight
+[FROZE]: module.encoder.layer.4.output.dense.bias
+[FROZE]: module.encoder.layer.4.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.4.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.5.attention.self.query.weight
+[FROZE]: module.encoder.layer.5.attention.self.query.bias
+[FROZE]: module.encoder.layer.5.attention.self.key.weight
+[FROZE]: module.encoder.layer.5.attention.self.key.bias
+[FROZE]: module.encoder.layer.5.attention.self.value.weight
+[FROZE]: module.encoder.layer.5.attention.self.value.bias
+[FROZE]: module.encoder.layer.5.attention.output.dense.weight
+[FROZE]: module.encoder.layer.5.attention.output.dense.bias
+[FROZE]: module.encoder.layer.5.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.5.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.5.intermediate.dense.weight
+[FROZE]: module.encoder.layer.5.intermediate.dense.bias
+[FROZE]: module.encoder.layer.5.output.dense.weight
+[FROZE]: module.encoder.layer.5.output.dense.bias
+[FROZE]: module.encoder.layer.5.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.5.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.6.attention.self.query.weight
+[FROZE]: module.encoder.layer.6.attention.self.query.bias
+[FROZE]: module.encoder.layer.6.attention.self.key.weight
+[FROZE]: module.encoder.layer.6.attention.self.key.bias
+[FROZE]: module.encoder.layer.6.attention.self.value.weight
+[FROZE]: module.encoder.layer.6.attention.self.value.bias
+[FROZE]: module.encoder.layer.6.attention.output.dense.weight
+[FROZE]: module.encoder.layer.6.attention.output.dense.bias
+[FROZE]: module.encoder.layer.6.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.6.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.6.intermediate.dense.weight
+[FROZE]: module.encoder.layer.6.intermediate.dense.bias
+[FROZE]: module.encoder.layer.6.output.dense.weight
+[FROZE]: module.encoder.layer.6.output.dense.bias
+[FROZE]: module.encoder.layer.6.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.6.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.7.attention.self.query.weight
+[FROZE]: module.encoder.layer.7.attention.self.query.bias
+[FROZE]: module.encoder.layer.7.attention.self.key.weight
+[FROZE]: module.encoder.layer.7.attention.self.key.bias
+[FROZE]: module.encoder.layer.7.attention.self.value.weight
+[FROZE]: module.encoder.layer.7.attention.self.value.bias
+[FROZE]: module.encoder.layer.7.attention.output.dense.weight
+[FROZE]: module.encoder.layer.7.attention.output.dense.bias
+[FROZE]: module.encoder.layer.7.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.7.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.7.intermediate.dense.weight
+[FROZE]: module.encoder.layer.7.intermediate.dense.bias
+[FROZE]: module.encoder.layer.7.output.dense.weight
+[FROZE]: module.encoder.layer.7.output.dense.bias
+[FROZE]: module.encoder.layer.7.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.7.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.8.attention.self.query.weight
+[FROZE]: module.encoder.layer.8.attention.self.query.bias
+[FROZE]: module.encoder.layer.8.attention.self.key.weight
+[FROZE]: module.encoder.layer.8.attention.self.key.bias
+[FROZE]: module.encoder.layer.8.attention.self.value.weight
+[FROZE]: module.encoder.layer.8.attention.self.value.bias
+[FROZE]: module.encoder.layer.8.attention.output.dense.weight
+[FROZE]: module.encoder.layer.8.attention.output.dense.bias
+
+Invalid rows/total: 0/2717
+[FROZE]: module.embeddings.word_embeddings.weight
+[FROZE]: module.embeddings.position_embeddings.weight
+[FROZE]: module.embeddings.token_type_embeddings.weight
+[FROZE]: module.embeddings.LayerNorm.weight
+[FROZE]: module.embeddings.LayerNorm.bias
+[FROZE]: module.encoder.layer.0.attention.self.query.weight
+[FROZE]: module.encoder.layer.0.attention.self.query.bias
+[FROZE]: module.encoder.layer.0.attention.self.key.weight
+[FROZE]: module.encoder.layer.0.attention.self.key.bias
+[FROZE]: module.encoder.layer.0.attention.self.value.weight
+[FROZE]: module.encoder.layer.0.attention.self.value.bias
+[FROZE]: module.encoder.layer.0.attention.output.dense.weight
+[FROZE]: module.encoder.layer.0.attention.output.dense.bias
+[FROZE]: module.encoder.layer.0.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.0.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.0.intermediate.dense.weight
+[FROZE]: module.encoder.layer.0.intermediate.dense.bias
+[FROZE]: module.encoder.layer.0.output.dense.weight
+[FROZE]: module.encoder.layer.0.output.dense.bias
+[FROZE]: module.encoder.layer.0.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.0.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.1.attention.self.query.weight
+[FROZE]: module.encoder.layer.1.attention.self.query.bias
+[FROZE]: module.encoder.layer.1.attention.self.key.weight
+[FROZE]: module.encoder.layer.1.attention.self.key.bias
+[FROZE]: module.encoder.layer.1.attention.self.value.weight
+[FROZE]: module.encoder.layer.1.attention.self.value.bias
+[FROZE]: module.encoder.layer.1.attention.output.dense.weight
+[FROZE]: module.encoder.layer.1.attention.output.dense.bias
+[FROZE]: module.encoder.layer.1.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.1.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.1.intermediate.dense.weight
+[FROZE]: module.encoder.layer.1.intermediate.dense.bias
+[FROZE]: module.encoder.layer.1.output.dense.weight
+[FROZE]: module.encoder.layer.1.output.dense.bias
+[FROZE]: module.encoder.layer.1.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.1.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.2.attention.self.query.weight
+[FROZE]: module.encoder.layer.2.attention.self.query.bias
+[FROZE]: module.encoder.layer.2.attention.self.key.weight
+[FROZE]: module.encoder.layer.2.attention.self.key.bias
+[FROZE]: module.encoder.layer.2.attention.self.value.weight
+[FROZE]: module.encoder.layer.2.attention.self.value.bias
+[FROZE]: module.encoder.layer.2.attention.output.dense.weight
+[FROZE]: module.encoder.layer.2.attention.output.dense.bias
+[FROZE]: module.encoder.layer.2.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.2.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.2.intermediate.dense.weight
+[FROZE]: module.encoder.layer.2.intermediate.dense.bias
+[FROZE]: module.encoder.layer.2.output.dense.weight
+[FROZE]: module.encoder.layer.2.output.dense.bias
+[FROZE]: module.encoder.layer.2.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.2.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.3.attention.self.query.weight
+[FROZE]: module.encoder.layer.3.attention.self.query.bias
+[FROZE]: module.encoder.layer.3.attention.self.key.weight
+[FROZE]: module.encoder.layer.3.attention.self.key.bias
+[FROZE]: module.encoder.layer.3.attention.self.value.weight
+[FROZE]: module.encoder.layer.3.attention.self.value.bias
+[FROZE]: module.encoder.layer.3.attention.output.dense.weight
+[FROZE]: module.encoder.layer.3.attention.output.dense.bias
+[FROZE]: module.encoder.layer.3.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.3.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.3.intermediate.dense.weight
+[FROZE]: module.encoder.layer.3.intermediate.dense.bias
+[FROZE]: module.encoder.layer.3.output.dense.weight
+[FROZE]: module.encoder.layer.3.output.dense.bias
+[FROZE]: module.encoder.layer.3.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.3.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.4.attention.self.query.weight
+[FROZE]: module.encoder.layer.4.attention.self.query.bias
+[FROZE]: module.encoder.layer.4.attention.self.key.weight
+[FROZE]: module.encoder.layer.4.attention.self.key.bias
+[FROZE]: module.encoder.layer.4.attention.self.value.weight
+[FROZE]: module.encoder.layer.4.attention.self.value.bias
+[FROZE]: module.encoder.layer.4.attention.output.dense.weight
+[FROZE]: module.encoder.layer.4.attention.output.dense.bias
+[FROZE]: module.encoder.layer.4.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.4.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.4.intermediate.dense.weight
+[FROZE]: module.encoder.layer.4.intermediate.dense.bias
+[FROZE]: module.encoder.layer.4.output.dense.weight
+[FROZE]: module.encoder.layer.4.output.dense.bias
+[FROZE]: module.encoder.layer.4.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.4.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.5.attention.self.query.weight
+[FROZE]: module.encoder.layer.5.attention.self.query.bias
+[FROZE]: module.encoder.layer.5.attention.self.key.weight
+[FROZE]: module.encoder.layer.5.attention.self.key.bias
+[FROZE]: module.encoder.layer.5.attention.self.value.weight
+[FROZE]: module.encoder.layer.5.attention.self.value.bias
+[FROZE]: module.encoder.layer.5.attention.output.dense.weight
+[FROZE]: module.encoder.layer.5.attention.output.dense.bias
+[FROZE]: module.encoder.layer.5.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.5.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.5.intermediate.dense.weight
+[FROZE]: module.encoder.layer.5.intermediate.dense.bias
+[FROZE]: module.encoder.layer.5.output.dense.weight
+[FROZE]: module.encoder.layer.5.output.dense.bias
+[FROZE]: module.encoder.layer.5.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.5.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.6.attention.self.query.weight
+[FROZE]: module.encoder.layer.6.attention.self.query.bias
+[FROZE]: module.encoder.layer.6.attention.self.key.weight
+[FROZE]: module.encoder.layer.6.attention.self.key.bias
+[FROZE]: module.encoder.layer.6.attention.self.value.weight
+[FROZE]: module.encoder.layer.6.attention.self.value.bias
+[FROZE]: module.encoder.layer.6.attention.output.dense.weight
+[FROZE]: module.encoder.layer.6.attention.output.dense.bias
+[FROZE]: module.encoder.layer.6.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.6.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.6.intermediate.dense.weight
+[FROZE]: module.encoder.layer.6.intermediate.dense.bias
+[FROZE]: module.encoder.layer.6.output.dense.weight
+[FROZE]: module.encoder.layer.6.output.dense.bias
+[FROZE]: module.encoder.layer.6.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.6.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.7.attention.self.query.weight
+[FROZE]: module.encoder.layer.7.attention.self.query.bias
+[FROZE]: module.encoder.layer.7.attention.self.key.weight
+[FROZE]: module.encoder.layer.7.attention.self.key.bias
+[FROZE]: module.encoder.layer.7.attention.self.value.weight
+[FROZE]: module.encoder.layer.7.attention.self.value.bias
+[FROZE]: module.encoder.layer.7.attention.output.dense.weight
+[FROZE]: module.encoder.layer.7.attention.output.dense.bias
+[FROZE]: module.encoder.layer.7.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.7.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.7.intermediate.dense.weight
+[FROZE]: module.encoder.layer.7.intermediate.dense.bias
+[FROZE]: module.encoder.layer.7.output.dense.weight
+[FROZE]: module.encoder.layer.7.output.dense.bias
+[FROZE]: module.encoder.layer.7.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.7.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.8.attention.self.query.weight
+[FROZE]: module.encoder.layer.8.attention.self.query.bias
+[FROZE]: module.encoder.layer.8.attention.self.key.weight
+[FROZE]: module.encoder.layer.8.attention.self.key.bias
+[FROZE]: module.encoder.layer.8.attention.self.value.weight
+[FROZE]: module.encoder.layer.8.attention.self.value.bias
+[FROZE]: module.encoder.layer.8.attention.output.dense.weight
+[FROZE]: module.encoder.layer.8.attention.output.dense.bias
+
+Invalid rows/total: 0/2717
+[FROZE]: module.embeddings.word_embeddings.weight
+[FROZE]: module.embeddings.position_embeddings.weight
+[FROZE]: module.embeddings.token_type_embeddings.weight
+[FROZE]: module.embeddings.LayerNorm.weight
+[FROZE]: module.embeddings.LayerNorm.bias
+[FROZE]: module.encoder.layer.0.attention.self.query.weight
+[FROZE]: module.encoder.layer.0.attention.self.query.bias
+[FROZE]: module.encoder.layer.0.attention.self.key.weight
+[FROZE]: module.encoder.layer.0.attention.self.key.bias
+[FROZE]: module.encoder.layer.0.attention.self.value.weight
+[FROZE]: module.encoder.layer.0.attention.self.value.bias
+[FROZE]: module.encoder.layer.0.attention.output.dense.weight
+[FROZE]: module.encoder.layer.0.attention.output.dense.bias
+[FROZE]: module.encoder.layer.0.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.0.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.0.intermediate.dense.weight
+[FROZE]: module.encoder.layer.0.intermediate.dense.bias
+[FROZE]: module.encoder.layer.0.output.dense.weight
+[FROZE]: module.encoder.layer.0.output.dense.bias
+[FROZE]: module.encoder.layer.0.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.0.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.1.attention.self.query.weight
+[FROZE]: module.encoder.layer.1.attention.self.query.bias
+[FROZE]: module.encoder.layer.1.attention.self.key.weight
+[FROZE]: module.encoder.layer.1.attention.self.key.bias
+[FROZE]: module.encoder.layer.1.attention.self.value.weight
+[FROZE]: module.encoder.layer.1.attention.self.value.bias
+[FROZE]: module.encoder.layer.1.attention.output.dense.weight
+[FROZE]: module.encoder.layer.1.attention.output.dense.bias
+[FROZE]: module.encoder.layer.1.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.1.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.1.intermediate.dense.weight
+[FROZE]: module.encoder.layer.1.intermediate.dense.bias
+[FROZE]: module.encoder.layer.1.output.dense.weight
+[FROZE]: module.encoder.layer.1.output.dense.bias
+[FROZE]: module.encoder.layer.1.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.1.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.2.attention.self.query.weight
+[FROZE]: module.encoder.layer.2.attention.self.query.bias
+[FROZE]: module.encoder.layer.2.attention.self.key.weight
+[FROZE]: module.encoder.layer.2.attention.self.key.bias
+[FROZE]: module.encoder.layer.2.attention.self.value.weight
+[FROZE]: module.encoder.layer.2.attention.self.value.bias
+[FROZE]: module.encoder.layer.2.attention.output.dense.weight
+[FROZE]: module.encoder.layer.2.attention.output.dense.bias
+[FROZE]: module.encoder.layer.2.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.2.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.2.intermediate.dense.weight
+[FROZE]: module.encoder.layer.2.intermediate.dense.bias
+[FROZE]: module.encoder.layer.2.output.dense.weight
+[FROZE]: module.encoder.layer.2.output.dense.bias
+[FROZE]: module.encoder.layer.2.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.2.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.3.attention.self.query.weight
+[FROZE]: module.encoder.layer.3.attention.self.query.bias
+[FROZE]: module.encoder.layer.3.attention.self.key.weight
+[FROZE]: module.encoder.layer.3.attention.self.key.bias
+[FROZE]: module.encoder.layer.3.attention.self.value.weight
+[FROZE]: module.encoder.layer.3.attention.self.value.bias
+[FROZE]: module.encoder.layer.3.attention.output.dense.weight
+[FROZE]: module.encoder.layer.3.attention.output.dense.bias
+[FROZE]: module.encoder.layer.3.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.3.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.3.intermediate.dense.weight
+[FROZE]: module.encoder.layer.3.intermediate.dense.bias
+[FROZE]: module.encoder.layer.3.output.dense.weight
+[FROZE]: module.encoder.layer.3.output.dense.bias
+[FROZE]: module.encoder.layer.3.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.3.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.4.attention.self.query.weight
+[FROZE]: module.encoder.layer.4.attention.self.query.bias
+[FROZE]: module.encoder.layer.4.attention.self.key.weight
+[FROZE]: module.encoder.layer.4.attention.self.key.bias
+[FROZE]: module.encoder.layer.4.attention.self.value.weight
+[FROZE]: module.encoder.layer.4.attention.self.value.bias
+[FROZE]: module.encoder.layer.4.attention.output.dense.weight
+[FROZE]: module.encoder.layer.4.attention.output.dense.bias
+[FROZE]: module.encoder.layer.4.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.4.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.4.intermediate.dense.weight
+[FROZE]: module.encoder.layer.4.intermediate.dense.bias
+[FROZE]: module.encoder.layer.4.output.dense.weight
+[FROZE]: module.encoder.layer.4.output.dense.bias
+[FROZE]: module.encoder.layer.4.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.4.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.5.attention.self.query.weight
+[FROZE]: module.encoder.layer.5.attention.self.query.bias
+[FROZE]: module.encoder.layer.5.attention.self.key.weight
+[FROZE]: module.encoder.layer.5.attention.self.key.bias
+[FROZE]: module.encoder.layer.5.attention.self.value.weight
+[FROZE]: module.encoder.layer.5.attention.self.value.bias
+[FROZE]: module.encoder.layer.5.attention.output.dense.weight
+[FROZE]: module.encoder.layer.5.attention.output.dense.bias
+[FROZE]: module.encoder.layer.5.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.5.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.5.intermediate.dense.weight
+[FROZE]: module.encoder.layer.5.intermediate.dense.bias
+[FROZE]: module.encoder.layer.5.output.dense.weight
+[FROZE]: module.encoder.layer.5.output.dense.bias
+[FROZE]: module.encoder.layer.5.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.5.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.6.attention.self.query.weight
+[FROZE]: module.encoder.layer.6.attention.self.query.bias
+[FROZE]: module.encoder.layer.6.attention.self.key.weight
+[FROZE]: module.encoder.layer.6.attention.self.key.bias
+[FROZE]: module.encoder.layer.6.attention.self.value.weight
+[FROZE]: module.encoder.layer.6.attention.self.value.bias
+[FROZE]: module.encoder.layer.6.attention.output.dense.weight
+[FROZE]: module.encoder.layer.6.attention.output.dense.bias
+[FROZE]: module.encoder.layer.6.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.6.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.6.intermediate.dense.weight
+[FROZE]: module.encoder.layer.6.intermediate.dense.bias
+[FROZE]: module.encoder.layer.6.output.dense.weight
+[FROZE]: module.encoder.layer.6.output.dense.bias
+[FROZE]: module.encoder.layer.6.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.6.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.7.attention.self.query.weight
+[FROZE]: module.encoder.layer.7.attention.self.query.bias
+[FROZE]: module.encoder.layer.7.attention.self.key.weight
+[FROZE]: module.encoder.layer.7.attention.self.key.bias
+[FROZE]: module.encoder.layer.7.attention.self.value.weight
+[FROZE]: module.encoder.layer.7.attention.self.value.bias
+[FROZE]: module.encoder.layer.7.attention.output.dense.weight
+[FROZE]: module.encoder.layer.7.attention.output.dense.bias
+[FROZE]: module.encoder.layer.7.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.7.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.7.intermediate.dense.weight
+[FROZE]: module.encoder.layer.7.intermediate.dense.bias
+[FROZE]: module.encoder.layer.7.output.dense.weight
+[FROZE]: module.encoder.layer.7.output.dense.bias
+[FROZE]: module.encoder.layer.7.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.7.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.8.attention.self.query.weight
+[FROZE]: module.encoder.layer.8.attention.self.query.bias
+[FROZE]: module.encoder.layer.8.attention.self.key.weight
+[FROZE]: module.encoder.layer.8.attention.self.key.bias
+[FROZE]: module.encoder.layer.8.attention.self.value.weight
+[FROZE]: module.encoder.layer.8.attention.self.value.bias
+[FROZE]: module.encoder.layer.8.attention.output.dense.weight
+[FROZE]: module.encoder.layer.8.attention.output.dense.bias
+
+Invalid rows/total: 0/2717
+[FROZE]: module.embeddings.word_embeddings.weight
+[FROZE]: module.embeddings.position_embeddings.weight
+[FROZE]: module.embeddings.token_type_embeddings.weight
+[FROZE]: module.embeddings.LayerNorm.weight
+[FROZE]: module.embeddings.LayerNorm.bias
+[FROZE]: module.encoder.layer.0.attention.self.query.weight
+[FROZE]: module.encoder.layer.0.attention.self.query.bias
+[FROZE]: module.encoder.layer.0.attention.self.key.weight
+[FROZE]: module.encoder.layer.0.attention.self.key.bias
+[FROZE]: module.encoder.layer.0.attention.self.value.weight
+[FROZE]: module.encoder.layer.0.attention.self.value.bias
+[FROZE]: module.encoder.layer.0.attention.output.dense.weight
+[FROZE]: module.encoder.layer.0.attention.output.dense.bias
+[FROZE]: module.encoder.layer.0.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.0.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.0.intermediate.dense.weight
+[FROZE]: module.encoder.layer.0.intermediate.dense.bias
+[FROZE]: module.encoder.layer.0.output.dense.weight
+[FROZE]: module.encoder.layer.0.output.dense.bias
+[FROZE]: module.encoder.layer.0.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.0.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.1.attention.self.query.weight
+[FROZE]: module.encoder.layer.1.attention.self.query.bias
+[FROZE]: module.encoder.layer.1.attention.self.key.weight
+[FROZE]: module.encoder.layer.1.attention.self.key.bias
+[FROZE]: module.encoder.layer.1.attention.self.value.weight
+[FROZE]: module.encoder.layer.1.attention.self.value.bias
+[FROZE]: module.encoder.layer.1.attention.output.dense.weight
+[FROZE]: module.encoder.layer.1.attention.output.dense.bias
+[FROZE]: module.encoder.layer.1.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.1.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.1.intermediate.dense.weight
+[FROZE]: module.encoder.layer.1.intermediate.dense.bias
+[FROZE]: module.encoder.layer.1.output.dense.weight
+[FROZE]: module.encoder.layer.1.output.dense.bias
+[FROZE]: module.encoder.layer.1.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.1.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.2.attention.self.query.weight
+[FROZE]: module.encoder.layer.2.attention.self.query.bias
+[FROZE]: module.encoder.layer.2.attention.self.key.weight
+[FROZE]: module.encoder.layer.2.attention.self.key.bias
+[FROZE]: module.encoder.layer.2.attention.self.value.weight
+[FROZE]: module.encoder.layer.2.attention.self.value.bias
+[FROZE]: module.encoder.layer.2.attention.output.dense.weight
+[FROZE]: module.encoder.layer.2.attention.output.dense.bias
+[FROZE]: module.encoder.layer.2.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.2.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.2.intermediate.dense.weight
+[FROZE]: module.encoder.layer.2.intermediate.dense.bias
+[FROZE]: module.encoder.layer.2.output.dense.weight
+[FROZE]: module.encoder.layer.2.output.dense.bias
+[FROZE]: module.encoder.layer.2.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.2.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.3.attention.self.query.weight
+[FROZE]: module.encoder.layer.3.attention.self.query.bias
+[FROZE]: module.encoder.layer.3.attention.self.key.weight
+[FROZE]: module.encoder.layer.3.attention.self.key.bias
+[FROZE]: module.encoder.layer.3.attention.self.value.weight
+[FROZE]: module.encoder.layer.3.attention.self.value.bias
+[FROZE]: module.encoder.layer.3.attention.output.dense.weight
+[FROZE]: module.encoder.layer.3.attention.output.dense.bias
+[FROZE]: module.encoder.layer.3.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.3.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.3.intermediate.dense.weight
+[FROZE]: module.encoder.layer.3.intermediate.dense.bias
+[FROZE]: module.encoder.layer.3.output.dense.weight
+[FROZE]: module.encoder.layer.3.output.dense.bias
+[FROZE]: module.encoder.layer.3.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.3.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.4.attention.self.query.weight
+[FROZE]: module.encoder.layer.4.attention.self.query.bias
+[FROZE]: module.encoder.layer.4.attention.self.key.weight
+[FROZE]: module.encoder.layer.4.attention.self.key.bias
+[FROZE]: module.encoder.layer.4.attention.self.value.weight
+[FROZE]: module.encoder.layer.4.attention.self.value.bias
+[FROZE]: module.encoder.layer.4.attention.output.dense.weight
+[FROZE]: module.encoder.layer.4.attention.output.dense.bias
+[FROZE]: module.encoder.layer.4.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.4.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.4.intermediate.dense.weight
+[FROZE]: module.encoder.layer.4.intermediate.dense.bias
+[FROZE]: module.encoder.layer.4.output.dense.weight
+[FROZE]: module.encoder.layer.4.output.dense.bias
+[FROZE]: module.encoder.layer.4.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.4.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.5.attention.self.query.weight
+[FROZE]: module.encoder.layer.5.attention.self.query.bias
+[FROZE]: module.encoder.layer.5.attention.self.key.weight
+[FROZE]: module.encoder.layer.5.attention.self.key.bias
+[FROZE]: module.encoder.layer.5.attention.self.value.weight
+[FROZE]: module.encoder.layer.5.attention.self.value.bias
+[FROZE]: module.encoder.layer.5.attention.output.dense.weight
+[FROZE]: module.encoder.layer.5.attention.output.dense.bias
+[FROZE]: module.encoder.layer.5.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.5.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.5.intermediate.dense.weight
+[FROZE]: module.encoder.layer.5.intermediate.dense.bias
+[FROZE]: module.encoder.layer.5.output.dense.weight
+[FROZE]: module.encoder.layer.5.output.dense.bias
+[FROZE]: module.encoder.layer.5.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.5.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.6.attention.self.query.weight
+[FROZE]: module.encoder.layer.6.attention.self.query.bias
+[FROZE]: module.encoder.layer.6.attention.self.key.weight
+[FROZE]: module.encoder.layer.6.attention.self.key.bias
+[FROZE]: module.encoder.layer.6.attention.self.value.weight
+[FROZE]: module.encoder.layer.6.attention.self.value.bias
+[FROZE]: module.encoder.layer.6.attention.output.dense.weight
+[FROZE]: module.encoder.layer.6.attention.output.dense.bias
+[FROZE]: module.encoder.layer.6.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.6.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.6.intermediate.dense.weight
+[FROZE]: module.encoder.layer.6.intermediate.dense.bias
+[FROZE]: module.encoder.layer.6.output.dense.weight
+[FROZE]: module.encoder.layer.6.output.dense.bias
+[FROZE]: module.encoder.layer.6.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.6.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.7.attention.self.query.weight
+[FROZE]: module.encoder.layer.7.attention.self.query.bias
+[FROZE]: module.encoder.layer.7.attention.self.key.weight
+[FROZE]: module.encoder.layer.7.attention.self.key.bias
+[FROZE]: module.encoder.layer.7.attention.self.value.weight
+[FROZE]: module.encoder.layer.7.attention.self.value.bias
+[FROZE]: module.encoder.layer.7.attention.output.dense.weight
+[FROZE]: module.encoder.layer.7.attention.output.dense.bias
+[FROZE]: module.encoder.layer.7.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.7.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.7.intermediate.dense.weight
+[FROZE]: module.encoder.layer.7.intermediate.dense.bias
+[FROZE]: module.encoder.layer.7.output.dense.weight
+[FROZE]: module.encoder.layer.7.output.dense.bias
+[FROZE]: module.encoder.layer.7.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.7.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.8.attention.self.query.weight
+[FROZE]: module.encoder.layer.8.attention.self.query.bias
+[FROZE]: module.encoder.layer.8.attention.self.key.weight
+[FROZE]: module.encoder.layer.8.attention.self.key.bias
+[FROZE]: module.encoder.layer.8.attention.self.value.weight
+[FROZE]: module.encoder.layer.8.attention.self.value.bias
+[FROZE]: module.encoder.layer.8.attention.output.dense.weight
+[FROZE]: module.encoder.layer.8.attention.output.dense.bias
+12/22/2021 06:51:17 PM [INFO]: Starting training!
+12/22/2021 06:51:17 PM [INFO]: Starting training!
+12/22/2021 06:51:17 PM [INFO]: Starting training!
+12/22/2021 06:51:17 PM [INFO]: Starting training!
+12/22/2021 06:51:17 PM [INFO]: Starting training!
+12/22/2021 06:51:17 PM [INFO]: Starting training!
+12/22/2021 06:51:17 PM [INFO]: Starting training!
+12/22/2021 06:51:17 PM [INFO]: Starting training!
+12/22/2021 06:51:22 PM [INFO]: Evaluating test samples...
+[FROZE]: module.encoder.layer.8.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.8.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.8.intermediate.dense.weight
+[FROZE]: module.encoder.layer.8.intermediate.dense.bias
+[FROZE]: module.encoder.layer.8.output.dense.weight
+[FROZE]: module.encoder.layer.8.output.dense.bias
+[FROZE]: module.encoder.layer.8.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.8.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.9.attention.self.query.weight
+[FROZE]: module.encoder.layer.9.attention.self.query.bias
+[FROZE]: module.encoder.layer.9.attention.self.key.weight
+[FROZE]: module.encoder.layer.9.attention.self.key.bias
+[FROZE]: module.encoder.layer.9.attention.self.value.weight
+[FROZE]: module.encoder.layer.9.attention.self.value.bias
+[FROZE]: module.encoder.layer.9.attention.output.dense.weight
+[FROZE]: module.encoder.layer.9.attention.output.dense.bias
+[FROZE]: module.encoder.layer.9.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.9.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.9.intermediate.dense.weight
+[FROZE]: module.encoder.layer.9.intermediate.dense.bias
+[FROZE]: module.encoder.layer.9.output.dense.weight
+[FROZE]: module.encoder.layer.9.output.dense.bias
+[FROZE]: module.encoder.layer.9.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.9.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.10.attention.self.query.weight
+[FROZE]: module.encoder.layer.10.attention.self.query.bias
+[FROZE]: module.encoder.layer.10.attention.self.key.weight
+[FROZE]: module.encoder.layer.10.attention.self.key.bias
+[FROZE]: module.encoder.layer.10.attention.self.value.weight
+[FROZE]: module.encoder.layer.10.attention.self.value.bias
+[FROZE]: module.encoder.layer.10.attention.output.dense.weight
+[FROZE]: module.encoder.layer.10.attention.output.dense.bias
+[FROZE]: module.encoder.layer.10.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.10.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.10.intermediate.dense.weight
+[FROZE]: module.encoder.layer.10.intermediate.dense.bias
+[FROZE]: module.encoder.layer.10.output.dense.weight
+[FROZE]: module.encoder.layer.10.output.dense.bias
+[FROZE]: module.encoder.layer.10.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.10.output.LayerNorm.bias
+[FREE]: module.encoder.layer.11.attention.self.query.weight
+[FREE]: module.encoder.layer.11.attention.self.query.bias
+[FREE]: module.encoder.layer.11.attention.self.key.weight
+[FREE]: module.encoder.layer.11.attention.self.key.bias
+[FREE]: module.encoder.layer.11.attention.self.value.weight
+[FREE]: module.encoder.layer.11.attention.self.value.bias
+[FREE]: module.encoder.layer.11.attention.output.dense.weight
+[FREE]: module.encoder.layer.11.attention.output.dense.bias
+[FREE]: module.encoder.layer.11.attention.output.LayerNorm.weight
+[FREE]: module.encoder.layer.11.attention.output.LayerNorm.bias
+[FREE]: module.encoder.layer.11.intermediate.dense.weight
+[FREE]: module.encoder.layer.11.intermediate.dense.bias
+[FREE]: module.encoder.layer.11.output.dense.weight
+[FREE]: module.encoder.layer.11.output.dense.bias
+[FREE]: module.encoder.layer.11.output.LayerNorm.weight
+[FREE]: module.encoder.layer.11.output.LayerNorm.bias
+[FREE]: module.pooler.dense.weight
+[FREE]: module.pooler.dense.bias
+[FREE]: module.classification_layer.weight
+[FREE]: module.classification_layer.bias
+[Epoch:  1,   768/  8000 items] total loss  2.919, accuracy per batch:  0.062
+[Epoch:  1,  1536/  8000 items] total loss  2.848, accuracy per batch:  0.115
+[Epoch:  1,  2304/  8000 items] total loss  2.830, accuracy per batch:  0.115
+[Epoch:  1,  3072/  8000 items] total loss  2.649, accuracy per batch:  0.219
+[Epoch:  1,  3840/  8000 items] total loss  2.694, accuracy per batch:  0.156
+[Epoch:  1,  4608/  8000 items] total loss  2.688, accuracy per batch:  0.167
+[Epoch:  1,  5376/  8000 items] total loss  2.744, accuracy per batch:  0.115
+[Epoch:  1,  6144/  8000 items] total loss  2.596, accuracy per batch:  0.198
+[Epoch:  1,  6912/  8000 items] total loss  2.471, accuracy per batch:  0.208
+[Epoch:  1,  7680/  8000 items] total loss  2.414, accuracy per batch:  0.250
+  0%|          | 0/85 [00:00<?, ?it/s]  5%|▍         | 4/85 [00:00<00:02, 37.84it/s] 11%|█         | 9/85 [00:00<00:01, 39.75it/s] 16%|█▋        | 14/85 [00:00<00:01, 42.56it/s] 22%|██▏       | 19/85 [00:00<00:01, 39.50it/s] 27%|██▋       | 23/85 [00:00<00:01, 39.23it/s] 32%|███▏      | 27/85 [00:00<00:01, 38.09it/s] 38%|███▊      | 32/85 [00:00<00:01, 40.30it/s] 44%|████▎     | 37/85 [00:00<00:01, 40.30it/s] 49%|████▉     | 42/85 [00:01<00:01, 39.53it/s] 55%|█████▌    | 47/85 [00:01<00:00, 39.82it/s] 60%|██████    | 51/85 [00:01<00:00, 39.54it/s] 66%|██████▌   | 56/85 [00:01<00:00, 39.60it/s] 71%|███████   | 60/85 [00:01<00:00, 39.40it/s] 76%|███████▋  | 65/85 [00:01<00:00, 39.52it/s] 82%|████████▏ | 70/85 [00:01<00:00, 40.46it/s] 88%|████████▊ | 75/85 [00:01<00:00, 39.58it/s] 93%|█████████▎| 79/85 [00:01<00:00, 39.47it/s] 99%|█████████▉| 84/85 [00:02<00:00, 40.48it/s]100%|██████████| 85/85 [00:02<00:00, 39.80it/s]
+/mmu_nlp/wuxing/maguangyuan/miniconda3/envs/NLP_RE/lib/python3.8/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: 9 seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/mmu_nlp/wuxing/maguangyuan/miniconda3/envs/NLP_RE/lib/python3.8/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: 1 seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/mmu_nlp/wuxing/maguangyuan/miniconda3/envs/NLP_RE/lib/python3.8/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: 14 seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/mmu_nlp/wuxing/maguangyuan/miniconda3/envs/NLP_RE/lib/python3.8/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: 11 seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/mmu_nlp/wuxing/maguangyuan/miniconda3/envs/NLP_RE/lib/python3.8/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: 12 seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/mmu_nlp/wuxing/maguangyuan/miniconda3/envs/NLP_RE/lib/python3.8/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: 10 seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/mmu_nlp/wuxing/maguangyuan/miniconda3/envs/NLP_RE/lib/python3.8/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: 7 seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/mmu_nlp/wuxing/maguangyuan/miniconda3/envs/NLP_RE/lib/python3.8/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: 6 seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/mmu_nlp/wuxing/maguangyuan/miniconda3/envs/NLP_RE/lib/python3.8/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: 4 seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/mmu_nlp/wuxing/maguangyuan/miniconda3/envs/NLP_RE/lib/python3.8/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: 15 seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/mmu_nlp/wuxing/maguangyuan/miniconda3/envs/NLP_RE/lib/python3.8/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: 5 seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/mmu_nlp/wuxing/maguangyuan/miniconda3/envs/NLP_RE/lib/python3.8/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: 2 seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/mmu_nlp/wuxing/maguangyuan/miniconda3/envs/NLP_RE/lib/python3.8/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: 8 seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/mmu_nlp/wuxing/maguangyuan/miniconda3/envs/NLP_RE/lib/python3.8/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: 0 seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/mmu_nlp/wuxing/maguangyuan/miniconda3/envs/NLP_RE/lib/python3.8/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: 16 seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/mmu_nlp/wuxing/maguangyuan/miniconda3/envs/NLP_RE/lib/python3.8/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: 17 seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/mmu_nlp/wuxing/maguangyuan/miniconda3/envs/NLP_RE/lib/python3.8/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: 13 seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/mmu_nlp/wuxing/maguangyuan/miniconda3/envs/NLP_RE/lib/python3.8/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: 3 seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/mmu_nlp/wuxing/maguangyuan/miniconda3/envs/NLP_RE/lib/python3.8/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: 18 seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+12/22/2021 06:51:24 PM [INFO]: ***** Eval results *****
+12/22/2021 06:51:24 PM [INFO]:   accuracy = 0.2475786004056795
+12/22/2021 06:51:24 PM [INFO]:   f1 = 0.009835959281592428
+12/22/2021 06:51:24 PM [INFO]:   precision = 0.3333333333333333
+12/22/2021 06:51:24 PM [INFO]:   recall = 0.006309148264984227
+12/22/2021 06:51:30 PM [INFO]: Evaluating test samples...
+Epoch finished, took 7.31 seconds.
+Losses at Epoch 1: 2.6852870
+Train accuracy at Epoch 1: 0.1604167
+Test f1 at Epoch 1: 0.0098360
+[Epoch:  2,   768/  8000 items] total loss  2.477, accuracy per batch:  0.250
+[Epoch:  2,  1536/  8000 items] total loss  2.359, accuracy per batch:  0.281
+[Epoch:  2,  2304/  8000 items] total loss  2.400, accuracy per batch:  0.229
+[Epoch:  2,  3072/  8000 items] total loss  2.296, accuracy per batch:  0.333
+[Epoch:  2,  3840/  8000 items] total loss  2.290, accuracy per batch:  0.312
+[Epoch:  2,  4608/  8000 items] total loss  2.351, accuracy per batch:  0.292
+[Epoch:  2,  5376/  8000 items] total loss  2.312, accuracy per batch:  0.260
+[Epoch:  2,  6144/  8000 items] total loss  2.189, accuracy per batch:  0.396
+[Epoch:  2,  6912/  8000 items] total loss  2.089, accuracy per batch:  0.385
+[Epoch:  2,  7680/  8000 items] total loss  2.019, accuracy per batch:  0.427
+  0%|          | 0/85 [00:00<?, ?it/s]  5%|▍         | 4/85 [00:00<00:02, 37.09it/s]  9%|▉         | 8/85 [00:00<00:01, 38.68it/s] 15%|█▌        | 13/85 [00:00<00:01, 42.17it/s] 21%|██        | 18/85 [00:00<00:01, 40.29it/s] 27%|██▋       | 23/85 [00:00<00:01, 39.19it/s] 32%|███▏      | 27/85 [00:00<00:01, 38.43it/s] 38%|███▊      | 32/85 [00:00<00:01, 40.58it/s] 44%|████▎     | 37/85 [00:00<00:01, 40.47it/s] 49%|████▉     | 42/85 [00:01<00:01, 39.56it/s] 55%|█████▌    | 47/85 [00:01<00:00, 39.81it/s] 60%|██████    | 51/85 [00:01<00:00, 39.39it/s] 66%|██████▌   | 56/85 [00:01<00:00, 39.52it/s] 71%|███████   | 60/85 [00:01<00:00, 39.38it/s] 76%|███████▋  | 65/85 [00:01<00:00, 39.39it/s] 82%|████████▏ | 70/85 [00:01<00:00, 40.49it/s] 88%|████████▊ | 75/85 [00:01<00:00, 39.26it/s] 93%|█████████▎| 79/85 [00:01<00:00, 39.01it/s] 99%|█████████▉| 84/85 [00:02<00:00, 40.18it/s]100%|██████████| 85/85 [00:02<00:00, 39.69it/s]
+12/22/2021 06:51:32 PM [INFO]: ***** Eval results *****
+12/22/2021 06:51:32 PM [INFO]:   accuracy = 0.42251521298174444
+12/22/2021 06:51:32 PM [INFO]:   f1 = 0.09140688502871547
+12/22/2021 06:51:32 PM [INFO]:   precision = 0.31402439024390244
+12/22/2021 06:51:32 PM [INFO]:   recall = 0.08123028391167192
+12/22/2021 06:51:37 PM [INFO]: Evaluating test samples...
+Epoch finished, took 6.52 seconds.
+Losses at Epoch 2: 2.2781703
+Train accuracy at Epoch 2: 0.3166667
+Test f1 at Epoch 2: 0.0914069
+[Epoch:  3,   768/  8000 items] total loss  2.017, accuracy per batch:  0.406
+[Epoch:  3,  1536/  8000 items] total loss  2.023, accuracy per batch:  0.375
+[Epoch:  3,  2304/  8000 items] total loss  1.962, accuracy per batch:  0.406
+[Epoch:  3,  3072/  8000 items] total loss  1.831, accuracy per batch:  0.510
+[Epoch:  3,  3840/  8000 items] total loss  1.835, accuracy per batch:  0.438
+[Epoch:  3,  4608/  8000 items] total loss  1.865, accuracy per batch:  0.365
+[Epoch:  3,  5376/  8000 items] total loss  1.867, accuracy per batch:  0.448
+[Epoch:  3,  6144/  8000 items] total loss  1.765, accuracy per batch:  0.448
+[Epoch:  3,  6912/  8000 items] total loss  1.709, accuracy per batch:  0.490
+[Epoch:  3,  7680/  8000 items] total loss  1.681, accuracy per batch:  0.490
+  0%|          | 0/85 [00:00<?, ?it/s]  5%|▍         | 4/85 [00:00<00:02, 37.74it/s] 11%|█         | 9/85 [00:00<00:01, 39.75it/s] 16%|█▋        | 14/85 [00:00<00:01, 42.55it/s] 22%|██▏       | 19/85 [00:00<00:01, 39.54it/s] 27%|██▋       | 23/85 [00:00<00:01, 39.25it/s] 32%|███▏      | 27/85 [00:00<00:01, 38.45it/s] 38%|███▊      | 32/85 [00:00<00:01, 40.63it/s] 44%|████▎     | 37/85 [00:00<00:01, 40.56it/s] 49%|████▉     | 42/85 [00:01<00:01, 39.67it/s] 55%|█████▌    | 47/85 [00:01<00:00, 39.99it/s] 61%|██████    | 52/85 [00:01<00:00, 40.17it/s] 67%|██████▋   | 57/85 [00:01<00:00, 39.47it/s] 73%|███████▎  | 62/85 [00:01<00:00, 39.66it/s] 79%|███████▉  | 67/85 [00:01<00:00, 40.59it/s] 85%|████████▍ | 72/85 [00:01<00:00, 39.89it/s] 91%|█████████ | 77/85 [00:01<00:00, 40.04it/s] 96%|█████████▋| 82/85 [00:02<00:00, 40.83it/s]100%|██████████| 85/85 [00:02<00:00, 40.06it/s]
+12/22/2021 06:51:39 PM [INFO]: ***** Eval results *****
+12/22/2021 06:51:39 PM [INFO]:   accuracy = 0.5189148073022313
+12/22/2021 06:51:39 PM [INFO]:   f1 = 0.295335777973593
+12/22/2021 06:51:39 PM [INFO]:   precision = 0.41316526610644255
+12/22/2021 06:51:39 PM [INFO]:   recall = 0.23264984227129337
+12/22/2021 06:51:45 PM [INFO]: Evaluating test samples...
+Epoch finished, took 6.48 seconds.
+Losses at Epoch 3: 1.8554403
+Train accuracy at Epoch 3: 0.4375000
+Test f1 at Epoch 3: 0.2953358
+[Epoch:  4,   768/  8000 items] total loss  1.665, accuracy per batch:  0.500
+[Epoch:  4,  1536/  8000 items] total loss  1.699, accuracy per batch:  0.479
+[Epoch:  4,  2304/  8000 items] total loss  1.570, accuracy per batch:  0.500
+[Epoch:  4,  3072/  8000 items] total loss  1.501, accuracy per batch:  0.552
+[Epoch:  4,  3840/  8000 items] total loss  1.577, accuracy per batch:  0.521
+[Epoch:  4,  4608/  8000 items] total loss  1.511, accuracy per batch:  0.510
+[Epoch:  4,  5376/  8000 items] total loss  1.506, accuracy per batch:  0.500
+[Epoch:  4,  6144/  8000 items] total loss  1.525, accuracy per batch:  0.552
+[Epoch:  4,  6912/  8000 items] total loss  1.521, accuracy per batch:  0.552
+[Epoch:  4,  7680/  8000 items] total loss  1.388, accuracy per batch:  0.594
+  0%|          | 0/85 [00:00<?, ?it/s]  5%|▍         | 4/85 [00:00<00:02, 37.82it/s] 11%|█         | 9/85 [00:00<00:01, 39.77it/s] 16%|█▋        | 14/85 [00:00<00:01, 42.69it/s] 22%|██▏       | 19/85 [00:00<00:01, 39.87it/s] 28%|██▊       | 24/85 [00:00<00:01, 39.10it/s] 33%|███▎      | 28/85 [00:00<00:01, 39.23it/s] 39%|███▉      | 33/85 [00:00<00:01, 41.27it/s] 45%|████▍     | 38/85 [00:00<00:01, 41.02it/s] 51%|█████     | 43/85 [00:01<00:01, 39.94it/s] 56%|█████▋    | 48/85 [00:01<00:00, 39.61it/s] 62%|██████▏   | 53/85 [00:01<00:00, 40.56it/s] 68%|██████▊   | 58/85 [00:01<00:00, 39.58it/s] 73%|███████▎  | 62/85 [00:01<00:00, 39.45it/s] 79%|███████▉  | 67/85 [00:01<00:00, 40.51it/s] 85%|████████▍ | 72/85 [00:01<00:00, 39.91it/s] 91%|█████████ | 77/85 [00:01<00:00, 40.03it/s] 96%|█████████▋| 82/85 [00:02<00:00, 40.82it/s]100%|██████████| 85/85 [00:02<00:00, 40.16it/s]
+12/22/2021 06:51:47 PM [INFO]: ***** Eval results *****
+12/22/2021 06:51:47 PM [INFO]:   accuracy = 0.5988083164300203
+12/22/2021 06:51:47 PM [INFO]:   f1 = 0.4449342790259371
+12/22/2021 06:51:47 PM [INFO]:   precision = 0.5078585461689588
+12/22/2021 06:51:47 PM [INFO]:   recall = 0.4077287066246057
+12/22/2021 06:51:52 PM [INFO]: Evaluating test samples...
+Epoch finished, took 6.46 seconds.
+Losses at Epoch 4: 1.5463682
+Train accuracy at Epoch 4: 0.5260417
+Test f1 at Epoch 4: 0.4449343
+[Epoch:  5,   768/  8000 items] total loss  1.380, accuracy per batch:  0.573
+[Epoch:  5,  1536/  8000 items] total loss  1.430, accuracy per batch:  0.552
+[Epoch:  5,  2304/  8000 items] total loss  1.245, accuracy per batch:  0.573
+[Epoch:  5,  3072/  8000 items] total loss  1.348, accuracy per batch:  0.542
+[Epoch:  5,  3840/  8000 items] total loss  1.357, accuracy per batch:  0.510
+[Epoch:  5,  4608/  8000 items] total loss  1.300, accuracy per batch:  0.594
+[Epoch:  5,  5376/  8000 items] total loss  1.223, accuracy per batch:  0.635
+[Epoch:  5,  6144/  8000 items] total loss  1.296, accuracy per batch:  0.594
+[Epoch:  5,  6912/  8000 items] total loss  1.344, accuracy per batch:  0.521
+[Epoch:  5,  7680/  8000 items] total loss  1.118, accuracy per batch:  0.656
+  0%|          | 0/85 [00:00<?, ?it/s]  5%|▍         | 4/85 [00:00<00:02, 37.55it/s] 11%|█         | 9/85 [00:00<00:01, 39.65it/s] 16%|█▋        | 14/85 [00:00<00:01, 42.53it/s] 22%|██▏       | 19/85 [00:00<00:01, 39.75it/s] 28%|██▊       | 24/85 [00:00<00:01, 38.95it/s] 33%|███▎      | 28/85 [00:00<00:01, 39.09it/s] 39%|███▉      | 33/85 [00:00<00:01, 41.14it/s] 45%|████▍     | 38/85 [00:00<00:01, 40.85it/s] 51%|█████     | 43/85 [00:01<00:01, 39.35it/s] 55%|█████▌    | 47/85 [00:01<00:00, 39.47it/s] 60%|██████    | 51/85 [00:01<00:00, 39.45it/s] 66%|██████▌   | 56/85 [00:01<00:00, 39.60it/s] 71%|███████   | 60/85 [00:01<00:00, 39.21it/s] 76%|███████▋  | 65/85 [00:01<00:00, 39.47it/s] 82%|████████▏ | 70/85 [00:01<00:00, 40.61it/s] 88%|████████▊ | 75/85 [00:01<00:00, 39.68it/s] 93%|█████████▎| 79/85 [00:01<00:00, 39.53it/s] 99%|█████████▉| 84/85 [00:02<00:00, 40.72it/s]100%|██████████| 85/85 [00:02<00:00, 39.92it/s]
+12/22/2021 06:51:54 PM [INFO]: ***** Eval results *****
+12/22/2021 06:51:54 PM [INFO]:   accuracy = 0.6544371196754564
+12/22/2021 06:51:54 PM [INFO]:   f1 = 0.514834091166683
+12/22/2021 06:51:54 PM [INFO]:   precision = 0.5521628498727735
+12/22/2021 06:51:54 PM [INFO]:   recall = 0.5134069400630915
+12/22/2021 06:52:00 PM [INFO]: Evaluating test samples...
+Epoch finished, took 6.47 seconds.
+Losses at Epoch 5: 1.3040461
+Train accuracy at Epoch 5: 0.5750000
+Test f1 at Epoch 5: 0.5148341
+[Epoch:  6,   768/  8000 items] total loss  1.154, accuracy per batch:  0.688
+[Epoch:  6,  1536/  8000 items] total loss  1.258, accuracy per batch:  0.656
+[Epoch:  6,  2304/  8000 items] total loss  1.056, accuracy per batch:  0.656
+[Epoch:  6,  3072/  8000 items] total loss  1.227, accuracy per batch:  0.583
+[Epoch:  6,  3840/  8000 items] total loss  1.045, accuracy per batch:  0.667
+[Epoch:  6,  4608/  8000 items] total loss  1.082, accuracy per batch:  0.646
+[Epoch:  6,  5376/  8000 items] total loss  0.998, accuracy per batch:  0.677
+[Epoch:  6,  6144/  8000 items] total loss  1.130, accuracy per batch:  0.615
+[Epoch:  6,  6912/  8000 items] total loss  1.159, accuracy per batch:  0.604
+[Epoch:  6,  7680/  8000 items] total loss  0.944, accuracy per batch:  0.698
+  0%|          | 0/85 [00:00<?, ?it/s]  5%|▍         | 4/85 [00:00<00:02, 37.03it/s]  9%|▉         | 8/85 [00:00<00:02, 38.40it/s] 15%|█▌        | 13/85 [00:00<00:01, 42.03it/s] 21%|██        | 18/85 [00:00<00:01, 39.94it/s] 27%|██▋       | 23/85 [00:00<00:01, 38.87it/s] 32%|███▏      | 27/85 [00:00<00:01, 37.90it/s] 38%|███▊      | 32/85 [00:00<00:01, 40.06it/s] 44%|████▎     | 37/85 [00:00<00:01, 40.16it/s] 49%|████▉     | 42/85 [00:01<00:01, 39.30it/s] 55%|█████▌    | 47/85 [00:01<00:00, 39.66it/s] 60%|██████    | 51/85 [00:01<00:00, 39.55it/s] 66%|██████▌   | 56/85 [00:01<00:00, 39.58it/s] 71%|███████   | 60/85 [00:01<00:00, 39.36it/s] 76%|███████▋  | 65/85 [00:01<00:00, 39.60it/s] 82%|████████▏ | 70/85 [00:01<00:00, 40.50it/s] 88%|████████▊ | 75/85 [00:01<00:00, 39.43it/s] 93%|█████████▎| 79/85 [00:02<00:00, 39.18it/s] 99%|█████████▉| 84/85 [00:02<00:00, 40.31it/s]100%|██████████| 85/85 [00:02<00:00, 39.63it/s]
+12/22/2021 06:52:02 PM [INFO]: ***** Eval results *****
+12/22/2021 06:52:02 PM [INFO]:   accuracy = 0.6948782961460447
+12/22/2021 06:52:02 PM [INFO]:   f1 = 0.5791164935831382
+12/22/2021 06:52:02 PM [INFO]:   precision = 0.6230191826522101
+12/22/2021 06:52:02 PM [INFO]:   recall = 0.5891167192429022
+12/22/2021 06:52:07 PM [INFO]: Evaluating test samples...
+Epoch finished, took 6.49 seconds.
+Losses at Epoch 6: 1.1052988
+Train accuracy at Epoch 6: 0.6489583
+Test f1 at Epoch 6: 0.5791165
+[Epoch:  7,   768/  8000 items] total loss  0.997, accuracy per batch:  0.719
+[Epoch:  7,  1536/  8000 items] total loss  1.103, accuracy per batch:  0.646
+[Epoch:  7,  2304/  8000 items] total loss  0.894, accuracy per batch:  0.760
+[Epoch:  7,  3072/  8000 items] total loss  0.968, accuracy per batch:  0.667
+[Epoch:  7,  3840/  8000 items] total loss  0.951, accuracy per batch:  0.625
+[Epoch:  7,  4608/  8000 items] total loss  0.901, accuracy per batch:  0.740
+[Epoch:  7,  5376/  8000 items] total loss  0.879, accuracy per batch:  0.760
+[Epoch:  7,  6144/  8000 items] total loss  1.053, accuracy per batch:  0.646
+[Epoch:  7,  6912/  8000 items] total loss  1.171, accuracy per batch:  0.594
+[Epoch:  7,  7680/  8000 items] total loss  0.906, accuracy per batch:  0.760
+  0%|          | 0/85 [00:00<?, ?it/s]  5%|▍         | 4/85 [00:00<00:02, 38.42it/s] 11%|█         | 9/85 [00:00<00:01, 39.97it/s] 16%|█▋        | 14/85 [00:00<00:01, 42.65it/s] 22%|██▏       | 19/85 [00:00<00:01, 39.66it/s] 28%|██▊       | 24/85 [00:00<00:01, 38.82it/s] 33%|███▎      | 28/85 [00:00<00:01, 38.89it/s] 39%|███▉      | 33/85 [00:00<00:01, 40.79it/s] 45%|████▍     | 38/85 [00:00<00:01, 40.67it/s] 51%|█████     | 43/85 [00:01<00:01, 39.85it/s] 56%|█████▋    | 48/85 [00:01<00:00, 39.26it/s] 62%|██████▏   | 53/85 [00:01<00:00, 40.18it/s] 68%|██████▊   | 58/85 [00:01<00:00, 39.08it/s] 73%|███████▎  | 62/85 [00:01<00:00, 39.06it/s] 79%|███████▉  | 67/85 [00:01<00:00, 39.98it/s] 85%|████████▍ | 72/85 [00:01<00:00, 39.23it/s] 91%|█████████ | 77/85 [00:01<00:00, 39.50it/s] 96%|█████████▋| 82/85 [00:02<00:00, 40.30it/s]100%|██████████| 85/85 [00:02<00:00, 39.80it/s]
+12/22/2021 06:52:09 PM [INFO]: ***** Eval results *****
+12/22/2021 06:52:09 PM [INFO]:   accuracy = 0.7199163286004057
+12/22/2021 06:52:09 PM [INFO]:   f1 = 0.6141982719299847
+12/22/2021 06:52:09 PM [INFO]:   precision = 0.648538961038961
+12/22/2021 06:52:09 PM [INFO]:   recall = 0.6301261829652997
+12/22/2021 06:52:15 PM [INFO]: Evaluating test samples...
+Epoch finished, took 6.48 seconds.
+Losses at Epoch 7: 0.9822895
+Train accuracy at Epoch 7: 0.6916667
+Test f1 at Epoch 7: 0.6141983
+[Epoch:  8,   768/  8000 items] total loss  0.900, accuracy per batch:  0.729
+[Epoch:  8,  1536/  8000 items] total loss  0.981, accuracy per batch:  0.667
+[Epoch:  8,  2304/  8000 items] total loss  0.782, accuracy per batch:  0.750
+[Epoch:  8,  3072/  8000 items] total loss  0.871, accuracy per batch:  0.719
+[Epoch:  8,  3840/  8000 items] total loss  0.922, accuracy per batch:  0.635
+[Epoch:  8,  4608/  8000 items] total loss  0.794, accuracy per batch:  0.760
+[Epoch:  8,  5376/  8000 items] total loss  0.785, accuracy per batch:  0.760
+[Epoch:  8,  6144/  8000 items] total loss  0.993, accuracy per batch:  0.646
+[Epoch:  8,  6912/  8000 items] total loss  0.967, accuracy per batch:  0.677
+[Epoch:  8,  7680/  8000 items] total loss  0.816, accuracy per batch:  0.740
+  0%|          | 0/85 [00:00<?, ?it/s]  5%|▍         | 4/85 [00:00<00:02, 38.19it/s] 11%|█         | 9/85 [00:00<00:01, 39.85it/s] 16%|█▋        | 14/85 [00:00<00:01, 42.65it/s] 22%|██▏       | 19/85 [00:00<00:01, 39.69it/s] 28%|██▊       | 24/85 [00:00<00:01, 38.94it/s] 33%|███▎      | 28/85 [00:00<00:01, 39.03it/s] 39%|███▉      | 33/85 [00:00<00:01, 41.07it/s] 45%|████▍     | 38/85 [00:00<00:01, 40.84it/s] 51%|█████     | 43/85 [00:01<00:01, 39.83it/s] 56%|█████▋    | 48/85 [00:01<00:00, 39.48it/s] 62%|██████▏   | 53/85 [00:01<00:00, 40.39it/s] 68%|██████▊   | 58/85 [00:01<00:00, 39.44it/s] 73%|███████▎  | 62/85 [00:01<00:00, 39.33it/s] 79%|███████▉  | 67/85 [00:01<00:00, 40.38it/s] 85%|████████▍ | 72/85 [00:01<00:00, 39.68it/s] 91%|█████████ | 77/85 [00:01<00:00, 39.82it/s] 96%|█████████▋| 82/85 [00:02<00:00, 40.63it/s]100%|██████████| 85/85 [00:02<00:00, 40.01it/s]
+12/22/2021 06:52:17 PM [INFO]: ***** Eval results *****
+12/22/2021 06:52:17 PM [INFO]:   accuracy = 0.735357505070994
+12/22/2021 06:52:17 PM [INFO]:   f1 = 0.6422989989820275
+12/22/2021 06:52:17 PM [INFO]:   precision = 0.6709163346613546
+12/22/2021 06:52:17 PM [INFO]:   recall = 0.6640378548895899
+12/22/2021 06:52:22 PM [INFO]: Evaluating test samples...
+Epoch finished, took 6.46 seconds.
+Losses at Epoch 8: 0.8811168
+Train accuracy at Epoch 8: 0.7083333
+Test f1 at Epoch 8: 0.6422990
+[Epoch:  9,   768/  8000 items] total loss  0.871, accuracy per batch:  0.729
+[Epoch:  9,  1536/  8000 items] total loss  0.912, accuracy per batch:  0.656
+[Epoch:  9,  2304/  8000 items] total loss  0.725, accuracy per batch:  0.771
+[Epoch:  9,  3072/  8000 items] total loss  0.894, accuracy per batch:  0.750
+[Epoch:  9,  3840/  8000 items] total loss  0.861, accuracy per batch:  0.719
+[Epoch:  9,  4608/  8000 items] total loss  0.773, accuracy per batch:  0.719
+[Epoch:  9,  5376/  8000 items] total loss  0.771, accuracy per batch:  0.750
+[Epoch:  9,  6144/  8000 items] total loss  0.989, accuracy per batch:  0.656
+[Epoch:  9,  6912/  8000 items] total loss  0.877, accuracy per batch:  0.708
+[Epoch:  9,  7680/  8000 items] total loss  0.780, accuracy per batch:  0.760
+  0%|          | 0/85 [00:00<?, ?it/s]  5%|▍         | 4/85 [00:00<00:02, 37.34it/s]  9%|▉         | 8/85 [00:00<00:01, 38.76it/s] 15%|█▌        | 13/85 [00:00<00:01, 42.15it/s] 21%|██        | 18/85 [00:00<00:01, 40.12it/s] 27%|██▋       | 23/85 [00:00<00:01, 39.13it/s] 32%|███▏      | 27/85 [00:00<00:01, 38.40it/s] 38%|███▊      | 32/85 [00:00<00:01, 40.49it/s] 44%|████▎     | 37/85 [00:00<00:01, 40.40it/s] 49%|████▉     | 42/85 [00:01<00:01, 39.58it/s] 55%|█████▌    | 47/85 [00:01<00:00, 39.79it/s] 60%|██████    | 51/85 [00:01<00:00, 39.63it/s] 66%|██████▌   | 56/85 [00:01<00:00, 39.59it/s] 71%|███████   | 60/85 [00:01<00:00, 39.37it/s] 76%|███████▋  | 65/85 [00:01<00:00, 39.59it/s] 82%|████████▏ | 70/85 [00:01<00:00, 40.48it/s] 88%|████████▊ | 75/85 [00:01<00:00, 39.51it/s] 93%|█████████▎| 79/85 [00:01<00:00, 39.45it/s] 99%|█████████▉| 84/85 [00:02<00:00, 40.48it/s]100%|██████████| 85/85 [00:02<00:00, 39.80it/s]
+12/22/2021 06:52:25 PM [INFO]: ***** Eval results *****
+12/22/2021 06:52:25 PM [INFO]:   accuracy = 0.7423808316430021
+12/22/2021 06:52:25 PM [INFO]:   f1 = 0.6541404599241555
+12/22/2021 06:52:25 PM [INFO]:   precision = 0.6868044515103339
+12/22/2021 06:52:25 PM [INFO]:   recall = 0.6813880126182965
+12/22/2021 06:52:30 PM [INFO]: Evaluating test samples...
+Epoch finished, took 6.47 seconds.
+Losses at Epoch 9: 0.8453155
+Train accuracy at Epoch 9: 0.7218750
+Test f1 at Epoch 9: 0.6541405
+[Epoch:  10,   768/  8000 items] total loss  0.697, accuracy per batch:  0.792
+[Epoch:  10,  1536/  8000 items] total loss  0.866, accuracy per batch:  0.719
+[Epoch:  10,  2304/  8000 items] total loss  0.736, accuracy per batch:  0.740
+[Epoch:  10,  3072/  8000 items] total loss  0.791, accuracy per batch:  0.750
+[Epoch:  10,  3840/  8000 items] total loss  0.818, accuracy per batch:  0.740
+[Epoch:  10,  4608/  8000 items] total loss  0.732, accuracy per batch:  0.760
+[Epoch:  10,  5376/  8000 items] total loss  0.730, accuracy per batch:  0.771
+[Epoch:  10,  6144/  8000 items] total loss  0.836, accuracy per batch:  0.719
+[Epoch:  10,  6912/  8000 items] total loss  0.980, accuracy per batch:  0.698
+[Epoch:  10,  7680/  8000 items] total loss  0.808, accuracy per batch:  0.740
+  0%|          | 0/85 [00:00<?, ?it/s]  5%|▍         | 4/85 [00:00<00:02, 38.01it/s] 11%|█         | 9/85 [00:00<00:01, 39.98it/s] 16%|█▋        | 14/85 [00:00<00:01, 42.75it/s] 22%|██▏       | 19/85 [00:00<00:01, 39.74it/s] 28%|██▊       | 24/85 [00:00<00:01, 38.98it/s] 33%|███▎      | 28/85 [00:00<00:01, 39.05it/s] 39%|███▉      | 33/85 [00:00<00:01, 41.08it/s] 45%|████▍     | 38/85 [00:00<00:01, 40.77it/s] 51%|█████     | 43/85 [00:01<00:01, 39.78it/s] 55%|█████▌    | 47/85 [00:01<00:00, 39.74it/s] 60%|██████    | 51/85 [00:01<00:00, 39.59it/s] 66%|██████▌   | 56/85 [00:01<00:00, 39.66it/s] 71%|███████   | 60/85 [00:01<00:00, 39.55it/s] 76%|███████▋  | 65/85 [00:01<00:00, 39.35it/s] 82%|████████▏ | 70/85 [00:01<00:00, 40.45it/s] 88%|████████▊ | 75/85 [00:01<00:00, 39.51it/s] 93%|█████████▎| 79/85 [00:01<00:00, 39.37it/s] 99%|█████████▉| 84/85 [00:02<00:00, 40.53it/s]100%|██████████| 85/85 [00:02<00:00, 39.94it/s]
+12/22/2021 06:52:32 PM [INFO]: ***** Eval results *****
+12/22/2021 06:52:32 PM [INFO]:   accuracy = 0.7501014198782961
+12/22/2021 06:52:32 PM [INFO]:   f1 = 0.6592674361077849
+12/22/2021 06:52:32 PM [INFO]:   precision = 0.6890822784810127
+12/22/2021 06:52:32 PM [INFO]:   recall = 0.6869085173501577
+12/22/2021 06:52:37 PM [INFO]: Evaluating test samples...
+Epoch finished, took 6.50 seconds.
+Losses at Epoch 10: 0.7992794
+Train accuracy at Epoch 10: 0.7427083
+Test f1 at Epoch 10: 0.6592674
+[Epoch:  11,   768/  8000 items] total loss  0.678, accuracy per batch:  0.812
+[Epoch:  11,  1536/  8000 items] total loss  0.812, accuracy per batch:  0.740
+[Epoch:  11,  2304/  8000 items] total loss  0.676, accuracy per batch:  0.771
+[Epoch:  11,  3072/  8000 items] total loss  0.810, accuracy per batch:  0.729
+[Epoch:  11,  3840/  8000 items] total loss  0.751, accuracy per batch:  0.729
+[Epoch:  11,  4608/  8000 items] total loss  0.712, accuracy per batch:  0.781
+[Epoch:  11,  5376/  8000 items] total loss  0.731, accuracy per batch:  0.760
+[Epoch:  11,  6144/  8000 items] total loss  0.798, accuracy per batch:  0.708
+[Epoch:  11,  6912/  8000 items] total loss  0.860, accuracy per batch:  0.729
+[Epoch:  11,  7680/  8000 items] total loss  0.791, accuracy per batch:  0.729
+  0%|          | 0/85 [00:00<?, ?it/s]  5%|▍         | 4/85 [00:00<00:02, 38.18it/s] 11%|█         | 9/85 [00:00<00:01, 40.01it/s] 16%|█▋        | 14/85 [00:00<00:01, 42.73it/s] 22%|██▏       | 19/85 [00:00<00:01, 39.73it/s] 28%|██▊       | 24/85 [00:00<00:01, 38.94it/s] 33%|███▎      | 28/85 [00:00<00:01, 38.82it/s] 39%|███▉      | 33/85 [00:00<00:01, 40.87it/s] 45%|████▍     | 38/85 [00:00<00:01, 40.61it/s] 51%|█████     | 43/85 [00:01<00:01, 39.72it/s] 55%|█████▌    | 47/85 [00:01<00:00, 39.71it/s] 60%|██████    | 51/85 [00:01<00:00, 39.56it/s] 66%|██████▌   | 56/85 [00:01<00:00, 39.70it/s] 71%|███████   | 60/85 [00:01<00:00, 39.38it/s] 76%|███████▋  | 65/85 [00:01<00:00, 39.68it/s] 82%|████████▏ | 70/85 [00:01<00:00, 40.65it/s] 88%|████████▊ | 75/85 [00:01<00:00, 39.70it/s] 93%|█████████▎| 79/85 [00:01<00:00, 39.59it/s] 99%|█████████▉| 84/85 [00:02<00:00, 40.55it/s]100%|██████████| 85/85 [00:02<00:00, 39.95it/s]
+12/22/2021 06:52:40 PM [INFO]: ***** Eval results *****
+12/22/2021 06:52:40 PM [INFO]:   accuracy = 0.7549188640973631
+12/22/2021 06:52:40 PM [INFO]:   f1 = 0.6747580370800677
+12/22/2021 06:52:40 PM [INFO]:   precision = 0.6980392156862745
+12/22/2021 06:52:40 PM [INFO]:   recall = 0.7018927444794952
+12/22/2021 06:52:45 PM [INFO]: Evaluating test samples...
+Epoch finished, took 6.47 seconds.
+Losses at Epoch 11: 0.7619479
+Train accuracy at Epoch 11: 0.7489583
+Test f1 at Epoch 11: 0.6747580
+[Epoch:  12,   768/  8000 items] total loss  0.771, accuracy per batch:  0.760
+[Epoch:  12,  1536/  8000 items] total loss  0.787, accuracy per batch:  0.750
+[Epoch:  12,  2304/  8000 items] total loss  0.646, accuracy per batch:  0.812
+[Epoch:  12,  3072/  8000 items] total loss  0.749, accuracy per batch:  0.750
+[Epoch:  12,  3840/  8000 items] total loss  0.769, accuracy per batch:  0.729
+[Epoch:  12,  4608/  8000 items] total loss  0.676, accuracy per batch:  0.812
+[Epoch:  12,  5376/  8000 items] total loss  0.626, accuracy per batch:  0.844
+[Epoch:  12,  6144/  8000 items] total loss  0.793, accuracy per batch:  0.750
+[Epoch:  12,  6912/  8000 items] total loss  0.792, accuracy per batch:  0.719
+[Epoch:  12,  7680/  8000 items] total loss  0.742, accuracy per batch:  0.781
+  0%|          | 0/85 [00:00<?, ?it/s]  5%|▍         | 4/85 [00:00<00:02, 38.19it/s] 11%|█         | 9/85 [00:00<00:01, 40.02it/s] 16%|█▋        | 14/85 [00:00<00:01, 42.76it/s] 22%|██▏       | 19/85 [00:00<00:01, 39.69it/s] 28%|██▊       | 24/85 [00:00<00:01, 38.57it/s] 33%|███▎      | 28/85 [00:00<00:01, 38.74it/s] 39%|███▉      | 33/85 [00:00<00:01, 40.80it/s] 45%|████▍     | 38/85 [00:00<00:01, 40.69it/s] 51%|█████     | 43/85 [00:01<00:01, 39.74it/s] 55%|█████▌    | 47/85 [00:01<00:00, 39.73it/s] 60%|██████    | 51/85 [00:01<00:00, 39.55it/s] 66%|██████▌   | 56/85 [00:01<00:00, 39.67it/s] 71%|███████   | 60/85 [00:01<00:00, 39.28it/s] 76%|███████▋  | 65/85 [00:01<00:00, 39.33it/s] 82%|████████▏ | 70/85 [00:01<00:00, 40.30it/s] 88%|████████▊ | 75/85 [00:01<00:00, 39.38it/s] 93%|█████████▎| 79/85 [00:01<00:00, 39.33it/s] 99%|█████████▉| 84/85 [00:02<00:00, 40.46it/s]100%|██████████| 85/85 [00:02<00:00, 39.83it/s]
+12/22/2021 06:52:47 PM [INFO]: ***** Eval results *****
+12/22/2021 06:52:47 PM [INFO]:   accuracy = 0.7611688640973631
+12/22/2021 06:52:47 PM [INFO]:   f1 = 0.6751378279608949
+12/22/2021 06:52:47 PM [INFO]:   precision = 0.6976744186046512
+12/22/2021 06:52:47 PM [INFO]:   recall = 0.7097791798107256
+12/22/2021 06:52:53 PM [INFO]: Evaluating test samples...
+Epoch finished, took 6.47 seconds.
+Losses at Epoch 12: 0.7349945
+Train accuracy at Epoch 12: 0.7708333
+Test f1 at Epoch 12: 0.6751378
+[Epoch:  13,   768/  8000 items] total loss  0.658, accuracy per batch:  0.792
+[Epoch:  13,  1536/  8000 items] total loss  0.776, accuracy per batch:  0.740
+[Epoch:  13,  2304/  8000 items] total loss  0.587, accuracy per batch:  0.760
+[Epoch:  13,  3072/  8000 items] total loss  0.710, accuracy per batch:  0.771
+[Epoch:  13,  3840/  8000 items] total loss  0.709, accuracy per batch:  0.740
+[Epoch:  13,  4608/  8000 items] total loss  0.575, accuracy per batch:  0.812
+[Epoch:  13,  5376/  8000 items] total loss  0.659, accuracy per batch:  0.802
+[Epoch:  13,  6144/  8000 items] total loss  0.817, accuracy per batch:  0.677
+[Epoch:  13,  6912/  8000 items] total loss  0.800, accuracy per batch:  0.708
+[Epoch:  13,  7680/  8000 items] total loss  0.696, accuracy per batch:  0.812
+  0%|          | 0/85 [00:00<?, ?it/s]  5%|▍         | 4/85 [00:00<00:02, 38.08it/s] 11%|█         | 9/85 [00:00<00:01, 39.87it/s] 16%|█▋        | 14/85 [00:00<00:01, 42.67it/s] 22%|██▏       | 19/85 [00:00<00:01, 39.61it/s] 28%|██▊       | 24/85 [00:00<00:01, 38.91it/s] 33%|███▎      | 28/85 [00:00<00:01, 38.99it/s] 39%|███▉      | 33/85 [00:00<00:01, 41.04it/s] 45%|████▍     | 38/85 [00:00<00:01, 40.84it/s] 51%|█████     | 43/85 [00:01<00:01, 39.80it/s] 55%|█████▌    | 47/85 [00:01<00:00, 39.81it/s] 60%|██████    | 51/85 [00:01<00:00, 39.66it/s] 66%|██████▌   | 56/85 [00:01<00:00, 39.74it/s] 71%|███████   | 60/85 [00:01<00:00, 39.56it/s] 76%|███████▋  | 65/85 [00:01<00:00, 39.74it/s] 82%|████████▏ | 70/85 [00:01<00:00, 40.76it/s] 88%|████████▊ | 75/85 [00:01<00:00, 39.80it/s] 93%|█████████▎| 79/85 [00:01<00:00, 39.61it/s] 99%|█████████▉| 84/85 [00:02<00:00, 40.75it/s]100%|██████████| 85/85 [00:02<00:00, 40.04it/s]
+12/22/2021 06:52:55 PM [INFO]: ***** Eval results *****
+12/22/2021 06:52:55 PM [INFO]:   accuracy = 0.7637423935091278
+12/22/2021 06:52:55 PM [INFO]:   f1 = 0.6812833043915636
+12/22/2021 06:52:55 PM [INFO]:   precision = 0.6985350809560524
+12/22/2021 06:52:55 PM [INFO]:   recall = 0.7145110410094637
+12/22/2021 06:53:00 PM [INFO]: Evaluating test samples...
+Epoch finished, took 6.46 seconds.
+Losses at Epoch 13: 0.6987359
+Train accuracy at Epoch 13: 0.7614583
+Test f1 at Epoch 13: 0.6812833
+[Epoch:  14,   768/  8000 items] total loss  0.668, accuracy per batch:  0.844
+[Epoch:  14,  1536/  8000 items] total loss  0.796, accuracy per batch:  0.750
+[Epoch:  14,  2304/  8000 items] total loss  0.591, accuracy per batch:  0.823
+[Epoch:  14,  3072/  8000 items] total loss  0.694, accuracy per batch:  0.771
+[Epoch:  14,  3840/  8000 items] total loss  0.699, accuracy per batch:  0.760
+[Epoch:  14,  4608/  8000 items] total loss  0.562, accuracy per batch:  0.823
+[Epoch:  14,  5376/  8000 items] total loss  0.643, accuracy per batch:  0.812
+[Epoch:  14,  6144/  8000 items] total loss  0.819, accuracy per batch:  0.719
+[Epoch:  14,  6912/  8000 items] total loss  0.796, accuracy per batch:  0.740
+[Epoch:  14,  7680/  8000 items] total loss  0.696, accuracy per batch:  0.802
+  0%|          | 0/85 [00:00<?, ?it/s]  5%|▍         | 4/85 [00:00<00:02, 38.24it/s] 11%|█         | 9/85 [00:00<00:01, 39.90it/s] 16%|█▋        | 14/85 [00:00<00:01, 42.67it/s] 22%|██▏       | 19/85 [00:00<00:01, 39.55it/s] 27%|██▋       | 23/85 [00:00<00:01, 39.24it/s] 32%|███▏      | 27/85 [00:00<00:01, 38.42it/s] 38%|███▊      | 32/85 [00:00<00:01, 40.62it/s] 44%|████▎     | 37/85 [00:00<00:01, 40.58it/s] 49%|████▉     | 42/85 [00:01<00:01, 39.70it/s] 55%|█████▌    | 47/85 [00:01<00:00, 39.94it/s] 61%|██████    | 52/85 [00:01<00:00, 40.07it/s] 67%|██████▋   | 57/85 [00:01<00:00, 39.34it/s] 73%|███████▎  | 62/85 [00:01<00:00, 39.49it/s] 79%|███████▉  | 67/85 [00:01<00:00, 40.45it/s] 85%|████████▍ | 72/85 [00:01<00:00, 39.79it/s] 91%|█████████ | 77/85 [00:01<00:00, 39.94it/s] 96%|█████████▋| 82/85 [00:02<00:00, 40.76it/s]100%|██████████| 85/85 [00:02<00:00, 40.01it/s]
+12/22/2021 06:53:02 PM [INFO]: ***** Eval results *****
+12/22/2021 06:53:02 PM [INFO]:   accuracy = 0.7688894523326572
+12/22/2021 06:53:02 PM [INFO]:   f1 = 0.6879423071175954
+12/22/2021 06:53:02 PM [INFO]:   precision = 0.703875968992248
+12/22/2021 06:53:02 PM [INFO]:   recall = 0.7160883280757098
+12/22/2021 06:53:07 PM [INFO]: Evaluating test samples...
+Epoch finished, took 6.45 seconds.
+Losses at Epoch 14: 0.6964717
+Train accuracy at Epoch 14: 0.7843750
+Test f1 at Epoch 14: 0.6879423
+[Epoch:  15,   768/  8000 items] total loss  0.652, accuracy per batch:  0.792
+[Epoch:  15,  1536/  8000 items] total loss  0.719, accuracy per batch:  0.750
+[Epoch:  15,  2304/  8000 items] total loss  0.557, accuracy per batch:  0.812
+[Epoch:  15,  3072/  8000 items] total loss  0.679, accuracy per batch:  0.802
+[Epoch:  15,  3840/  8000 items] total loss  0.644, accuracy per batch:  0.750
+[Epoch:  15,  4608/  8000 items] total loss  0.572, accuracy per batch:  0.771
+[Epoch:  15,  5376/  8000 items] total loss  0.585, accuracy per batch:  0.854
+[Epoch:  15,  6144/  8000 items] total loss  0.799, accuracy per batch:  0.708
+[Epoch:  15,  6912/  8000 items] total loss  0.839, accuracy per batch:  0.729
+[Epoch:  15,  7680/  8000 items] total loss  0.675, accuracy per batch:  0.812
+  0%|          | 0/85 [00:00<?, ?it/s]  5%|▍         | 4/85 [00:00<00:02, 37.86it/s] 11%|█         | 9/85 [00:00<00:01, 39.83it/s] 16%|█▋        | 14/85 [00:00<00:01, 42.52it/s] 22%|██▏       | 19/85 [00:00<00:01, 39.70it/s] 28%|██▊       | 24/85 [00:00<00:01, 38.73it/s] 33%|███▎      | 28/85 [00:00<00:01, 38.85it/s] 39%|███▉      | 33/85 [00:00<00:01, 40.93it/s] 45%|████▍     | 38/85 [00:00<00:01, 40.73it/s] 51%|█████     | 43/85 [00:01<00:01, 39.73it/s] 55%|█████▌    | 47/85 [00:01<00:00, 39.72it/s] 60%|██████    | 51/85 [00:01<00:00, 39.06it/s] 66%|██████▌   | 56/85 [00:01<00:00, 39.24it/s] 71%|███████   | 60/85 [00:01<00:00, 39.21it/s] 76%|███████▋  | 65/85 [00:01<00:00, 39.34it/s] 82%|████████▏ | 70/85 [00:01<00:00, 40.42it/s] 88%|████████▊ | 75/85 [00:01<00:00, 39.44it/s] 93%|█████████▎| 79/85 [00:01<00:00, 39.29it/s] 99%|█████████▉| 84/85 [00:02<00:00, 40.31it/s]100%|██████████| 85/85 [00:02<00:00, 39.77it/s]
+12/22/2021 06:53:09 PM [INFO]: ***** Eval results *****
+12/22/2021 06:53:09 PM [INFO]:   accuracy = 0.7744041582150101
+12/22/2021 06:53:09 PM [INFO]:   f1 = 0.6900544749342268
+12/22/2021 06:53:09 PM [INFO]:   precision = 0.71484375
+12/22/2021 06:53:09 PM [INFO]:   recall = 0.7216088328075709
+12/22/2021 06:53:14 PM [INFO]: Evaluating test samples...
+Epoch finished, took 6.46 seconds.
+Losses at Epoch 15: 0.6720601
+Train accuracy at Epoch 15: 0.7781250
+Test f1 at Epoch 15: 0.6900545
+[Epoch:  16,   768/  8000 items] total loss  0.647, accuracy per batch:  0.802
+[Epoch:  16,  1536/  8000 items] total loss  0.775, accuracy per batch:  0.750
+[Epoch:  16,  2304/  8000 items] total loss  0.566, accuracy per batch:  0.854
+[Epoch:  16,  3072/  8000 items] total loss  0.692, accuracy per batch:  0.792
+[Epoch:  16,  3840/  8000 items] total loss  0.635, accuracy per batch:  0.802
+[Epoch:  16,  4608/  8000 items] total loss  0.586, accuracy per batch:  0.865
+[Epoch:  16,  5376/  8000 items] total loss  0.581, accuracy per batch:  0.823
+[Epoch:  16,  6144/  8000 items] total loss  0.707, accuracy per batch:  0.740
+[Epoch:  16,  6912/  8000 items] total loss  0.671, accuracy per batch:  0.760
+[Epoch:  16,  7680/  8000 items] total loss  0.709, accuracy per batch:  0.771
+  0%|          | 0/85 [00:00<?, ?it/s]  5%|▍         | 4/85 [00:00<00:02, 37.99it/s]  9%|▉         | 8/85 [00:00<00:01, 39.07it/s] 15%|█▌        | 13/85 [00:00<00:01, 42.18it/s] 21%|██        | 18/85 [00:00<00:01, 40.09it/s] 27%|██▋       | 23/85 [00:00<00:01, 39.03it/s] 32%|███▏      | 27/85 [00:00<00:01, 38.22it/s] 38%|███▊      | 32/85 [00:00<00:01, 40.31it/s] 44%|████▎     | 37/85 [00:00<00:01, 40.20it/s] 49%|████▉     | 42/85 [00:01<00:01, 39.45it/s] 55%|█████▌    | 47/85 [00:01<00:00, 39.71it/s] 60%|██████    | 51/85 [00:01<00:00, 39.32it/s] 66%|██████▌   | 56/85 [00:01<00:00, 39.37it/s] 71%|███████   | 60/85 [00:01<00:00, 39.28it/s] 76%|███████▋  | 65/85 [00:01<00:00, 39.34it/s] 82%|████████▏ | 70/85 [00:01<00:00, 40.41it/s] 88%|████████▊ | 75/85 [00:01<00:00, 39.19it/s] 93%|█████████▎| 79/85 [00:02<00:00, 39.05it/s] 99%|█████████▉| 84/85 [00:02<00:00, 40.18it/s]100%|██████████| 85/85 [00:02<00:00, 39.63it/s]
+12/22/2021 06:53:16 PM [INFO]: ***** Eval results *****
+12/22/2021 06:53:16 PM [INFO]:   accuracy = 0.7766100405679512
+12/22/2021 06:53:16 PM [INFO]:   f1 = 0.6878787190849976
+12/22/2021 06:53:16 PM [INFO]:   precision = 0.7156323644933229
+12/22/2021 06:53:16 PM [INFO]:   recall = 0.7184542586750788
+12/22/2021 06:53:22 PM [INFO]: Evaluating test samples...
+Epoch finished, took 6.49 seconds.
+Losses at Epoch 16: 0.6568410
+Train accuracy at Epoch 16: 0.7958333
+Test f1 at Epoch 16: 0.6878787
+[Epoch:  17,   768/  8000 items] total loss  0.603, accuracy per batch:  0.823
+[Epoch:  17,  1536/  8000 items] total loss  0.638, accuracy per batch:  0.792
+[Epoch:  17,  2304/  8000 items] total loss  0.585, accuracy per batch:  0.792
+[Epoch:  17,  3072/  8000 items] total loss  0.682, accuracy per batch:  0.771
+[Epoch:  17,  3840/  8000 items] total loss  0.667, accuracy per batch:  0.760
+[Epoch:  17,  4608/  8000 items] total loss  0.537, accuracy per batch:  0.865
+[Epoch:  17,  5376/  8000 items] total loss  0.554, accuracy per batch:  0.844
+[Epoch:  17,  6144/  8000 items] total loss  0.750, accuracy per batch:  0.708
+[Epoch:  17,  6912/  8000 items] total loss  0.751, accuracy per batch:  0.760
+[Epoch:  17,  7680/  8000 items] total loss  0.637, accuracy per batch:  0.844
+  0%|          | 0/85 [00:00<?, ?it/s]  5%|▍         | 4/85 [00:00<00:02, 37.46it/s]  9%|▉         | 8/85 [00:00<00:01, 38.64it/s] 15%|█▌        | 13/85 [00:00<00:01, 42.09it/s] 21%|██        | 18/85 [00:00<00:01, 40.25it/s] 27%|██▋       | 23/85 [00:00<00:01, 39.17it/s] 32%|███▏      | 27/85 [00:00<00:01, 38.32it/s] 38%|███▊      | 32/85 [00:00<00:01, 40.40it/s] 44%|████▎     | 37/85 [00:00<00:01, 40.35it/s] 49%|████▉     | 42/85 [00:01<00:01, 39.43it/s] 55%|█████▌    | 47/85 [00:01<00:00, 39.48it/s] 60%|██████    | 51/85 [00:01<00:00, 39.35it/s] 66%|██████▌   | 56/85 [00:01<00:00, 39.40it/s] 71%|███████   | 60/85 [00:01<00:00, 39.01it/s] 76%|███████▋  | 65/85 [00:01<00:00, 39.27it/s] 82%|████████▏ | 70/85 [00:01<00:00, 40.09it/s] 88%|████████▊ | 75/85 [00:01<00:00, 39.14it/s] 93%|█████████▎| 79/85 [00:02<00:00, 39.05it/s] 99%|█████████▉| 84/85 [00:02<00:00, 39.86it/s]100%|██████████| 85/85 [00:02<00:00, 39.53it/s]
+12/22/2021 06:53:24 PM [INFO]: ***** Eval results *****
+12/22/2021 06:53:24 PM [INFO]:   accuracy = 0.7780806288032454
+12/22/2021 06:53:24 PM [INFO]:   f1 = 0.6915213547335985
+12/22/2021 06:53:24 PM [INFO]:   precision = 0.7206923682140047
+12/22/2021 06:53:24 PM [INFO]:   recall = 0.722397476340694
+12/22/2021 06:53:29 PM [INFO]: Evaluating test samples...
+Epoch finished, took 6.49 seconds.
+Losses at Epoch 17: 0.6403595
+Train accuracy at Epoch 17: 0.7958333
+Test f1 at Epoch 17: 0.6915214
+[Epoch:  18,   768/  8000 items] total loss  0.587, accuracy per batch:  0.802
+[Epoch:  18,  1536/  8000 items] total loss  0.729, accuracy per batch:  0.760
+[Epoch:  18,  2304/  8000 items] total loss  0.551, accuracy per batch:  0.812
+[Epoch:  18,  3072/  8000 items] total loss  0.686, accuracy per batch:  0.781
+[Epoch:  18,  3840/  8000 items] total loss  0.675, accuracy per batch:  0.771
+[Epoch:  18,  4608/  8000 items] total loss  0.511, accuracy per batch:  0.875
+[Epoch:  18,  5376/  8000 items] total loss  0.512, accuracy per batch:  0.854
+[Epoch:  18,  6144/  8000 items] total loss  0.709, accuracy per batch:  0.729
+[Epoch:  18,  6912/  8000 items] total loss  0.730, accuracy per batch:  0.740
+[Epoch:  18,  7680/  8000 items] total loss  0.587, accuracy per batch:  0.844
+  0%|          | 0/85 [00:00<?, ?it/s]  5%|▍         | 4/85 [00:00<00:02, 37.98it/s] 11%|█         | 9/85 [00:00<00:01, 39.85it/s] 16%|█▋        | 14/85 [00:00<00:01, 42.67it/s] 22%|██▏       | 19/85 [00:00<00:01, 39.69it/s] 28%|██▊       | 24/85 [00:00<00:01, 38.89it/s] 33%|███▎      | 28/85 [00:00<00:01, 38.93it/s] 39%|███▉      | 33/85 [00:00<00:01, 40.98it/s] 45%|████▍     | 38/85 [00:00<00:01, 40.55it/s] 51%|█████     | 43/85 [00:01<00:01, 39.66it/s] 55%|█████▌    | 47/85 [00:01<00:00, 39.38it/s] 60%|██████    | 51/85 [00:01<00:00, 39.30it/s] 66%|██████▌   | 56/85 [00:01<00:00, 39.46it/s] 71%|███████   | 60/85 [00:01<00:00, 39.27it/s] 76%|███████▋  | 65/85 [00:01<00:00, 39.55it/s] 82%|████████▏ | 70/85 [00:01<00:00, 40.53it/s] 88%|████████▊ | 75/85 [00:01<00:00, 39.47it/s] 93%|█████████▎| 79/85 [00:01<00:00, 39.39it/s] 99%|█████████▉| 84/85 [00:02<00:00, 40.38it/s]100%|██████████| 85/85 [00:02<00:00, 39.78it/s]
+12/22/2021 06:53:31 PM [INFO]: ***** Eval results *****
+12/22/2021 06:53:31 PM [INFO]:   accuracy = 0.7769776876267748
+12/22/2021 06:53:31 PM [INFO]:   f1 = 0.6933294741135942
+12/22/2021 06:53:31 PM [INFO]:   precision = 0.7229199372056515
+12/22/2021 06:53:31 PM [INFO]:   recall = 0.7263406940063092
+12/22/2021 06:53:36 PM [INFO]: Evaluating test samples...
+Epoch finished, took 6.51 seconds.
+Losses at Epoch 18: 0.6278681
+Train accuracy at Epoch 18: 0.7968750
+Test f1 at Epoch 18: 0.6933295
+[Epoch:  19,   768/  8000 items] total loss  0.644, accuracy per batch:  0.781
+[Epoch:  19,  1536/  8000 items] total loss  0.642, accuracy per batch:  0.812
+[Epoch:  19,  2304/  8000 items] total loss  0.535, accuracy per batch:  0.854
+[Epoch:  19,  3072/  8000 items] total loss  0.613, accuracy per batch:  0.792
+[Epoch:  19,  3840/  8000 items] total loss  0.640, accuracy per batch:  0.781
+[Epoch:  19,  4608/  8000 items] total loss  0.537, accuracy per batch:  0.823
+[Epoch:  19,  5376/  8000 items] total loss  0.520, accuracy per batch:  0.865
+[Epoch:  19,  6144/  8000 items] total loss  0.746, accuracy per batch:  0.760
+[Epoch:  19,  6912/  8000 items] total loss  0.701, accuracy per batch:  0.729
+[Epoch:  19,  7680/  8000 items] total loss  0.555, accuracy per batch:  0.875
+  0%|          | 0/85 [00:00<?, ?it/s]  5%|▍         | 4/85 [00:00<00:02, 37.44it/s] 11%|█         | 9/85 [00:00<00:01, 39.64it/s] 16%|█▋        | 14/85 [00:00<00:01, 42.48it/s] 22%|██▏       | 19/85 [00:00<00:01, 39.34it/s] 27%|██▋       | 23/85 [00:00<00:01, 39.05it/s] 32%|███▏      | 27/85 [00:00<00:01, 38.40it/s] 38%|███▊      | 32/85 [00:00<00:01, 40.56it/s] 44%|████▎     | 37/85 [00:00<00:01, 40.39it/s] 49%|████▉     | 42/85 [00:01<00:01, 39.41it/s] 55%|█████▌    | 47/85 [00:01<00:00, 39.68it/s] 60%|██████    | 51/85 [00:01<00:00, 39.48it/s] 66%|██████▌   | 56/85 [00:01<00:00, 39.52it/s] 71%|███████   | 60/85 [00:01<00:00, 39.25it/s] 76%|███████▋  | 65/85 [00:01<00:00, 39.52it/s] 82%|████████▏ | 70/85 [00:01<00:00, 40.41it/s] 88%|████████▊ | 75/85 [00:01<00:00, 39.17it/s] 93%|█████████▎| 79/85 [00:01<00:00, 39.14it/s] 99%|█████████▉| 84/85 [00:02<00:00, 40.11it/s]100%|██████████| 85/85 [00:02<00:00, 39.67it/s]
+12/22/2021 06:53:38 PM [INFO]: ***** Eval results *****
+12/22/2021 06:53:38 PM [INFO]:   accuracy = 0.7777129817444218
+12/22/2021 06:53:38 PM [INFO]:   f1 = 0.693193429773383
+12/22/2021 06:53:38 PM [INFO]:   precision = 0.7207843137254902
+12/22/2021 06:53:38 PM [INFO]:   recall = 0.7247634069400631
+12/22/2021 06:53:44 PM [INFO]: Evaluating test samples...
+Epoch finished, took 6.48 seconds.
+Losses at Epoch 19: 0.6134154
+Train accuracy at Epoch 19: 0.8072917
+Test f1 at Epoch 19: 0.6931934
+[Epoch:  20,   768/  8000 items] total loss  0.597, accuracy per batch:  0.781
+[Epoch:  20,  1536/  8000 items] total loss  0.646, accuracy per batch:  0.760
+[Epoch:  20,  2304/  8000 items] total loss  0.547, accuracy per batch:  0.833
+[Epoch:  20,  3072/  8000 items] total loss  0.576, accuracy per batch:  0.812
+[Epoch:  20,  3840/  8000 items] total loss  0.600, accuracy per batch:  0.823
+[Epoch:  20,  4608/  8000 items] total loss  0.540, accuracy per batch:  0.844
+[Epoch:  20,  5376/  8000 items] total loss  0.544, accuracy per batch:  0.833
+[Epoch:  20,  6144/  8000 items] total loss  0.674, accuracy per batch:  0.781
+[Epoch:  20,  6912/  8000 items] total loss  0.780, accuracy per batch:  0.729
+[Epoch:  20,  7680/  8000 items] total loss  0.581, accuracy per batch:  0.833
+  0%|          | 0/85 [00:00<?, ?it/s][FROZE]: module.encoder.layer.8.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.8.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.8.intermediate.dense.weight
+[FROZE]: module.encoder.layer.8.intermediate.dense.bias
+[FROZE]: module.encoder.layer.8.output.dense.weight
+[FROZE]: module.encoder.layer.8.output.dense.bias
+[FROZE]: module.encoder.layer.8.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.8.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.9.attention.self.query.weight
+[FROZE]: module.encoder.layer.9.attention.self.query.bias
+[FROZE]: module.encoder.layer.9.attention.self.key.weight
+[FROZE]: module.encoder.layer.9.attention.self.key.bias
+[FROZE]: module.encoder.layer.9.attention.self.value.weight
+[FROZE]: module.encoder.layer.9.attention.self.value.bias
+[FROZE]: module.encoder.layer.9.attention.output.dense.weight
+[FROZE]: module.encoder.layer.9.attention.output.dense.bias
+[FROZE]: module.encoder.layer.9.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.9.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.9.intermediate.dense.weight
+[FROZE]: module.encoder.layer.9.intermediate.dense.bias
+[FROZE]: module.encoder.layer.9.output.dense.weight
+[FROZE]: module.encoder.layer.9.output.dense.bias
+[FROZE]: module.encoder.layer.9.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.9.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.10.attention.self.query.weight
+[FROZE]: module.encoder.layer.10.attention.self.query.bias
+[FROZE]: module.encoder.layer.10.attention.self.key.weight
+[FROZE]: module.encoder.layer.10.attention.self.key.bias
+[FROZE]: module.encoder.layer.10.attention.self.value.weight
+[FROZE]: module.encoder.layer.10.attention.self.value.bias
+[FROZE]: module.encoder.layer.10.attention.output.dense.weight
+[FROZE]: module.encoder.layer.10.attention.output.dense.bias
+[FROZE]: module.encoder.layer.10.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.10.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.10.intermediate.dense.weight
+[FROZE]: module.encoder.layer.10.intermediate.dense.bias
+[FROZE]: module.encoder.layer.10.output.dense.weight
+[FROZE]: module.encoder.layer.10.output.dense.bias
+[FROZE]: module.encoder.layer.10.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.10.output.LayerNorm.bias
+[FREE]: module.encoder.layer.11.attention.self.query.weight
+[FREE]: module.encoder.layer.11.attention.self.query.bias
+[FREE]: module.encoder.layer.11.attention.self.key.weight
+[FREE]: module.encoder.layer.11.attention.self.key.bias
+[FREE]: module.encoder.layer.11.attention.self.value.weight
+[FREE]: module.encoder.layer.11.attention.self.value.bias
+[FREE]: module.encoder.layer.11.attention.output.dense.weight
+[FREE]: module.encoder.layer.11.attention.output.dense.bias
+[FREE]: module.encoder.layer.11.attention.output.LayerNorm.weight
+[FREE]: module.encoder.layer.11.attention.output.LayerNorm.bias
+[FREE]: module.encoder.layer.11.intermediate.dense.weight
+[FREE]: module.encoder.layer.11.intermediate.dense.bias
+[FREE]: module.encoder.layer.11.output.dense.weight
+[FREE]: module.encoder.layer.11.output.dense.bias
+[FREE]: module.encoder.layer.11.output.LayerNorm.weight
+[FREE]: module.encoder.layer.11.output.LayerNorm.bias
+[FREE]: module.pooler.dense.weight
+[FREE]: module.pooler.dense.bias
+[FREE]: module.classification_layer.weight
+[FREE]: module.classification_layer.bias
+Empty DataFrame
+Columns: [Train Loss, Train Accuracy, Test F1 Score]
+Index: []
+[FROZE]: module.encoder.layer.8.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.8.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.8.intermediate.dense.weight
+[FROZE]: module.encoder.layer.8.intermediate.dense.bias
+[FROZE]: module.encoder.layer.8.output.dense.weight
+[FROZE]: module.encoder.layer.8.output.dense.bias
+[FROZE]: module.encoder.layer.8.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.8.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.9.attention.self.query.weight
+[FROZE]: module.encoder.layer.9.attention.self.query.bias
+[FROZE]: module.encoder.layer.9.attention.self.key.weight
+[FROZE]: module.encoder.layer.9.attention.self.key.bias
+[FROZE]: module.encoder.layer.9.attention.self.value.weight
+[FROZE]: module.encoder.layer.9.attention.self.value.bias
+[FROZE]: module.encoder.layer.9.attention.output.dense.weight
+[FROZE]: module.encoder.layer.9.attention.output.dense.bias
+[FROZE]: module.encoder.layer.9.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.9.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.9.intermediate.dense.weight
+[FROZE]: module.encoder.layer.9.intermediate.dense.bias
+[FROZE]: module.encoder.layer.9.output.dense.weight
+[FROZE]: module.encoder.layer.9.output.dense.bias
+[FROZE]: module.encoder.layer.9.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.9.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.10.attention.self.query.weight
+[FROZE]: module.encoder.layer.10.attention.self.query.bias
+[FROZE]: module.encoder.layer.10.attention.self.key.weight
+[FROZE]: module.encoder.layer.10.attention.self.key.bias
+[FROZE]: module.encoder.layer.10.attention.self.value.weight
+[FROZE]: module.encoder.layer.10.attention.self.value.bias
+[FROZE]: module.encoder.layer.10.attention.output.dense.weight
+[FROZE]: module.encoder.layer.10.attention.output.dense.bias
+[FROZE]: module.encoder.layer.10.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.10.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.10.intermediate.dense.weight
+[FROZE]: module.encoder.layer.10.intermediate.dense.bias
+[FROZE]: module.encoder.layer.10.output.dense.weight
+[FROZE]: module.encoder.layer.10.output.dense.bias
+[FROZE]: module.encoder.layer.10.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.10.output.LayerNorm.bias
+[FREE]: module.encoder.layer.11.attention.self.query.weight
+[FREE]: module.encoder.layer.11.attention.self.query.bias
+[FREE]: module.encoder.layer.11.attention.self.key.weight
+[FREE]: module.encoder.layer.11.attention.self.key.bias
+[FREE]: module.encoder.layer.11.attention.self.value.weight
+[FREE]: module.encoder.layer.11.attention.self.value.bias
+[FREE]: module.encoder.layer.11.attention.output.dense.weight
+[FREE]: module.encoder.layer.11.attention.output.dense.bias
+[FREE]: module.encoder.layer.11.attention.output.LayerNorm.weight
+[FREE]: module.encoder.layer.11.attention.output.LayerNorm.bias
+[FREE]: module.encoder.layer.11.intermediate.dense.weight
+[FREE]: module.encoder.layer.11.intermediate.dense.bias
+[FREE]: module.encoder.layer.11.output.dense.weight
+[FREE]: module.encoder.layer.11.output.dense.bias
+[FREE]: module.encoder.layer.11.output.LayerNorm.weight
+[FREE]: module.encoder.layer.11.output.LayerNorm.bias
+[FREE]: module.pooler.dense.weight
+[FREE]: module.pooler.dense.bias
+[FREE]: module.classification_layer.weight
+[FREE]: module.classification_layer.bias
+Empty DataFrame
+Columns: [Train Loss, Train Accuracy, Test F1 Score]
+Index: []
+[FROZE]: module.encoder.layer.8.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.8.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.8.intermediate.dense.weight
+[FROZE]: module.encoder.layer.8.intermediate.dense.bias
+[FROZE]: module.encoder.layer.8.output.dense.weight
+[FROZE]: module.encoder.layer.8.output.dense.bias
+[FROZE]: module.encoder.layer.8.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.8.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.9.attention.self.query.weight
+[FROZE]: module.encoder.layer.9.attention.self.query.bias
+[FROZE]: module.encoder.layer.9.attention.self.key.weight
+[FROZE]: module.encoder.layer.9.attention.self.key.bias
+[FROZE]: module.encoder.layer.9.attention.self.value.weight
+[FROZE]: module.encoder.layer.9.attention.self.value.bias
+[FROZE]: module.encoder.layer.9.attention.output.dense.weight
+[FROZE]: module.encoder.layer.9.attention.output.dense.bias
+[FROZE]: module.encoder.layer.9.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.9.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.9.intermediate.dense.weight
+[FROZE]: module.encoder.layer.9.intermediate.dense.bias
+[FROZE]: module.encoder.layer.9.output.dense.weight
+[FROZE]: module.encoder.layer.9.output.dense.bias
+[FROZE]: module.encoder.layer.9.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.9.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.10.attention.self.query.weight
+[FROZE]: module.encoder.layer.10.attention.self.query.bias
+[FROZE]: module.encoder.layer.10.attention.self.key.weight
+[FROZE]: module.encoder.layer.10.attention.self.key.bias
+[FROZE]: module.encoder.layer.10.attention.self.value.weight
+[FROZE]: module.encoder.layer.10.attention.self.value.bias
+[FROZE]: module.encoder.layer.10.attention.output.dense.weight
+[FROZE]: module.encoder.layer.10.attention.output.dense.bias
+[FROZE]: module.encoder.layer.10.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.10.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.10.intermediate.dense.weight
+[FROZE]: module.encoder.layer.10.intermediate.dense.bias
+[FROZE]: module.encoder.layer.10.output.dense.weight
+[FROZE]: module.encoder.layer.10.output.dense.bias
+[FROZE]: module.encoder.layer.10.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.10.output.LayerNorm.bias
+[FREE]: module.encoder.layer.11.attention.self.query.weight
+[FREE]: module.encoder.layer.11.attention.self.query.bias
+[FREE]: module.encoder.layer.11.attention.self.key.weight
+[FREE]: module.encoder.layer.11.attention.self.key.bias
+[FREE]: module.encoder.layer.11.attention.self.value.weight
+[FREE]: module.encoder.layer.11.attention.self.value.bias
+[FREE]: module.encoder.layer.11.attention.output.dense.weight
+[FREE]: module.encoder.layer.11.attention.output.dense.bias
+[FREE]: module.encoder.layer.11.attention.output.LayerNorm.weight
+[FREE]: module.encoder.layer.11.attention.output.LayerNorm.bias
+[FREE]: module.encoder.layer.11.intermediate.dense.weight
+[FREE]: module.encoder.layer.11.intermediate.dense.bias
+[FREE]: module.encoder.layer.11.output.dense.weight
+[FREE]: module.encoder.layer.11.output.dense.bias
+[FREE]: module.encoder.layer.11.output.LayerNorm.weight
+[FREE]: module.encoder.layer.11.output.LayerNorm.bias
+[FREE]: module.pooler.dense.weight
+[FREE]: module.pooler.dense.bias
+[FREE]: module.classification_layer.weight
+[FREE]: module.classification_layer.bias
+Empty DataFrame
+Columns: [Train Loss, Train Accuracy, Test F1 Score]
+Index: []
+[FROZE]: module.encoder.layer.8.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.8.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.8.intermediate.dense.weight
+[FROZE]: module.encoder.layer.8.intermediate.dense.bias
+[FROZE]: module.encoder.layer.8.output.dense.weight
+[FROZE]: module.encoder.layer.8.output.dense.bias
+[FROZE]: module.encoder.layer.8.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.8.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.9.attention.self.query.weight
+[FROZE]: module.encoder.layer.9.attention.self.query.bias
+[FROZE]: module.encoder.layer.9.attention.self.key.weight
+[FROZE]: module.encoder.layer.9.attention.self.key.bias
+[FROZE]: module.encoder.layer.9.attention.self.value.weight
+[FROZE]: module.encoder.layer.9.attention.self.value.bias
+[FROZE]: module.encoder.layer.9.attention.output.dense.weight
+[FROZE]: module.encoder.layer.9.attention.output.dense.bias
+[FROZE]: module.encoder.layer.9.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.9.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.9.intermediate.dense.weight
+[FROZE]: module.encoder.layer.9.intermediate.dense.bias
+[FROZE]: module.encoder.layer.9.output.dense.weight
+[FROZE]: module.encoder.layer.9.output.dense.bias
+[FROZE]: module.encoder.layer.9.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.9.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.10.attention.self.query.weight
+[FROZE]: module.encoder.layer.10.attention.self.query.bias
+[FROZE]: module.encoder.layer.10.attention.self.key.weight
+[FROZE]: module.encoder.layer.10.attention.self.key.bias
+[FROZE]: module.encoder.layer.10.attention.self.value.weight
+[FROZE]: module.encoder.layer.10.attention.self.value.bias
+[FROZE]: module.encoder.layer.10.attention.output.dense.weight
+[FROZE]: module.encoder.layer.10.attention.output.dense.bias
+[FROZE]: module.encoder.layer.10.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.10.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.10.intermediate.dense.weight
+[FROZE]: module.encoder.layer.10.intermediate.dense.bias
+[FROZE]: module.encoder.layer.10.output.dense.weight
+[FROZE]: module.encoder.layer.10.output.dense.bias
+[FROZE]: module.encoder.layer.10.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.10.output.LayerNorm.bias
+[FREE]: module.encoder.layer.11.attention.self.query.weight
+[FREE]: module.encoder.layer.11.attention.self.query.bias
+[FREE]: module.encoder.layer.11.attention.self.key.weight
+[FREE]: module.encoder.layer.11.attention.self.key.bias
+[FREE]: module.encoder.layer.11.attention.self.value.weight
+[FREE]: module.encoder.layer.11.attention.self.value.bias
+[FREE]: module.encoder.layer.11.attention.output.dense.weight
+[FREE]: module.encoder.layer.11.attention.output.dense.bias
+[FREE]: module.encoder.layer.11.attention.output.LayerNorm.weight
+[FREE]: module.encoder.layer.11.attention.output.LayerNorm.bias
+[FREE]: module.encoder.layer.11.intermediate.dense.weight
+[FREE]: module.encoder.layer.11.intermediate.dense.bias
+[FREE]: module.encoder.layer.11.output.dense.weight
+[FREE]: module.encoder.layer.11.output.dense.bias
+[FREE]: module.encoder.layer.11.output.LayerNorm.weight
+[FREE]: module.encoder.layer.11.output.LayerNorm.bias
+[FREE]: module.pooler.dense.weight
+[FREE]: module.pooler.dense.bias
+[FREE]: module.classification_layer.weight
+[FREE]: module.classification_layer.bias
+Empty DataFrame
+Columns: [Train Loss, Train Accuracy, Test F1 Score]
+Index: []
+[FROZE]: module.encoder.layer.8.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.8.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.8.intermediate.dense.weight
+[FROZE]: module.encoder.layer.8.intermediate.dense.bias
+[FROZE]: module.encoder.layer.8.output.dense.weight
+[FROZE]: module.encoder.layer.8.output.dense.bias
+[FROZE]: module.encoder.layer.8.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.8.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.9.attention.self.query.weight
+[FROZE]: module.encoder.layer.9.attention.self.query.bias
+[FROZE]: module.encoder.layer.9.attention.self.key.weight
+[FROZE]: module.encoder.layer.9.attention.self.key.bias
+[FROZE]: module.encoder.layer.9.attention.self.value.weight
+[FROZE]: module.encoder.layer.9.attention.self.value.bias
+[FROZE]: module.encoder.layer.9.attention.output.dense.weight
+[FROZE]: module.encoder.layer.9.attention.output.dense.bias
+[FROZE]: module.encoder.layer.9.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.9.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.9.intermediate.dense.weight
+[FROZE]: module.encoder.layer.9.intermediate.dense.bias
+[FROZE]: module.encoder.layer.9.output.dense.weight
+[FROZE]: module.encoder.layer.9.output.dense.bias
+[FROZE]: module.encoder.layer.9.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.9.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.10.attention.self.query.weight
+[FROZE]: module.encoder.layer.10.attention.self.query.bias
+[FROZE]: module.encoder.layer.10.attention.self.key.weight
+[FROZE]: module.encoder.layer.10.attention.self.key.bias
+[FROZE]: module.encoder.layer.10.attention.self.value.weight
+[FROZE]: module.encoder.layer.10.attention.self.value.bias
+[FROZE]: module.encoder.layer.10.attention.output.dense.weight
+[FROZE]: module.encoder.layer.10.attention.output.dense.bias
+[FROZE]: module.encoder.layer.10.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.10.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.10.intermediate.dense.weight
+[FROZE]: module.encoder.layer.10.intermediate.dense.bias
+[FROZE]: module.encoder.layer.10.output.dense.weight
+[FROZE]: module.encoder.layer.10.output.dense.bias
+[FROZE]: module.encoder.layer.10.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.10.output.LayerNorm.bias
+[FREE]: module.encoder.layer.11.attention.self.query.weight
+[FREE]: module.encoder.layer.11.attention.self.query.bias
+[FREE]: module.encoder.layer.11.attention.self.key.weight
+[FREE]: module.encoder.layer.11.attention.self.key.bias
+[FREE]: module.encoder.layer.11.attention.self.value.weight
+[FREE]: module.encoder.layer.11.attention.self.value.bias
+[FREE]: module.encoder.layer.11.attention.output.dense.weight
+[FREE]: module.encoder.layer.11.attention.output.dense.bias
+[FREE]: module.encoder.layer.11.attention.output.LayerNorm.weight
+[FREE]: module.encoder.layer.11.attention.output.LayerNorm.bias
+[FREE]: module.encoder.layer.11.intermediate.dense.weight
+[FREE]: module.encoder.layer.11.intermediate.dense.bias
+[FREE]: module.encoder.layer.11.output.dense.weight
+[FREE]: module.encoder.layer.11.output.dense.bias
+[FREE]: module.encoder.layer.11.output.LayerNorm.weight
+[FREE]: module.encoder.layer.11.output.LayerNorm.bias
+[FREE]: module.pooler.dense.weight
+[FREE]: module.pooler.dense.bias
+[FREE]: module.classification_layer.weight
+[FREE]: module.classification_layer.bias
+Empty DataFrame
+Columns: [Train Loss, Train Accuracy, Test F1 Score]
+Index: []
+[FROZE]: module.encoder.layer.8.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.8.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.8.intermediate.dense.weight
+[FROZE]: module.encoder.layer.8.intermediate.dense.bias
+[FROZE]: module.encoder.layer.8.output.dense.weight
+[FROZE]: module.encoder.layer.8.output.dense.bias
+[FROZE]: module.encoder.layer.8.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.8.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.9.attention.self.query.weight
+[FROZE]: module.encoder.layer.9.attention.self.query.bias
+[FROZE]: module.encoder.layer.9.attention.self.key.weight
+[FROZE]: module.encoder.layer.9.attention.self.key.bias
+[FROZE]: module.encoder.layer.9.attention.self.value.weight
+[FROZE]: module.encoder.layer.9.attention.self.value.bias
+[FROZE]: module.encoder.layer.9.attention.output.dense.weight
+[FROZE]: module.encoder.layer.9.attention.output.dense.bias
+[FROZE]: module.encoder.layer.9.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.9.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.9.intermediate.dense.weight
+[FROZE]: module.encoder.layer.9.intermediate.dense.bias
+[FROZE]: module.encoder.layer.9.output.dense.weight
+[FROZE]: module.encoder.layer.9.output.dense.bias
+[FROZE]: module.encoder.layer.9.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.9.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.10.attention.self.query.weight
+[FROZE]: module.encoder.layer.10.attention.self.query.bias
+[FROZE]: module.encoder.layer.10.attention.self.key.weight
+[FROZE]: module.encoder.layer.10.attention.self.key.bias
+[FROZE]: module.encoder.layer.10.attention.self.value.weight
+[FROZE]: module.encoder.layer.10.attention.self.value.bias
+[FROZE]: module.encoder.layer.10.attention.output.dense.weight
+[FROZE]: module.encoder.layer.10.attention.output.dense.bias
+[FROZE]: module.encoder.layer.10.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.10.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.10.intermediate.dense.weight
+[FROZE]: module.encoder.layer.10.intermediate.dense.bias
+[FROZE]: module.encoder.layer.10.output.dense.weight
+[FROZE]: module.encoder.layer.10.output.dense.bias
+[FROZE]: module.encoder.layer.10.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.10.output.LayerNorm.bias
+[FREE]: module.encoder.layer.11.attention.self.query.weight
+[FREE]: module.encoder.layer.11.attention.self.query.bias
+[FREE]: module.encoder.layer.11.attention.self.key.weight
+[FREE]: module.encoder.layer.11.attention.self.key.bias
+[FREE]: module.encoder.layer.11.attention.self.value.weight
+[FREE]: module.encoder.layer.11.attention.self.value.bias
+[FREE]: module.encoder.layer.11.attention.output.dense.weight
+[FREE]: module.encoder.layer.11.attention.output.dense.bias
+[FREE]: module.encoder.layer.11.attention.output.LayerNorm.weight
+[FREE]: module.encoder.layer.11.attention.output.LayerNorm.bias
+[FREE]: module.encoder.layer.11.intermediate.dense.weight
+[FREE]: module.encoder.layer.11.intermediate.dense.bias
+[FREE]: module.encoder.layer.11.output.dense.weight
+[FREE]: module.encoder.layer.11.output.dense.bias
+[FREE]: module.encoder.layer.11.output.LayerNorm.weight
+[FREE]: module.encoder.layer.11.output.LayerNorm.bias
+[FREE]: module.pooler.dense.weight
+[FREE]: module.pooler.dense.bias
+[FREE]: module.classification_layer.weight
+[FREE]: module.classification_layer.bias
+Empty DataFrame
+Columns: [Train Loss, Train Accuracy, Test F1 Score]
+Index: []
+[FROZE]: module.encoder.layer.8.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.8.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.8.intermediate.dense.weight
+[FROZE]: module.encoder.layer.8.intermediate.dense.bias
+[FROZE]: module.encoder.layer.8.output.dense.weight
+[FROZE]: module.encoder.layer.8.output.dense.bias
+[FROZE]: module.encoder.layer.8.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.8.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.9.attention.self.query.weight
+[FROZE]: module.encoder.layer.9.attention.self.query.bias
+[FROZE]: module.encoder.layer.9.attention.self.key.weight
+[FROZE]: module.encoder.layer.9.attention.self.key.bias
+[FROZE]: module.encoder.layer.9.attention.self.value.weight
+[FROZE]: module.encoder.layer.9.attention.self.value.bias
+[FROZE]: module.encoder.layer.9.attention.output.dense.weight
+[FROZE]: module.encoder.layer.9.attention.output.dense.bias
+[FROZE]: module.encoder.layer.9.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.9.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.9.intermediate.dense.weight
+[FROZE]: module.encoder.layer.9.intermediate.dense.bias
+[FROZE]: module.encoder.layer.9.output.dense.weight
+[FROZE]: module.encoder.layer.9.output.dense.bias
+[FROZE]: module.encoder.layer.9.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.9.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.10.attention.self.query.weight
+[FROZE]: module.encoder.layer.10.attention.self.query.bias
+[FROZE]: module.encoder.layer.10.attention.self.key.weight
+[FROZE]: module.encoder.layer.10.attention.self.key.bias
+[FROZE]: module.encoder.layer.10.attention.self.value.weight
+[FROZE]: module.encoder.layer.10.attention.self.value.bias
+[FROZE]: module.encoder.layer.10.attention.output.dense.weight
+[FROZE]: module.encoder.layer.10.attention.output.dense.bias
+[FROZE]: module.encoder.layer.10.attention.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.10.attention.output.LayerNorm.bias
+[FROZE]: module.encoder.layer.10.intermediate.dense.weight
+[FROZE]: module.encoder.layer.10.intermediate.dense.bias
+[FROZE]: module.encoder.layer.10.output.dense.weight
+[FROZE]: module.encoder.layer.10.output.dense.bias
+[FROZE]: module.encoder.layer.10.output.LayerNorm.weight
+[FROZE]: module.encoder.layer.10.output.LayerNorm.bias
+[FREE]: module.encoder.layer.11.attention.self.query.weight
+[FREE]: module.encoder.layer.11.attention.self.query.bias
+[FREE]: module.encoder.layer.11.attention.self.key.weight
+[FREE]: module.encoder.layer.11.attention.self.key.bias
+[FREE]: module.encoder.layer.11.attention.self.value.weight
+[FREE]: module.encoder.layer.11.attention.self.value.bias
+[FREE]: module.encoder.layer.11.attention.output.dense.weight
+[FREE]: module.encoder.layer.11.attention.output.dense.bias
+[FREE]: module.encoder.layer.11.attention.output.LayerNorm.weight
+[FREE]: module.encoder.layer.11.attention.output.LayerNorm.bias
+[FREE]: module.encoder.layer.11.intermediate.dense.weight
+[FREE]: module.encoder.layer.11.intermediate.dense.bias
+[FREE]: module.encoder.layer.11.output.dense.weight
+[FREE]: module.encoder.layer.11.output.dense.bias
+[FREE]: module.encoder.layer.11.output.LayerNorm.weight
+[FREE]: module.encoder.layer.11.output.LayerNorm.bias
+[FREE]: module.pooler.dense.weight
+[FREE]: module.pooler.dense.bias
+[FREE]: module.classification_layer.weight
+[FREE]: module.classification_layer.bias
+Empty DataFrame
+Columns: [Train Loss, Train Accuracy, Test F1 Score]
+Index: []
+  5%|▍         | 4/85 [00:00<00:02, 35.36it/s]  9%|▉         | 8/85 [00:00<00:02, 36.53it/s] 15%|█▌        | 13/85 [00:00<00:01, 39.22it/s] 20%|██        | 17/85 [00:00<00:01, 38.20it/s] 25%|██▍       | 21/85 [00:00<00:01, 38.36it/s] 29%|██▉       | 25/85 [00:00<00:01, 35.71it/s] 34%|███▍      | 29/85 [00:00<00:01, 34.11it/s] 39%|███▉      | 33/85 [00:00<00:01, 34.30it/s] 44%|████▎     | 37/85 [00:01<00:01, 32.95it/s] 48%|████▊     | 41/85 [00:01<00:01, 32.21it/s] 53%|█████▎    | 45/85 [00:01<00:01, 32.66it/s] 58%|█████▊    | 49/85 [00:01<00:01, 31.65it/s] 62%|██████▏   | 53/85 [00:01<00:00, 32.63it/s] 67%|██████▋   | 57/85 [00:01<00:00, 31.38it/s] 72%|███████▏  | 61/85 [00:01<00:00, 31.62it/s] 76%|███████▋  | 65/85 [00:01<00:00, 30.99it/s] 81%|████████  | 69/85 [00:02<00:00, 32.37it/s] 86%|████████▌ | 73/85 [00:02<00:00, 30.13it/s] 91%|█████████ | 77/85 [00:02<00:00, 31.37it/s] 95%|█████████▌| 81/85 [00:02<00:00, 31.89it/s]100%|██████████| 85/85 [00:02<00:00, 31.74it/s]100%|██████████| 85/85 [00:02<00:00, 32.95it/s]
+12/22/2021 06:53:46 PM [INFO]: ***** Eval results *****
+12/22/2021 06:53:46 PM [INFO]:   accuracy = 0.7788159229208924
+12/22/2021 06:53:46 PM [INFO]:   f1 = 0.6954973696137788
+12/22/2021 06:53:46 PM [INFO]:   precision = 0.7274881516587678
+12/22/2021 06:53:46 PM [INFO]:   recall = 0.7263406940063092
+Epoch finished, took 6.92 seconds.
+Losses at Epoch 20: 0.6085401
+Train accuracy at Epoch 20: 0.8031250
+Test f1 at Epoch 20: 0.6954974
+    Train Loss  Train Accuracy  Test F1 Score
+0     2.685287        0.160417       0.009836
+1     2.278170        0.316667       0.091407
+2     1.855440        0.437500       0.295336
+3     1.546368        0.526042       0.444934
+4     1.304046        0.575000       0.514834
+5     1.105299        0.648958       0.579116
+6     0.982290        0.691667       0.614198
+7     0.881117        0.708333       0.642299
+8     0.845315        0.721875       0.654140
+9     0.799279        0.742708       0.659267
+10    0.761948        0.748958       0.674758
+11    0.734994        0.770833       0.675138
+12    0.698736        0.761458       0.681283
+13    0.696472        0.784375       0.687942
+14    0.672060        0.778125       0.690054
+15    0.656841        0.795833       0.687879
+16    0.640359        0.795833       0.691521
+17    0.627868        0.796875       0.693329
+18    0.613415        0.807292       0.693193
+19    0.608540        0.803125       0.695497
